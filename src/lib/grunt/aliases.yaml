@@ -1,0 +1,5 @@
+default:
+  - "eslint"
+  - "http-server"
+  - "browserify"
+  - "watch"
