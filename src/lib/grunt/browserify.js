@@ -20,8 +20,8 @@ module.exports = {
             debug: true
         }
     },
-    dailyjournal: {
+    app: {
         src: ["../scripts/main.js"],
-        dest: "../../public/hellogoodbye.js"
+        dest: "../../public/bundle.js"
     }
 }
