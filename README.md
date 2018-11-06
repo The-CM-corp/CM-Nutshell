@@ -12,7 +12,9 @@ Use this repository for when you want to start a new modular JavaScript applicat
 1. Clone this repository.
 1. `cd browserify-boilerplate/src/lib`
 1. `npm install`
-1. `grunt`
+1. `npm start`
+
+The `npm start` command will run grunt for you.
 
 The web server will be started, and the JavaScript code in the `src/scripts` directory will be compiled into `public/hellogoodbye.js`.
 
