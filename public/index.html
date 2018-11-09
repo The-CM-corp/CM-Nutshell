@@ -2,19 +2,89 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Browserify Boilerplate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CM-Nutshell</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-  <article class="output">
+    <section id="welcome">
+        <h1>Welcome To Nutshell</h1>
+        <h2>(full screen popup)</h2>
+        <p><a href="#">login </a> / <a href="#">register</a></p>
+        <div id="login__form">login form (hidden > show on click)</div>
+        <div id="register__form">register form (hidden > show on click)</div>
+    </section>
+    <section id="nav">
+        <header class="header">
+            <h1>Navigation Header</h1>
+            <h2> - Username - Friends Link - Logout</h2>
+        </header>
+        <nav class="nav__container">
+            <div class="nav__buttons">news</div>
+            <div class="nav__buttons">events</div>
+            <div class="nav__buttons">chat</div>
+            <div class="nav__buttons">to do</div>
+        </nav>
+    </section>
+    <section id="categories" class="categories__container">
+        <div class="category__container">
+            <h1>NEWS</h1>
+            <h3><a href="#">add news article</a></h3>
+            <div id="news__results">
+                <div class="news__element">
+                    <h3>Article Title</h3>
+                    <p>Synopsis: This is a bunch of random text about the article</p>
+                    <p><a href="#">Linky goes here</a></p>
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="category__container">
+            <h1>EVENTS</h1>
+            <h3><a href="#">add new event</a></h3>
+            <div id="event__results">
+                <div class="event__element">
+                    <h3>Date: Event Name</h3>
+                    <p>Location</p>
+                    <p>Brief description of event (newest has to be bold)</p>
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="category__container">
+            <h1>CHAT</h1>
+            <h3><a href="#">add new message</a></h3>
+            <div id="chat__results">
+                <div class="chat__element">
+                    <h3><a href="#">UserName</a></h3>
+                    <p>Hey, this is my message!</p>
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="category__container">
+            <h1>TO DO</h1>
+            <h3><a href="#">add new task</a></h3>
+            <div id="todo__results">
+                <div class="todo__element">
+                    <h3>Task Name</h3>
+                    <p>Completion Date</p>
+                    <input type="checkbox">
+                    <button>edit</button>
+                    <button>delete</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </article>
 
 
-  
   <!-- js/jquery script tags -->
   <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
     crossorigin="anonymous"></script>
