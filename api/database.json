@@ -1,3 +1,59 @@
 {
-  "user": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Joe Shepherd",
+      "password": "broccoli",
+      "email": "joe@joe.com"
+    },
+    {
+      "id": 2,
+      "name": "Greg Korte",
+      "password": "cauliflower",
+      "email": "greg@greg.com"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Pinball Party",
+      "date": "11/8/18",
+      "synopsis": "Have fun playing pinball and drinking soda",
+      "location": "Beercade",
+      "user_id": 1
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Great News for Once",
+      "synopsis": "People were nice to each other",
+      "url": "#",
+      "user_id" : 1
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "task": "Take out trash",
+      "date": "11/8/18",
+      "completed": false,
+      "user_id": 1
+    }
+  ],
+  "chats":[
+    {
+      "id": 1,
+      "user_id": 1,
+      "time": "10:00:00",
+      "message": "Hey, I'm kicking all sorts of butt"
+    }
+  ],
+  "friendships":[
+    {
+      "id": 1,
+      "stalker_id": 1,
+      "bystander_id": 2
+    }
+  ]
 }
