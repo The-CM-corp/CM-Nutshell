@@ -9,3 +9,4 @@ obj
 *.sqlite3
 .vscode
 dist
+.DS_Store
