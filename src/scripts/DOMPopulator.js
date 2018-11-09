@@ -10,7 +10,8 @@ const putOnDOM = {
     //appending our new elements to the fragment then the fragment to or article  
     let fragment = document.createDocumentFragment()
     fragment.appendChild(entryHolder)
-    entryArt.appendChild(fragment)
+    let toDoOutput = document.getElementById("todo__results")
+    toDoOutput.appendChild(fragment)
   },
   // loops over all of one type of entry and populates multiple ones at a time
   initialToDos(entries) {
