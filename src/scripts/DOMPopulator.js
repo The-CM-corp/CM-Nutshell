@@ -6,7 +6,7 @@ const putOnDOM = {
     let entryTask = elementCreator.elementFactory("p", entry.task, "toDo__task", `ToDoTask__${entry.id}`)
     let entryDate = elementCreator.elementFactory("p", entry.date, "toDO__date", `ToDoDate__${entry.id}`)
     let entryCheck = elementCreator.elementFactory("input type='checkbox'", null, "toDO__checkbox", `ToDoCheckbox__${entry.id}`)
-    let entryHolder = elementCreator.elementFactory("section", null, "entrySection", `ToDo__${entry.id}`, entryTask, entryDate, entryCheck)
+    let entryHolder = elementCreator.elementFactory("div", null, "toDoDiv", `ToDo__${entry.id}`, entryTask, entryDate, entryCheck)
     //appending our new elements to the fragment then the fragment to or article  
     let fragment = document.createDocumentFragment()
     fragment.appendChild(entryHolder)
