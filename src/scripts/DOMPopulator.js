@@ -1,21 +1,21 @@
 import elementCreator from "./elementFactory"
-// ?generic template
+// generic template
+
 const putOnDOM = {
-  postNewEntry(entry) {
-    let entryTitle = elementCreator.elementFactory("h2", entry.concept)
-    let entryContent = elementCreator.elementFactory("p", `${entry.entry} I am ${entry.mood}. ${entry.date}`)
-    let entryHolder = elementCreator.elementFactory("section", null, "entrySection", `${entry.id}`, entryTitle, entryContent)
+  postNewToDO(entry) {
+    let entryTask = elementCreator.elementFactory("p", entry.task, "toDo__task", `ToDoTask__${entry.id}`)
+    let entryDate = elementCreator.elementFactory("p", entry.date, "toDO__date", `ToDoDate__${entry.id}`)
+    let entryCheck = elementCreator.elementFactory("input type='checkbox'", null, "toDO__checkbox", `ToDoCheckbox__${entry.id}`)
+    let entryHolder = elementCreator.elementFactory("section", null, "entrySection", `ToDo__${entry.id}`, entryTask, entryDate, entryCheck)
     //appending our new elements to the fragment then the fragment to or article  
     let fragment = document.createDocumentFragment()
     fragment.appendChild(entryHolder)
     entryArt.appendChild(fragment)
   },
-
   // loops over all of one type of entry and populates multiple ones at a time
-  domCreation(entries) {
+  initialToDos(entries) {
     entries.forEach(entry => {
-      putOnDOM.postNewEntry(entry)
-
+      putOnDOM.postNewToDO(entry)
     })
   }
 }
