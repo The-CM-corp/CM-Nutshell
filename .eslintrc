@@ -19,8 +19,8 @@
         "no-unused-vars": "warn",
         "constructor-super": "warn",
         "valid-typeof": "warn",
-        "quotes": ["error", "double"],
-        "no-trailing-spaces": 2
+        "quotes": ["warn", "double"],
+        "no-trailing-spaces": 1
     },
     "globals": {
         "$": true
