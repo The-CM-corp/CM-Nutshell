@@ -1,5 +1,6 @@
 import API from "./todo.js"
 import putOnDOM from "./DOMPopulator"
+import onTodoSumbit from "./todoForm"
 
 
 let newTODO = {
@@ -12,6 +13,7 @@ let newTODO = {
 // API.deleteTodo(2)
 API.getTodo().then(todos => putOnDOM.initialTodos(todos))
 
+onTodoSumbit()
 
 // I want the task to be a slightly larger fornt than the expected completed date
 // i want task on top of date and check box to the right of the text
