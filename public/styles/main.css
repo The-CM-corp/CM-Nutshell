@@ -4,14 +4,14 @@
   } *
 
 body {
-  /* margin: 0; */
+  margin-top: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #333;
   background: whitesmoke;
 }
 
 .header {
-  background: blue;
+  background: #424651;
   padding: 10px;
   color: whitesmoke;
 }
@@ -34,15 +34,27 @@ body {
 }
 .nav__buttons {
   width: 100%;
-  border: 1px solid red;
-  background: blue;
+  border: 1px solid whitesmoke;
+  background: #424651;
   text-align: center;
   color: white;
   padding: 5px 0;
 }
 
 .nav__buttons:hover {
-  background: red;
+  background: #BCE7FD;
+  color: #424651;
+}
+
+.dashboard__logout__links {
+  color: whitesmoke;
+  border: 1px solid lightblue;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.dashboard__logout__links:hover {
+  color: blue;
+  background-color: lightblue;
 }
 
 
@@ -55,7 +67,8 @@ body {
 
 .category__container {
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid #424651;
+  padding: 10px;
 }
 
 .news__element {

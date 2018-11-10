@@ -22,6 +22,21 @@ function addClickEvents(){
       $("#categories").removeClass("hide")
   });
   // Main Navigation Buttons > expand clicked category and hide others
+    // Logout
+    $("#logout__link").click(function(){
+      window.location.reload(true);
+  });
+    $("#dashboard__link").click(function(){
+      $("#news__container").removeClass("hide");
+      $("#events__container").removeClass("hide");
+      $("#chat__container").removeClass("hide");
+      $("#todo__container").removeClass("hide");
+      $("#add__news__form").addClass("hide");
+      $("#add__event__form").addClass("hide");
+      $("#add__chat__form").addClass("hide");
+      $("#add__todo__form").addClass("hide");
+  });
+    // Navbar
     $("#news__nav").click(function(){
       $("#news__container").removeClass("hide");
       $("#events__container").addClass("hide");
