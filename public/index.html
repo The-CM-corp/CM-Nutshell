@@ -10,29 +10,60 @@
 </head>
 
 <body>
-    <section id="welcome">
+    <section id="welcome" class="welcome">
         <h1>Welcome To Nutshell</h1>
-        <h2>(full screen popup)</h2>
-        <p><a href="#">login </a> / <a href="#">register</a></p>
-        <div id="login__form">login form (hidden > show on click)</div>
-        <div id="register__form">register form (hidden > show on click)</div>
+        <h2>Log In or Register to Continue</h2>
+        <p><a id="login__link" href="#">login </a> / <a id="register__link" href="#">register</a></p>
+
+        <!-- Hidden Login Form > will show on login link click -->
+        <div id="login__form" class="login__form hide">
+            <p>Enter Your Username and Password</p>
+            <label for="login__name">Name</label>
+            <input type="text" name="login__name" id="login__name" value="username">
+            <label for="login__password">Password</label>
+            <input type="text" name="login__password" id="login__password" value="password">
+            <button id="login__button">Submit</button>
+        </div>
+        <!-- Hidden Register Form > will show on register link click -->
+        <div id="register__form" class="login__form hide">
+            <p>Register Your Username and Password</p>
+            <label for="register__name">Name</label>
+            <input type="text" name="register__name" id="register__name" value="username">
+            <label for="login__password">Password</label>
+            <input type="text" name="register__password" id="register__password" value="password">
+            <button id="register__button">Submit</button>
+        </div>
     </section>
-    <section id="nav">
+    <section id="nav" class="nav hide">
         <header class="header">
-            <h1>Navigation Header</h1>
+            <h1>(: nutshell :)</h1>
             <h2> - Username - Friends Link - Logout</h2>
         </header>
         <nav class="nav__container">
-            <div class="nav__buttons">news</div>
-            <div class="nav__buttons">events</div>
-            <div class="nav__buttons">chat</div>
-            <div class="nav__buttons">to do</div>
+            <div id="news__nav" class="nav__buttons">news</div>
+            <div id="events__nav" class="nav__buttons">events</div>
+            <div id="chat__nav" class="nav__buttons">chat</div>
+            <div id="todo__nav" class="nav__buttons">to do</div>
         </nav>
     </section>
-    <section id="categories" class="categories__container">
-        <div class="category__container">
+
+    <!-- Begin Categories Sections -->
+    <section id="categories" class="categories__container hide">
+
+        <!-- News Section -->
+        <div id="news__container" class="category__container">
             <h1>NEWS</h1>
-            <h3><a href="#">add news article</a></h3>
+            <h3><a href="#" id="add__news">add article</a></h3>
+            <!-- Add News Form -->
+            <div id="add__news__form" class="add_content_form hide">
+                <p>Add News Article</p>
+                <label for="add__news__title">News Title</label>
+                <input type="text" name="add__news__title" id="add__news__title" value="News Title">
+                <label for="add__news__synopsis">Synopsis</label>
+                <input type="text" name="add__news__synopsis" id="add__news__synopsis" value="Synopsis">
+                <button id="add__news__button">Submit</button>
+            </div>
+            <!-- News Results -->
             <div id="news__results">
                 <div class="news__element">
                     <h3>Article Title</h3>
@@ -43,9 +74,23 @@
                 </div>
             </div>
         </div>
-        <div class="category__container">
+
+        <!-- Events Section -->
+        <div id="events__container" class="category__container">
             <h1>EVENTS</h1>
-            <h3><a href="#">add new event</a></h3>
+            <h3><a href="#" id="add__event">add event</a></h3>
+            <!-- Add Event Form -->
+            <div id="add__event__form" class="add_event_form hide">
+                <p>Add Event </p>
+                <label for="add__event__title">Event Name</label>
+                <input type="text" name="add__event__title" id="add__event__title" value="Event Title">
+                <label for="add__event__location">Location</label>
+                <input type="text" name="add__event__location" id="add__event__location" value="Location">
+                <label for="add__event__date">Date</label>
+                <input type="date" name="add__event__date" id="add__event__date">
+                <button id="add__event__button">Submit</button>
+            </div>
+            <!-- Event Results -->
             <div id="event__results">
                 <div class="event__element">
                     <h3>Date: Event Name</h3>
@@ -56,9 +101,19 @@
                 </div>
             </div>
         </div>
-        <div class="category__container">
+
+        <!-- Chat Section -->
+        <div id="chat__container" class="category__container">
             <h1>CHAT</h1>
-            <h3><a href="#">add new message</a></h3>
+            <h3><a href="#" id="add__chat">new message</a></h3>
+            <!-- Add Chat Form -->
+            <div id="add__chat__form" class="add_chat_form hide">
+                <p>Add Message </p>
+                <label for="add__chat__message">Chat Message</label>
+                <input type="textarea" name="add__chat__message" id="add__chat__message" value="Message" rows="3">
+                <button id="add__chat__button">Submit</button>
+            </div>
+            <!-- Chat Results -->
             <div id="chat__results">
                 <div class="chat__element">
                     <h3><a href="#">UserName</a></h3>
@@ -68,9 +123,21 @@
                 </div>
             </div>
         </div>
-        <div class="category__container">
+
+        <!-- Todo Section -->
+        <div id="todo__container" class="category__container">
             <h1>TO DO</h1>
-            <h3><a href="#">add new task</a></h3>
+            <h3><a href="#" id="add__todo">add task</a></h3>
+            <!-- Add Todo Form -->
+            <div id="add__todo__form" class="add_todo_form hide">
+                <p>Add Task </p>
+                <label for="add__todo__title">Task</label>
+                <input type="text" name="add__todo__title" id="add__todo__title" value="Task">
+                <label for="add__todo__date">Expected Completion Date</label>
+                <input type="date" name="add__todo__date" id="add__todo__date">
+                <button id="add__todo__button">Submit</button>
+            </div>
+            <!-- Todo Results -->
             <div id="todo__results">
                 <div class="todo__element">
                     <h3>Task Name</h3>
@@ -85,10 +152,10 @@
 
 
 
-  <!-- js/jquery script tags -->
-  <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-    crossorigin="anonymous"></script>
-  <script src="bundle.js"></script>
+    <!-- js/jquery script tags -->
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+        crossorigin="anonymous"></script>
+    <script src="bundle.js"></script>
 </body>
 
 </html>

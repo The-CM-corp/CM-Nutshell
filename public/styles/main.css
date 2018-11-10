@@ -1,64 +1,83 @@
 * {
-  margin: 0;
-  padding: 0;
-  }
+  /* margin: 0; */
+  /* padding: 0; */
+  } *
 
-  body {
-    /* margin: 0; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #333;
-    background: whitesmoke;
-  }
+body {
+  /* margin: 0; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  background: whitesmoke;
+}
 
-  .header {
-    background: blue;
-    padding: 10px;
-    color: whitesmoke;
-  }
+.header {
+  background: blue;
+  padding: 10px;
+  color: whitesmoke;
+}
 
-  /* Navigation */
-  .nav__container {
-    display: flex;
-  }
+.login__form {
+  border: 1px solid gray;
+}
 
-  .nav__buttons {
-    width: 100%;
-    border: 1px solid red;
-    background: blue;
-    text-align: center;
-    color: white;
-    padding: 5px 0;
-  }
+.welcome {
+  text-align: center;
+}
+/* Navigation */
+.nav__container {
+  display: flex;
+}
 
-  .nav__buttons:hover {
-    background: red;
-  }
+.nav {
+  max-width: 1000px;
+  margin: auto;
+}
+.nav__buttons {
+  width: 100%;
+  border: 1px solid red;
+  background: blue;
+  text-align: center;
+  color: white;
+  padding: 5px 0;
+}
 
-  /* Categories */
-  .categories__container {
-    display: flex;
-  }
+.nav__buttons:hover {
+  background: red;
+}
 
-  .category__container {
-    width: 100%;
-    border: 1px solid red;
-  }
 
-  .news__element {
-    border: 1px solid green;
-    padding: 5px;
-  }
+/* Categories */
+.categories__container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+}
 
-  .event__element {
-    border: 1px solid green;
-    padding: 5px;
-  }
+.category__container {
+  width: 100%;
+  border: 1px solid red;
+}
 
-  .chat__element {
-    border: 1px solid green;
-    padding: 5px;
-  }
-  .todo__element {
-    border: 1px solid green;
-    padding: 5px;
-  }
+.news__element {
+  border: 1px solid green;
+  padding: 5px;
+}
+
+.event__element {
+  border: 1px solid green;
+  padding: 5px;
+}
+
+.chat__element {
+  border: 1px solid green;
+  padding: 5px;
+}
+.todo__element {
+  border: 1px solid green;
+  padding: 5px;
+}
+
+
+.hide {
+  display: none;
+}
