@@ -1,2 +1,3 @@
-// import sayHello from "./hello"
+import addClickEvents from "./navigation"
 
+addClickEvents()
