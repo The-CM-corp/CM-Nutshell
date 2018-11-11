@@ -1,3 +1,3 @@
-import addClickEvents from "./events"
+import addClickEvents from "./navigation"
 
 addClickEvents()
