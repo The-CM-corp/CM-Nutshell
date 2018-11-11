@@ -1,6 +1,6 @@
 import putOnDOM from "./DOMPopulator";
 
-// communicate with the API to GET the messages array of Objects, then be able to obtain the value name on the user id. Be able to edit (PATCH) one entry, POST a new entry, and DELTE an entry. Start by getting these to function without dealing with the DOM yet.
+// communicate with the API to GET the messages array of Objects, then be able to obtain the value name on the user id. Be able to edit (PATCH) one entry, POST a new entry, and DELTE an entry. The load existing entries function will also print the entries to DOM.
 
 export default {
   // takes user input and makes new object
@@ -40,6 +40,6 @@ export default {
   loadExistingChats: function () {
     return fetch(`http://localhost:8088/chats/`)
     .then(entries => entries.json())
-    .then(entries => putOnDOM.initialChat(entries))
+    .then(entries => putOnDOM.initialChats(entries))
   }
 }

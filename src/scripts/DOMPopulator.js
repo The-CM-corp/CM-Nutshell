@@ -6,8 +6,9 @@ const putOnDOM = {
     let chatName = elementCreator.elementFactory("a", entry.user_id, "chat__name", `chat__name${entry.id}`, "#")
     let chatTime = elementCreator.elementFactory("p", entry.time, "chat__time", `chat__time${entry.id}`)
     let chatMessage = elementCreator.elementFactory("p", entry.message, "chat__message", `chat_message${entry.id}`)
-    let chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div${entry.id}`, null, chatName, chatTime, chatMessage)
-    //appending our new elements to the fragment then the fragment to or article
+    let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__edit", `btn__edit${entry.id}`)
+    let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__delete", `btn__delete${entry.id}`)
+    let chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div${entry.id}`, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn)
     let fragment = document.createDocumentFragment()
     let chatOutput = document.querySelector("#chat__results")
     fragment.appendChild(chatHolder)
@@ -15,7 +16,7 @@ const putOnDOM = {
   },
 
   // loops over all of one type of entry and populates multiple ones at a time
-  initialChat(entries) {
+  initialChats(entries) {
     entries.forEach(entry => {
       putOnDOM.postNewMessage(entry)
     })
@@ -76,3 +77,5 @@ const putOnDOM = {
     })
   }
 }
+
+export default putOnDOM
