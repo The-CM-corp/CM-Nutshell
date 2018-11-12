@@ -1,3 +1,10 @@
-import addClickEvents from "./navigation"
+import addNavClickEvents from "./navigation"
+import eventsGenerator from "./events"
+import userFunctions from "./users"
 
-addClickEvents()
+
+addNavClickEvents()
+
+userFunctions()
+
+eventsGenerator()
