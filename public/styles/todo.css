@@ -1,0 +1,29 @@
+
+ /* I want the task to be a slightly larger fornt than the expected completed date */
+ /* i want task on top of date and check box to the right of the text */
+
+ .todo__div {
+   display: flex;
+   align-items: center;
+ }
+ .todo__checkbox {
+   margin: 3%;
+ }
+ .todo__text {
+   margin: 0px 0px 0px 3%;
+ }
+
+ .todo__checked {
+   color: grey;
+   opacity: 75%;
+   text-decoration: line-through;
+ }
+ .todo__buttons button {
+   margin: 3%;
+ }
+
+ .todo__buttons {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 5%;
+ }

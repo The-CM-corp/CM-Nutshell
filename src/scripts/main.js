@@ -1,3 +1,6 @@
+import API from "./todo.js"
+import putOnDOM from "./DOMPopulator"
+import onTodoSumbit from "./todoForm"
 import addNavClickEvents from "./navigation"
 import eventsGenerator from "./events"
 import userFunctions from "./users"
@@ -17,3 +20,13 @@ $("#login__button").click(function(){usersAPI.loginUser()})
 chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()
+
+
+//todo calls
+API.getTodo().then(todos => putOnDOM.initialTodos(todos))
+onTodoSumbit()
+
+
+
+
+
