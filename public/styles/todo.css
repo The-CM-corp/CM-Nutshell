@@ -18,3 +18,12 @@
    opacity: 75%;
    text-decoration: line-through;
  }
+ .todo__buttons button {
+   margin: 3%;
+ }
+
+ .todo__buttons {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 5%;
+ }
