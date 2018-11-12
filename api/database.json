@@ -17,6 +17,12 @@
       "password": "sally",
       "email": "sally",
       "id": 3
+    },
+    {
+      "name": "bryan",
+      "password": "bryan",
+      "email": "bryan@bryan.com",
+      "id": 4
     }
   ],
   "events": [
@@ -45,10 +51,10 @@
       "user_id": 2
     },
     {
-      "title": "Event Title",
-      "date": "",
-      "synopsis": "",
-      "location": "Location",
+      "title": "ffudf",
+      "date": "2018-11-16",
+      "synopsis": "sdsrsretew",
+      "location": "cxfixdifxi",
       "id": 4
     }
   ],
