@@ -1,4 +1,4 @@
-console.log("hello")
+console.log("hi")
 
 // I made a change to main.js to import and call a function from news.js (2 lines)
 // ALSO I added removed lots of lines from the news pre-filled section in index
@@ -42,7 +42,7 @@ const newsHtmlEntry = (entry) => {
   <div>
     <h2>${entry.title}</h2>
     <p>${entry.synopsis}</p>
-    <a href="${entry.url}">${entry.title}</a><br>
+    <a href="http://${entry.url}">${entry.url}</a><br>
     <button id="deleteNews!${entry.id}">Delete</button>
     <button id="editNews!${entry.id}">Edit</button>
 
