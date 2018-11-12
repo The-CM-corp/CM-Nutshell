@@ -12,10 +12,9 @@ import {news} from "./news"
 
 addNavClickEvents()
 userFunctions()
-eventsGenerator()
 news()
 
-$("#login__button").click(function(){usersAPI.loginUser()})
+$("#login__button").click(function(){usersAPI.loginUser().then(() => {eventsGenerator()})})
 
 chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
@@ -25,8 +24,3 @@ chatExecution.deleteMessageHandler()
 //todo calls
 API.getTodo().then(todos => putOnDOM.initialTodos(todos))
 onTodoSumbit()
-
-
-
-
-
