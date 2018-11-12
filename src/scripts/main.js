@@ -12,10 +12,11 @@ import {news} from "./news"
 
 addNavClickEvents()
 userFunctions()
-news()
+// news()
 
 $("#login__button").click(function(){usersAPI.loginUser().then(() => {
   eventsGenerator()
+  news()
   let fetchUserName = sessionStorage.getItem("user_name")
   $("#nav__username").text(fetchUserName)
 })})

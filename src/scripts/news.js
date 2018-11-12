@@ -39,12 +39,12 @@ const newsFormManager = {
 // added the edit and delete buttons here
 const newsHtmlEntry = (entry) => {
   return `
-  <div>
-    <h2>${entry.title}</h2>
+  <div class="news__div">
+    <h4>${entry.title}</h4>
     <p>${entry.synopsis}</p>
     <a href="http://${entry.url}">${entry.url}</a><br>
-    <button id="deleteNews!${entry.id}">Delete</button>
-    <button id="editNews!${entry.id}">Edit</button>
+    <button id="editNews!${entry.id}" class="edit__button">Edit</button>
+    <button id="deleteNews!${entry.id}" class="delete__button">Delete</button>
 
   </div>
   `
@@ -54,8 +54,8 @@ const newsHtmlEntry = (entry) => {
 
 const newsUrl = "http://localhost:8088/news"
 const newsDataManager = {
-  newsGetEntries: () => {
-    return fetch(`${newsUrl}`)
+  newsGetEntries: (user_id) => {
+    return fetch(`${newsUrl}?user_id=${user_id}`)
       .then(res => res.json())
   },
   newsSaveEntry: (entry) => {
@@ -97,7 +97,8 @@ const newsDom = (entry) => {
 const newsDomRender = () => {
   // clear the section before rendering DB news entries in the DOM
   document.querySelector("#news__results").innerHTML = ""
-  newsDataManager.newsGetEntries()
+  let fetchUserId = sessionStorage.getItem("user_id")
+  newsDataManager.newsGetEntries(fetchUserId)
     .then(entries => {
       entries.forEach(entry => {
         const newsEntryHTML = newsHtmlEntry(entry)
@@ -113,6 +114,8 @@ const saveNews = () => {
     const news__title = document.querySelector("#news__form__title").value
     const news__synopsis = document.querySelector("#news__form__synopsis").value
     const news__url = document.querySelector("#news__form__url").value
+    const news__session__user__id = sessionStorage.getItem("user_id")
+    console.log("news session id:", news__session__user__id)
     // below will check to make sure all inputs are filled out before saving to DB
     if (!news__title || !news__synopsis || !news__url) {
       alert("fill out the form")
@@ -121,7 +124,8 @@ const saveNews = () => {
       const newsEntry = {
         title: news__title,
         synopsis: news__synopsis,
-        url: news__url
+        url: news__url,
+        user_id: +news__session__user__id
       }
       // save the info and then once the promise is fulfilled
       newsDataManager.newsSaveEntry(newsEntry).then(() => {

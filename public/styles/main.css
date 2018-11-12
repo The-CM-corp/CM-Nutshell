@@ -71,10 +71,10 @@ body {
   padding: 10px;
 }
 
-.news__element {
+/* .news__element {
   border: 1px solid green;
   padding: 5px;
-}
+} */
 
 /* check class syntax in html */
 .event__div {
@@ -128,4 +128,11 @@ body {
 
 .delete__button:hover {
   background: purple;
+}
+
+.news__div {
+  border: 1px solid #424651;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
 }
