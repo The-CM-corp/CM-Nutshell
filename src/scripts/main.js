@@ -10,10 +10,11 @@ let newTODO = {
   "completed": false,
   "user_id": 1
 }
-API.postTodo(newTODO).then(todos => console.log("brand new", todos)) 
+// API.postTodo(newTODO).then(todos => console.log("brand new", todos)) 
 // API.deleteTodo(2)
 
 onTodoSumbit()
+
 
 
 addClickEvents()

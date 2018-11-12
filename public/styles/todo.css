@@ -12,3 +12,9 @@
  .todo__text {
    margin: 0px 0px 0px 3%;
  }
+
+ .todo__checked {
+   color: grey;
+   opacity: 75%;
+   text-decoration: line-through;
+ }

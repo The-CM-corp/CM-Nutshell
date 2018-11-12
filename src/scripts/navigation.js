@@ -1,3 +1,4 @@
+
 // Click Events
 function addClickEvents(){
   $(document).ready(function(){

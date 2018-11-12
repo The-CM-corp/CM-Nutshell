@@ -1,6 +1,7 @@
 // interacting with the input form for new todos
 import putOnDOM from "./DOMPopulator"
 import API from "./todo"
+import onCheckbox from "./todoDelete"
 
 
 function onTodoSumbit () {
@@ -15,6 +16,7 @@ function onTodoSumbit () {
     console.log(document.getElementById("add__todo__date"))
     API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))
     console.log(newTodo)
+    // onCheckbox()
   })
 }
 
