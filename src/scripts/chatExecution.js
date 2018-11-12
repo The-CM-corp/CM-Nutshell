@@ -2,9 +2,9 @@ import chatStuff from "./chatMethods"
 
 export default {
   addNewMessageHandler: function () {
-    $("#btn-new-message").click(() => {
+    $("#add__chat__button").click(() => {
       let timestamp = new Date()
-      const newMessageInput = document.querySelector("#input-new-message");
+      const newMessageInput = document.querySelector("#add__chat__message");
       let newMessage = chatStuff.chatObjFactory(timestamp, newMessageInput.value);
       return chatStuff.saveNewChat(newMessage)
         .then(response => $("#chat__results").empty())
