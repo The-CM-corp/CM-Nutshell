@@ -7,7 +7,7 @@ import {news} from "./news"
 
 
 news()
-=======
+
 chatFetchCalls.loadExistingChats()
 
 chatExecution.addNewMessageHandler()
