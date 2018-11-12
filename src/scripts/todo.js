@@ -15,14 +15,14 @@ const API = {
     }).then(data => data.json())
   },
   // not sure how the patch works yet..
-  patchTodo(editedTodo, id) {
+  patchTodo(id, editedTodo) {
     return fetch(`http://localhost:8088/todos/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(editedTodo)
-    }).then(data => data.json())
+    })
   },
   deleteTodo(id) {
     return fetch(`http://localhost:8088/todos/${id}`, {
