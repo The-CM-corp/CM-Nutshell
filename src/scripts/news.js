@@ -1,3 +1,5 @@
+console.log("hello")
+
 // I made a change to main.js to import a function from news.js  ALSO I added a div to index.html with id "news__form"
 
 
@@ -8,11 +10,12 @@ const newsFormManager = {
     return `
     <div>
     Title: <br>
-    <input type="text" name="Title" id="news__form__title"><br>
+    <input type="text" name="Title" id="news__form__title" placeholder="News Title"><br>
     Synopsis: <br>
-    <input type="textarea" name="Synopsis" id="news__form__synopsis"><br>
+    <input type="textarea" name="Synopsis" id="news__form__synopsis" placeholder="Tell Us More"><br>
     URL: <br>
-    <input type="text" name="URL" id="news__form__url"><br>
+    <input type="text" name="URL" id="news__form__url" placeholder="Give Us the Link"><br>
+    </div>
     <button id="news__form__save">Save</button>
     `
   },
@@ -29,7 +32,7 @@ const newsHtmlEntry = (entry) => {
   <div>
     <h2>${entry.title}</h2>
     <p>${entry.synopsis}</p>
-    <p>${entry.url}</p>
+    <a href="${entry.url}">${entry.title}</a>
   </div>
   `
 }
@@ -100,7 +103,7 @@ const saveNews = () => {
 
 const news = () => {
   // below will display the news form to the DOM
-  document.querySelector("#news__form").innerHTML = newsFormManager.newsHtmlForm()
+  document.querySelector("#add__news__form").innerHTML = newsFormManager.newsHtmlForm()
   newsDomRender()
   saveNews()
 }
