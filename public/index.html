@@ -16,39 +16,45 @@
     <h2>Log In or Register to Continue</h2>
     <p><a id="login__link" href="#">login </a> / <a id="register__link" href="#">register</a></p>
 
-    <!-- Hidden Login Form > will show on login link click -->
-    <div id="login__form" class="login__form hide">
-      <p>Enter Your Username and Password</p>
-      <label for="login__name">Name</label>
-      <input type="text" name="login__name" id="login__name" value="username">
-      <label for="login__password">Password</label>
-      <input type="text" name="login__password" id="login__password" value="password">
-      <button id="login__button">Submit</button>
-    </div>
-    <!-- Hidden Register Form > will show on register link click -->
-    <div id="register__form" class="login__form hide">
-      <p>Register Your Username and Password</p>
-      <label for="register__name">Name</label>
-      <input type="text" name="register__name" id="register__name" value="username">
-      <label for="login__password">Password</label>
-      <input type="text" name="register__password" id="register__password" value="password">
-      <button id="register__button">Submit</button>
-    </div>
-  </section>
-  <section id="nav" class="nav hide">
-    <header class="header">
-      <h1>(: nutshell :)</h1>
-      <h2>Username - Friends Link</h2>
-      <p><a id="dashboard__link" href="#" class="dashboard__logout__links">Dashboard</a> | <a id="logout__link" href="#"
-          class="dashboard__logout__links">Logout</a>
-    </header>
-    <nav class="nav__container">
-      <div id="news__nav" class="nav__buttons">news</div>
-      <div id="events__nav" class="nav__buttons">events</div>
-      <div id="chat__nav" class="nav__buttons">chat</div>
-      <div id="todo__nav" class="nav__buttons">to do</div>
-    </nav>
-  </section>
+        <!-- Hidden Login Form > will show on login link click -->
+        <div id="login__form" class="login__form hide">
+            <p>Enter Your Username and Password</p>
+            <label for="login__name">Name</label>
+            <input type="text" name="login__name" id="login__name" value="username">
+            <label for="login__password">Password</label>
+            <input type="text" name="login__password" id="login__password" value="password">
+            <button id="login__button">Submit</button>
+        </div>
+        <!-- Hidden Register Form > will show on register link click -->
+        <div id="register__form" class="login__form hide">
+            <p>Please Register by Completing all Fields Below</p>
+            <div>
+                <label for="register__name">Name</label>
+                <input type="text" name="register__name" id="register__name" value="username">
+            </div>
+            <div>
+                <label for="login__email">Email</label>
+                <input type="text" name="register__email" id="register__email" value="email">
+            </div>
+            <label for="login__password">Password</label>
+            <input type="text" name="register__password" id="register__password" value="password">
+            <button id="register__button">Submit</button>
+        </div>
+    </section>
+    <section id="nav" class="nav hide">
+        <header class="header">
+            <h1>(: nutshell :)</h1>
+            <h2>Username - Friends Link</h2>
+            <p><a id="dashboard__link" href="#" class="dashboard__logout__links">Dashboard</a> | <a id="logout__link"
+                    href="#" class="dashboard__logout__links">Logout</a>
+        </header>
+        <nav class="nav__container">
+            <div id="news__nav" class="nav__buttons">news</div>
+            <div id="events__nav" class="nav__buttons">events</div>
+            <div id="chat__nav" class="nav__buttons">chat</div>
+            <div id="todo__nav" class="nav__buttons">to do</div>
+        </nav>
+    </section>
 
   <!-- Begin Categories Sections -->
   <section id="categories" class="categories__container hide">
@@ -81,29 +87,33 @@
       </div>
     </div>
 
-    <!-- Events Section -->
-    <div id="events__container" class="category__container">
-      <h1>EVENTS</h1>
-      <h3><a href="#" id="add__event">add event</a></h3>
-      <!-- Add Event Form -->
-      <div id="add__event__form" class="add_event_form hide">
-        <p>Add Event </p>
-        <label for="add__event__title">Event Name</label>
-        <input type="text" name="add__event__title" id="add__event__title" value="Event Title">
-        <label for="add__event__location">Location</label>
-        <input type="text" name="add__event__location" id="add__event__location" value="Location">
-        <label for="add__event__date">Date</label>
-        <input type="date" name="add__event__date" id="add__event__date">
-        <button id="add__event__button">Submit</button>
-      </div>
-      <!-- Event Results -->
-      <div id="event__results">
-        <div class="event__element">
-          <h3>Date: Event Name</h3>
-          <p>Location</p>
-          <p>Brief description of event (newest has to be bold)</p>
-          <button>edit</button>
-          <button>delete</button>
+        <!-- Events Section -->
+        <div id="events__container" class="category__container">
+            <h1>EVENTS</h1>
+            <h3><a href="#" id="add__event">add event</a></h3>
+            <!-- Add Event Form -->
+            <div id="add__event__form" class="add_event_form hide">
+                <p>Add Event </p>
+                <label for="add__event__title">Event Name</label>
+                <input type="text" name="add__event__title" id="add__event__title" value="Event Title">
+                <label for="add__event__location">Location</label>
+                <input type="text" name="add__event__location" id="add__event__location" value="Location">
+                <label for="add__event__date">Date</label>
+                <input type="date" name="add__event__date" id="add__event__date">
+                <label for="add__event__synopsis">Synopsis</label>
+                <input type="text" name="add__event__synopsis" id="add__event__synopsis">
+                <button id="add__event__button">Submit</button>
+            </div>
+            <!-- Event Results -->
+            <div id="event__results">
+                <!-- <div class="event__element">
+                    <h3>Date: Event Name</h3>
+                    <p>Location</p>
+                    <p>Brief description of event (newest has to be bold)</p>
+                    <button>edit</button>
+                    <button>delete</button>
+                </div> -->
+            </div>
         </div>
       </div>
     </div>

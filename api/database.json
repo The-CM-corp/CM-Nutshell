@@ -11,6 +11,18 @@
       "name": "Greg Korte",
       "password": "cauliflower",
       "email": "greg@greg.com"
+    },
+    {
+      "name": "sally",
+      "password": "sally",
+      "email": "sally",
+      "id": 3
+    },
+    {
+      "name": "bryan",
+      "password": "bryan",
+      "email": "bryan@bryan.com",
+      "id": 4
     }
   ],
   "events": [
@@ -21,6 +33,29 @@
       "synopsis": "Have fun playing pinball and drinking soda",
       "location": "Beercade",
       "user_id": 1
+    },
+    {
+      "id": 2,
+      "title": "Nashville Predators Hockey",
+      "date": "11/17/18",
+      "synopsis": "Predators vs. the Kings",
+      "location": "Bridgestone Arena",
+      "user_id": 1
+    },
+    {
+      "id": 3,
+      "title": "Movie Night at the Odeon",
+      "date": "11/19/18",
+      "synopsis": "Screening of the Classic Movie Joe Dirt",
+      "location": "Odeon Theatre, Spartlesburg, TN",
+      "user_id": 2
+    },
+    {
+      "title": "ffudf",
+      "date": "2018-11-16",
+      "synopsis": "sdsrsretew",
+      "location": "cxfixdifxi",
+      "id": 4
     }
   ],
   "news": [
@@ -29,7 +64,7 @@
       "title": "Great News for Once",
       "synopsis": "People were nice to each other",
       "url": "#",
-      "user_id" : 1
+      "user_id": 1
     }
   ],
   "todos": [
@@ -41,7 +76,7 @@
       "user_id": 1
     }
   ],
-  "chats":[
+  "chats": [
     {
       "id": 1,
       "user_id": 1,
@@ -49,7 +84,7 @@
       "message": "Hey, I'm kicking all sorts of butt"
     }
   ],
-  "friendships":[
+  "friendships": [
     {
       "id": 1,
       "stalker_id": 1,
