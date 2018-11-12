@@ -1,7 +1,23 @@
 import API from "./todo.js"
 import putOnDOM from "./DOMPopulator"
 import onTodoSumbit from "./todoForm"
+import chatFetchCalls from "./chatMethods";
+import chatExecution from "./chatExecution";
 import addClickEvents from "./navigation"
+import {news} from "./news"
+
+
+
+
+news()
+
+chatFetchCalls.loadExistingChats()
+
+chatExecution.addNewMessageHandler()
+chatExecution.deleteMessageHandler()
+
+// for navigation stuff
+addClickEvents()
 
 API.getTodo().then(todos => putOnDOM.initialTodos(todos))
 let newTODO = {
