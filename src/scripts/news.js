@@ -1,6 +1,15 @@
 console.log("hello")
 
-// I made a change to main.js to import a function from news.js  ALSO I added a div to index.html with id "news__form"
+// I made a change to main.js to import and call a function from news.js (2 lines)
+// ALSO I added removed lots of lines from the news pre-filled section in index
+// index just needs the following:
+// <div id = "news__container" class = "category__container">
+//   <h1>NEWS</h1> 
+//   <h3><a href="#" id ="add__news">add article</a></h3>
+//   <div id="add__news__form" class="add_content_form hide"></div> 
+//   <div id="news__results" class="news__element"></div> 
+// </div>
+
 
 
 
@@ -27,20 +36,21 @@ const newsFormManager = {
 }
 
 // representation of DOM entries
+// added the edit and delete buttons here
 const newsHtmlEntry = (entry) => {
   return `
   <div>
     <h2>${entry.title}</h2>
     <p>${entry.synopsis}</p>
     <a href="${entry.url}">${entry.title}</a><br>
-    <button id="delete!${entry.id}">Delete</button>
-    <button id="edit!${entry.id}">Edit</button>
+    <button id="deleteNews!${entry.id}">Delete</button>
+    <button id="editNews!${entry.id}">Edit</button>
 
   </div>
   `
 }
 
-// fetch obj with a get and a post
+// fetch obj with a get, post, delete, edit, and target single entry
 
 const newsUrl = "http://localhost:8088/news"
 const newsDataManager = {
@@ -85,6 +95,7 @@ const newsDom = (entry) => {
 }
 
 const newsDomRender = () => {
+  // clear the section before rendering DB news entries in the DOM
   document.querySelector("#news__results").innerHTML = ""
   newsDataManager.newsGetEntries()
     .then(entries => {
@@ -123,23 +134,31 @@ const saveNews = () => {
   })
 }
 
-// This is the function for editing a news entry
+// This is the function for deleting and editing a news entry
 
 const newsEdit = () => {
   document.querySelector("#news__results").addEventListener("click", event => {
-    if (event.target.id.startsWith("delete")) {
+    // below the eventlistener is targeting an id that starts with the string "deleteNews"
+    // it then finds the id of the entry associated with the clicked button and performs a delete method from the DB and renders the new DB results
+    if (event.target.id.startsWith("deleteNews")) {
       const id = event.target.id.split("!")[1]
+      console.log("delete id", id)
       newsDataManager.newsDeleteEntry(id).then(() =>
-      newsDomRender()
+        newsDomRender()
       )
     }
-    if (event.target.id.startsWith("edit")) {
+    // below the eventlistener is targeting an id that starts with the string "editNews"
+    // it's looking for the id from the entry associated with the edit button and performs a get from the database but returns the values to the input boxes
+    if (event.target.id.startsWith("editNews")) {
       const id = event.target.id.split("!")[1]
-      newsDataManager.newsSingleEntry(id).then((entry) =>{
+      newsDataManager.newsSingleEntry(id).then((entry) => {
         document.querySelector("#news__form__title").value = entry.title
         document.querySelector("#news__form__synopsis").value = entry.synopsis
         document.querySelector("#news__form__url").value = entry.url
       })
+
+      // I'm not sure how to also delete the old entry so I'm putting in an alert for the user
+      alert("Make sure to delete your old entry")
     }
   })
 }
@@ -147,8 +166,11 @@ const newsEdit = () => {
 const news = () => {
   // below will display the news form to the DOM
   document.querySelector("#add__news__form").innerHTML = newsFormManager.newsHtmlForm()
+  // this function displays any saved entries
   newsDomRender()
+  // this function POSTs to the DB and displays to dom when "save" is clicked
   saveNews()
+  // This function listens for the delete and edit buttons and acts accordingly
   newsEdit()
 }
 
