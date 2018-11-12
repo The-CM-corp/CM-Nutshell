@@ -16,7 +16,7 @@ const newsFormManager = {
     URL: <br>
     <input type="text" name="URL" id="news__form__url" placeholder="Give Us the Link"><br>
     </div>
-    <button id="news__form__save">Save</button>
+    <button id="news__form__save">Save</button><br><br>
     `
   },
   newsClearForm: () => {
@@ -32,7 +32,10 @@ const newsHtmlEntry = (entry) => {
   <div>
     <h2>${entry.title}</h2>
     <p>${entry.synopsis}</p>
-    <a href="${entry.url}">${entry.title}</a>
+    <a href="${entry.url}">${entry.title}</a><br>
+    <button id="delete!${entry.id}">Delete</button>
+    <button id="edit!${entry.id}">Edit</button>
+
   </div>
   `
 }
@@ -54,6 +57,24 @@ const newsDataManager = {
       body: JSON.stringify(entry)
 
     }).then(res => res.json())
+  },
+  newsDeleteEntry: (id) => {
+    return fetch(`${newsUrl}/${id}`, {
+      method: "DELETE"
+    }).then(res => res.json())
+  },
+  newsEditEntry: (entry, id) => {
+    return fetch(`${newsUrl}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(entry)
+    }).then(res => res.json())
+  },
+  newsSingleEntry: (id) => {
+    return fetch(`${newsUrl}/${id}`)
+      .then(res => res.json())
   }
 }
 
@@ -64,6 +85,7 @@ const newsDom = (entry) => {
 }
 
 const newsDomRender = () => {
+  document.querySelector("#news__results").innerHTML = ""
   newsDataManager.newsGetEntries()
     .then(entries => {
       entries.forEach(entry => {
@@ -101,11 +123,33 @@ const saveNews = () => {
   })
 }
 
+// This is the function for editing a news entry
+
+const newsEdit = () => {
+  document.querySelector("#news__results").addEventListener("click", event => {
+    if (event.target.id.startsWith("delete")) {
+      const id = event.target.id.split("!")[1]
+      newsDataManager.newsDeleteEntry(id).then(() =>
+      newsDomRender()
+      )
+    }
+    if (event.target.id.startsWith("edit")) {
+      const id = event.target.id.split("!")[1]
+      newsDataManager.newsSingleEntry(id).then((entry) =>{
+        document.querySelector("#news__form__title").value = entry.title
+        document.querySelector("#news__form__synopsis").value = entry.synopsis
+        document.querySelector("#news__form__url").value = entry.url
+      })
+    }
+  })
+}
+
 const news = () => {
   // below will display the news form to the DOM
   document.querySelector("#add__news__form").innerHTML = newsFormManager.newsHtmlForm()
   newsDomRender()
   saveNews()
+  newsEdit()
 }
 
 export {
