@@ -30,8 +30,9 @@ const todoClicks = () => {
     if (event.target.id.startsWith("todoCheckbox")){
       const id = event.target.id.split("!")[1]
       console.log("checked id", id)
-      let text = document.querySelectorAll(".todo__text")
+      let text = document.getElementById(`todo__text!${id}`)
       console.log(text) 
+      // text.classList.add("todo__checked")
       // if (id === text.id.split("!")[1]){
       //   console.log(text)
       // }

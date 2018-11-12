@@ -24,7 +24,7 @@ const putOnDOM = {
   postNewTodo(entry) {
     let entryTask = elementCreator.elementFactory("h3", entry.task, "todo__task", `todo__task${entry.id}`)
     let entryDate = elementCreator.elementFactory("p", `Expected completion date: ${entry.date}`, "todo__date", `todo__date${entry.id}`)
-    let entryText = elementCreator.elementFactory("div", null, "todo__text", `todo__text!${entry.id}`, null, entryTask, entryDate)
+    let entryText = elementCreator.elementFactory("div", null, "todo__text", `  ${entry.id}`, null, entryTask, entryDate)
     let entryEdit = elementCreator.elementFactory("button", "Edit", "todo__edit", `todoEdit!${entry.id}`)
     let entryDelete = elementCreator.elementFactory("button", "Delete", "todo__delete", `todoDelete!${entry.id}`)
     let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, entryEdit, entryDelete)

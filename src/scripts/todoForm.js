@@ -1,4 +1,3 @@
-// interacting with the input form for new todos
 import putOnDOM from "./DOMPopulator"
 import API from "./todo"
 import deleteTask from "./todoDelete"
