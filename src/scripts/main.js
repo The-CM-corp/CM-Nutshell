@@ -16,7 +16,11 @@ addNavClickEvents()
 userFunctions()
 news()
 
-$("#login__button").click(function(){usersAPI.loginUser().then(() => {eventsGenerator()})})
+$("#login__button").click(function(){usersAPI.loginUser().then(() => {
+  eventsGenerator()
+  let fetchUserName = sessionStorage.getItem("user_name")
+  $("#nav__username").text(fetchUserName)
+})})
 
 chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
