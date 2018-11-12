@@ -4,14 +4,15 @@ import API from "./todo"
 
 
 function onTodoSumbit () {
-  let todoSubmit = document.getElementById("todo__sumbitInput")
+  let todoSubmit = document.getElementById("add__todo__button")
   todoSubmit.addEventListener("click", () => {
     console.log("wazzup")
     let newTodo = {
-      "task": document.getElementById("todo__taskInput").value,
-      "date": document.getElementById("todo__dateInput").value,
+      "task": document.getElementById("add__todo__title").value,
+      "date": document.getElementById("add__todo__date").value,
       "completed": false,
     }
+    console.log(document.getElementById("add__todo__date"))
     API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))
     console.log(newTodo)
   })
