@@ -1,51 +1,54 @@
 import eventsAPI from "./api-events"
 import putOnDOM from "./DOMPopulator"
 
-let allEvents = eventsAPI.getData("events")
 
 function clearData() {
   let eventDataResults = document.getElementById("event__results");
   eventDataResults.innerHTML = "";
 }
 
-
 function eventsGenerator() {
-  Promise.all([allEvents]).then((alldata) => {
-    alldata.forEach((currentEvent) => {
-      putOnDOM.intialEvents(currentEvent)
+  clearData()
+  let fetchUserId = sessionStorage.getItem("user_id")
+
+  eventsAPI.getData(fetchUserId)
+    .then((eventData) => {
+      putOnDOM.intialEvents(eventData)
+      addDeleteEvent()
     })
-    $("#add__event__button").click(function () {
-      submitEventForm()
-    })
-    deleteEvent()
-  })
 }
 
+
+$("#add__event__button").click(function () {
+  submitEventForm()
+})
 
 function submitEventForm() {
   let eventFormTitleEl = document.getElementById("add__event__title")
   let eventFormLocationEl = document.getElementById("add__event__location")
   let eventFormDateEl = document.getElementById("add__event__date")
   let eventFormSynopsisEl = document.getElementById("add__event__synopsis")
+  let sessionUserId = sessionStorage.getItem("user_id");
+  console.log("session id:", sessionUserId)
 
-  // create a new object within the journalEntries array
-  let newObject = { title: eventFormTitleEl.value, date: eventFormDateEl.value, synopsis: eventFormSynopsisEl.value, location: eventFormLocationEl.value }
+  // create a new event object
+  let newObject = { title: eventFormTitleEl.value, date: eventFormDateEl.value, synopsis: eventFormSynopsisEl.value, location: eventFormLocationEl.value, user_id: +sessionUserId }
   eventsAPI.saveData(newObject).then(() => {
     console.log("new object", newObject);
     clearData();
   }).then(() => eventsGenerator())
 }
 
-function deleteEvent() {
+function addDeleteEvent() {
   // the following selects all delete buttons
-  let deleteEventBtns = document.querySelectorAll(".delete__button")
-  // the following adds the event listener to delete the entry
-  deleteEventBtns.forEach((button) => {
-    $(button).click(function (){
-      eventsAPI.deleteEntry(button.id)
+  $(".event__delete__button").click(function () {
+    console.log("delete button clicked")
+    eventsAPI.deleteEntry($(this).attr("id"))
+      .then(() => {
+        clearData()
+        eventsGenerator()
     })
   })
 }
-
 
 export default eventsGenerator
