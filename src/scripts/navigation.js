@@ -1,5 +1,3 @@
-import submitEventForm from "./events"
-
 // Navigation Click Events
 function addNavClickEvents(){
   $(document).ready(function(){
@@ -26,6 +24,7 @@ function addNavClickEvents(){
     // Logout
     $("#logout__link").click(function(){
       window.location.reload(true);
+      sessionStorage.clear()
   });
     $("#dashboard__link").click(function(){
       $("#news__container").removeClass("hide");

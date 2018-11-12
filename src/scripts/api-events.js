@@ -1,6 +1,6 @@
 const eventsAPI = {
-  getData(dataType) {
-    return fetch(`http://localhost:8088/${dataType}`)
+  getData(user_id) {
+    return fetch(`http://localhost:8088/events?user_id=${user_id}`)
       .then(response => response.json())
   },
   saveData(entry) {
