@@ -7,6 +7,8 @@ import userFunctions from "./users"
 import chatFetchCalls from "./chatMethods";
 import chatExecution from "./chatExecution";
 import {news} from "./news"
+import deleteTask from "./todoDelete"
+import todoClicks from "./todoDelete";
 
 
 addNavClickEvents()
@@ -22,7 +24,7 @@ chatExecution.deleteMessageHandler()
 //todo calls 
 API.getTodo().then(todos => putOnDOM.initialTodos(todos))
 onTodoSumbit()
-
+todoClicks()
 
 
 
