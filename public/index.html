@@ -2,18 +2,19 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CM-Nutshell</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CM-Nutshell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/todo.css">
 </head>
 
 <body>
-    <section id="welcome" class="welcome">
-        <h1>Welcome To Nutshell</h1>
-        <h2>Log In or Register to Continue</h2>
-        <p><a id="login__link" href="#">login </a> / <a id="register__link" href="#">register</a></p>
+  <section id="welcome" class="welcome">
+    <h1>Welcome To Nutshell</h1>
+    <h2>Log In or Register to Continue</h2>
+    <p><a id="login__link" href="#">login </a> / <a id="register__link" href="#">register</a></p>
 
         <!-- Hidden Login Form > will show on login link click -->
         <div id="login__form" class="login__form hide">
@@ -55,8 +56,8 @@
         </nav>
     </section>
 
-    <!-- Begin Categories Sections -->
-    <section id="categories" class="categories__container hide">
+  <!-- Begin Categories Sections -->
+  <section id="categories" class="categories__container hide">
 
         <!-- News Section -->
         <div id="news__container" class="category__container">
@@ -83,6 +84,8 @@
                 </div> -->
             </div>
         </div>
+      </div>
+    </div>
 
         <!-- Events Section -->
         <div id="events__container" class="category__container">
@@ -112,6 +115,8 @@
                 </div> -->
             </div>
         </div>
+      </div>
+    </div>
 
         <!-- Chat Section -->
         <div id="chat__container" class="category__container">
@@ -128,39 +133,35 @@
             <div id="chat__results">
             </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Todo Section -->
-        <div id="todo__container" class="category__container">
-            <h1>TO DO</h1>
-            <h3><a href="#" id="add__todo">add task</a></h3>
-            <!-- Add Todo Form -->
-            <div id="add__todo__form" class="add_todo_form hide">
-                <p>Add Task </p>
-                <label for="add__todo__title">Task</label>
-                <input type="text" name="add__todo__title" id="add__todo__title" value="Task">
-                <label for="add__todo__date">Expected Completion Date</label>
-                <input type="date" name="add__todo__date" id="add__todo__date">
-                <button id="add__todo__button">Submit</button>
-            </div>
-            <!-- Todo Results -->
-            <div id="todo__results">
-                <div class="todo__element">
-                    <h3>Task Name</h3>
-                    <p>Completion Date</p>
-                    <input type="checkbox">
-                    <button>edit</button>
-                    <button>delete</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Todo Section -->
+    <div id="todo__container" class="category__container">
+      <h1>TO DO</h1>
+      <h3><a href="#" id="add__todo">add task</a></h3>
+      <!-- Add Todo Form -->
+      <div id="add__todo__form" class="add_todo_form hide">
+        <p>Add Task </p>
+        <!-- <label for="add__todo__title">Task</label> -->
+        <input type="text" name="add__todo__title" id="add__todo__title" value="Task" placeholder="Task">
+        <label for="add__todo__date">Expected Completion Date</label>
+        <input type="date" name="add__todo__date" id="add__todo__date">
+        <button id="add__todo__button">Submit</button>
+      </div>
+      <!-- Todo Results -->
+      <div id="todo__results">
+       
+      </div>
+    </div>
+  </section>
 
 
 
-    <!-- js/jquery script tags -->
-    <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-        crossorigin="anonymous"></script>
-    <script src="bundle.js"></script>
+  <!-- js/jquery script tags -->
+  <script src="http://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+    crossorigin="anonymous"></script>
+  <script src="bundle.js"></script>
 </body>
 
 </html>
