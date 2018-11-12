@@ -32,7 +32,7 @@ const todoClicks = () => {
       console.log("checked id", id)
       let text = document.getElementById(`todo__text!${id}`)
       console.log(text) 
-      // text.classList.add("todo__checked")
+      text.classList.toggle("todo__checked")
       // if (id === text.id.split("!")[1]){
       //   console.log(text)
       // }
