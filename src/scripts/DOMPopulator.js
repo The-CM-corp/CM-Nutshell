@@ -61,7 +61,9 @@ const putOnDOM = {
     let eventSynopsis = elementCreator.elementFactory("p", entry.synopsis, "event__synopsis", `event__synopsis${entry.id}`)
     let eventDate = elementCreator.elementFactory("p", entry.date, "event__date", `event__date${entry.id}`)
     let eventLocation = elementCreator.elementFactory("p", entry.location, "event__location", `event__location${entry.id}`)
-    let eventHolder = elementCreator.elementFactory("div", null, "event__div", `event__div${event.id}`, null, eventTitle, eventDate, eventSynopsis, eventLocation)
+    let eventEditBtn = elementCreator.elementFactory("button", "edit", "edit__button", `${entry.id}`, "#")
+    let eventDeleteBtn = elementCreator.elementFactory("button", "delete", "delete__button", `${entry.id}`, "#")
+    let eventHolder = elementCreator.elementFactory("div", null, "event__div", `event__div${entry.id}`, null, eventTitle, eventDate, eventSynopsis, eventLocation, eventEditBtn, eventDeleteBtn)
     //appending our new elements to the fragment then the fragment to or article
     let fragment = document.createDocumentFragment()
     fragment.appendChild(eventHolder)

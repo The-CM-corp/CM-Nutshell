@@ -26,9 +26,15 @@
         </div>
         <!-- Hidden Register Form > will show on register link click -->
         <div id="register__form" class="login__form hide">
-            <p>Register Your Username and Password</p>
-            <label for="register__name">Name</label>
-            <input type="text" name="register__name" id="register__name" value="username">
+            <p>Please Register by Completing all Fields Below</p>
+            <div>
+                <label for="register__name">Name</label>
+                <input type="text" name="register__name" id="register__name" value="username">
+            </div>
+            <div>
+                <label for="login__email">Email</label>
+                <input type="text" name="register__email" id="register__email" value="email">
+            </div>
             <label for="login__password">Password</label>
             <input type="text" name="register__password" id="register__password" value="password">
             <button id="register__button">Submit</button>
@@ -38,7 +44,8 @@
         <header class="header">
             <h1>(: nutshell :)</h1>
             <h2>Username - Friends Link</h2>
-            <p><a id="dashboard__link" href="#" class="dashboard__logout__links">Dashboard</a> | <a id="logout__link" href="#" class="dashboard__logout__links">Logout</a>
+            <p><a id="dashboard__link" href="#" class="dashboard__logout__links">Dashboard</a> | <a id="logout__link"
+                    href="#" class="dashboard__logout__links">Logout</a>
         </header>
         <nav class="nav__container">
             <div id="news__nav" class="nav__buttons">news</div>
@@ -90,17 +97,19 @@
                 <input type="text" name="add__event__location" id="add__event__location" value="Location">
                 <label for="add__event__date">Date</label>
                 <input type="date" name="add__event__date" id="add__event__date">
+                <label for="add__event__synopsis">Synopsis</label>
+                <input type="text" name="add__event__synopsis" id="add__event__synopsis">
                 <button id="add__event__button">Submit</button>
             </div>
             <!-- Event Results -->
             <div id="event__results">
-                <div class="event__element">
+                <!-- <div class="event__element">
                     <h3>Date: Event Name</h3>
                     <p>Location</p>
                     <p>Brief description of event (newest has to be bold)</p>
                     <button>edit</button>
                     <button>delete</button>
-                </div>
+                </div> -->
             </div>
         </div>
 

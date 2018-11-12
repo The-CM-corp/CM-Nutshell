@@ -1,5 +1,7 @@
-// Click Events
-function addClickEvents(){
+import submitEventForm from "./events"
+
+// Navigation Click Events
+function addNavClickEvents(){
   $(document).ready(function(){
     // Welcome Page - login and register links > show respective forms
     $("#login__link").click(function(){
@@ -17,9 +19,8 @@ function addClickEvents(){
       $("#categories").removeClass("hide")
   });
     $("#register__button").click(function(){
-      $("#welcome").addClass("hide");
-      $("#nav").removeClass("hide");
-      $("#categories").removeClass("hide")
+      $("#login__form").removeClass("hide");
+      $("#register__form").addClass("hide");
   });
   // Main Navigation Buttons > expand clicked category and hide others
     // Logout
@@ -74,7 +75,7 @@ function addClickEvents(){
     $("#add__todo").click(function(){
       $("#add__todo__form").removeClass("hide");
   });
-  });
-  }
+  })
+}
 
-  export default addClickEvents
+  export default addNavClickEvents
