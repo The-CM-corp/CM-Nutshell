@@ -1,9 +1,9 @@
-import chatStuff from "./chatMethods";
+import chatFetchCalls from "./chatMethods";
 import chatExecution from "./chatExecution";
 import addClickEvents from "./navigation"
 
 
-chatStuff.loadExistingChats()
+chatFetchCalls.loadExistingChats()
 
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()

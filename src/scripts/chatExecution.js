@@ -1,21 +1,21 @@
-import chatStuff from "./chatMethods"
+import chatFetchCalls from "./chatMethods"
 
 export default {
   addNewMessageHandler: function () {
     $("#add__chat__button").click(() => {
       let timestamp = new Date()
       const newMessageInput = document.querySelector("#add__chat__message");
-      let newMessage = chatStuff.chatObjFactory(timestamp, newMessageInput.value);
-      return chatStuff.saveNewChat(newMessage)
+      let newMessage = chatFetchCalls.chatObjFactory(timestamp, newMessageInput.value);
+      return chatFetchCalls.saveNewChat(newMessage)
         .then(response => $("#chat__results").empty())
-        .then(response => chatStuff.loadExistingChats())
+        .then(response => chatFetchCalls.loadExistingChats())
         .then(response => newMessageInput.value = "")
     })
   },
   deleteMessageHandler: function () {
     $("#chat__results").on("click", ".btn__chat__delete", (event) => {
       let chatId = event.target.id.split("-")[1]
-      return chatStuff.deleteChat(chatId)
+      return chatFetchCalls.deleteChat(chatId)
         .then(response => {
           let messageHolder = event.target.parentElement
           let chatOutput = document.querySelector("#chat__results")
@@ -27,12 +27,8 @@ export default {
 
 
 
+// TODO find a way to only display 10 most recent messages in reverse order, some kind of feedback when message is saved, deleted, edited. Using user input to edit the message. Format the timestamp better.
 
-// need to make forms that will be added dynamically when the "add new message" button is clicked.
-
-// need to find a way to only display 10 most recent messages in reverse order.
-
-// some kind of feedback when the user's message goes through
 
 
 
