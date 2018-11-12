@@ -15,6 +15,7 @@ news()
 chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()
+chatExecution.editMessageHandler()
 
 // for navigation stuff
 addClickEvents()
