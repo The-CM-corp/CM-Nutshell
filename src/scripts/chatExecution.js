@@ -1,27 +1,32 @@
 import chatStuff from "./chatMethods"
 
-
-
-
-// click event to add new message
-const addNewMessageHandler = () => {
-  const newMessageBtn = document.querySelector("#btn-new-message");
-  newMessageBtn.addEventListener("click", (event) => {
-    console.log("button was clicke")
-    let timestamp = new Date()
-    const newMessageInput = document.querySelector("#input-new-message");
-    let newMessage = chatStuff.chatObjFactory(timestamp, newMessageInput.value);
-    chatStuff.saveNewChat(newMessage)
-    .then(response => $("#chatResults").empty())
-    .then(response => chatStuff.loadExistingChats())
-    .then(entries => putOnDOM.initialChats(entries))
-  })
+export default {
+  addNewMessageHandler: function () {
+    $("#btn-new-message").click(() => {
+      let timestamp = new Date()
+      const newMessageInput = document.querySelector("#input-new-message");
+      let newMessage = chatStuff.chatObjFactory(timestamp, newMessageInput.value);
+      return chatStuff.saveNewChat(newMessage)
+        .then(response => $("#chat__results").empty())
+        .then(response => chatStuff.loadExistingChats())
+        .then(response => newMessageInput.value = "")
+    })
+  },
+  deleteMessageHandler: function () {
+    $("#chat__results").on("click", ".btn__chat__delete", (event) => {
+      let chatId = event.target.id.split("-")[1]
+      return chatStuff.deleteChat(chatId)
+        .then(response => {
+          let messageHolder = event.target.parentElement
+          let chatOutput = document.querySelector("#chat__results")
+          chatOutput.removeChild(messageHolder)
+        })
+    })
+  }
 }
 
 
 
-
-// need click event on delete button button that will delete an entry from the DB and either delete from the DOM immediately or reload the entries. will need to have a unique identifier that can associate each delete button and edit button with the corresponding message. (maybe add a button element maker call in the DOM populator)
 
 // need to make forms that will be added dynamically when the "add new message" button is clicked.
 
@@ -30,6 +35,5 @@ const addNewMessageHandler = () => {
 // some kind of feedback when the user's message goes through
 
 
-export default addNewMessageHandler
 
 

@@ -1,9 +1,9 @@
 import chatStuff from "./chatMethods";
-import addNewMessageHandler from "./chatExecution";
+import chatExecution from "./chatExecution";
 
 chatStuff.loadExistingChats()
 
-addNewMessageHandler()
-
+chatExecution.addNewMessageHandler()
+chatExecution.deleteMessageHandler()
 
 
