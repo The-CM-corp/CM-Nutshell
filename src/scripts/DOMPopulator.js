@@ -30,7 +30,14 @@ const putOnDOM = {
     let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, null, null, entryEdit, entryDelete)
     let entryCheck = elementCreator.elementFactory("input", null, "todo__checkbox", `todoCheckbox!${entry.id}`)
     entryCheck.type = "checkbox"
-    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null, entryCheck, entryText, entryButtons)
+    // edit form
+    let editTodoTask = elementCreator.elementFactory("input", null, "todo__edit__task", `todo__edit__task${entry.id}`, null, "text", entry.task)
+    let editTodoDate = elementCreator.elementFactory("input", null, "todo__edit__date", `todo__edit__date${entry.id}`, null, "text", entry.date)
+    let editTodoSaveBtn = elementCreator.elementFactory("button", "Save Edits", "todo__edit__save__button", `todo__edit__save__button${entry.id}`)
+    let editTodoCancelBtn = elementCreator.elementFactory("button", "cancel", "todo__edit__cancel__button", `todo__edit__cancel__button${entry.id}`)
+    let editTodoHolder = elementCreator.elementFactory("div", null, "todo__edit__div hide", `todo__edit__div${entry.id}`, null, null, null, editTodoTask, editTodoDate, editTodoSaveBtn, editTodoCancelBtn)
+    //
+    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null, entryCheck, entryText, entryButtons, editTodoHolder)
     //appending our new elements to the fragment then the fragment to or article
     let fragment = document.createDocumentFragment()
     fragment.appendChild(entryHolder)
