@@ -13,17 +13,18 @@
 
 <body>
   <section id="welcome" class="welcome">
-    <h1>Welcome To Nutshell</h1>
-    <h2>Log In or Register to Continue</h2>
-    <p><a id="login__link" href="#">login </a> / <a id="register__link" href="#">register</a></p>
+    <div>
+      <h1>{nutshell}</h1>
+      <h2><a id="login__link" href="#" class="login_register__links">Login</a> or <a id="register__link" href="#" class="login_register__links">Register</a></h2>
+    </div>
 
     <!-- Hidden Login Form > will show on login link click -->
     <div id="login__form" class="login__form hide">
       <p>Enter Your Username and Password</p>
       <label for="login__name">Name</label>
-      <input type="text" name="login__name" id="login__name" value="username">
+      <input type="text" name="login__name" id="login__name" placeholder="username">
       <label for="login__password">Password</label>
-      <input type="text" name="login__password" id="login__password" value="password">
+      <input type="text" name="login__password" id="login__password" placeholder="password">
       <button id="login__button">Submit</button>
     </div>
     <!-- Hidden Register Form > will show on register link click -->
@@ -44,7 +45,7 @@
   </section>
   <section id="nav" class="nav hide">
     <header class="header">
-      <h1><span class="nutshell__logo">:{nutshell}:</span></h1>
+      <h1><span class="nutshell__logo">{nutshell}</span></h1>
       <h2><span class="nav__username" id="nav__username"></span> - Friends Link</h2>
       <p><a id="dashboard__link" href="#" class="dashboard__logout__links">Dashboard</a> | <a id="logout__link" href="#"
           class="dashboard__logout__links">Logout</a>
