@@ -28,6 +28,7 @@ $("#login__button").click(function () {
 chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()
+chatExecution.editMessageHandler()
 
 
 //todo calls
