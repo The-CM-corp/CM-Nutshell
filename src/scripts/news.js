@@ -1,4 +1,4 @@
-console.log("hi")
+console.log("hello")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -107,21 +107,29 @@ const newsDomRender = () => {
   document.querySelector("#news__results").innerHTML = ""
   let fetchUserId = sessionStorage.getItem("user_id")
   newsDataManager.newsGetEntries(fetchUserId)
-    .then(entries => {
-      entries.forEach(entry => {
+    .then((entries) => {
+      let sortedNews = entries.sort(function(a,b){
+        return a.timestamp.localeCompare(a.timestamp)
         const newsEntryHTML = newsHtmlEntry(entry)
         newsDom(newsEntryHTML)
       })
-    })
+    // .then(entries => {
+    //   entries.forEach(entry => {
+    //     const newsEntryHTML = newsHtmlEntry(entry)
+    //     newsDom(newsEntryHTML)
+    //   })
+    // })
 }
 
 // saveNews function to target button and grab values from inputs to be posted and displayed
 
 const saveNews = () => {
   document.querySelector("#news__form__save").addEventListener("click", () => {
-    const timestamp = new Date()
-    timestamp.setTime(unixtime*1000)
-    dateString = timestamp.toUTCString()
+    const currentDate = new Date()
+    const date = currentDate.getDate()
+    const month = currentDate.getMonth()
+    const year = currentDate.getFullYear()
+    const dateString = `${month+1}-${date}-${year}`
     const news__title = document.querySelector("#news__form__title").value
     const news__synopsis = document.querySelector("#news__form__synopsis").value
     const news__url = document.querySelector("#news__form__url").value
