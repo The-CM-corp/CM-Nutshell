@@ -1,17 +1,6 @@
 console.log("hi")
-
-// I made a change to main.js to import and call a function from news.js (2 lines)
-// ALSO I added removed lots of lines from the news pre-filled section in index
-// index just needs the following:
-// <div id = "news__container" class = "category__container">
-//   <h1>NEWS</h1> 
-//   <h3><a href="#" id ="add__news">add article</a></h3>
-//   <div id="add__news__form" class="add_content_form hide"></div> 
-//   <div id="news__results" class="news__element"></div> 
-// </div>
-
-
-
+// add news() to the login button on main.js
+// updated main.css with news__div
 
 // html form representation and clear form values
 const newsFormManager = {
