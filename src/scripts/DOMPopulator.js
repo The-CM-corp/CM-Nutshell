@@ -30,12 +30,26 @@ const putOnDOM = {
     let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, null, null, entryEdit, entryDelete)
     let entryCheck = elementCreator.elementFactory("input", null, "todo__checkbox", `todoCheckbox!${entry.id}`)
     entryCheck.type = "checkbox"
-    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null,  entryCheck, entryText, entryButtons)
+    let entryAllButButtons = elementCreator.elementFactory("div", null, "todo__notButtons", `todo__notButtons!${entry.id}`, null, null, null, entryCheck, entryText)
+    // edit form
+    let editTodoTask = elementCreator.elementFactory("input", null, "todo__edit__task", `todo__edit__task!${entry.id}`, null, "text", entry.task)
+    let editTodoDate = elementCreator.elementFactory("input", null, "todo__edit__date", `todo__edit__date!${entry.id}`, null, "text", entry.date)
+    let editTodoSaveBtn = elementCreator.elementFactory("button", "Save Edits", "todo__edit__save__button", `todo__edit__save__button!${entry.id}`)
+    let editTodoCancelBtn = elementCreator.elementFactory("button", "Cancel", "todo__edit__cancel__button", `todo__edit__cancel__button!${entry.id}`)
+    let editTodoHolder = elementCreator.elementFactory("div", null, "todo__edit__div hide", `todo__edit__div${entry.id}`, null, null, null, editTodoTask, editTodoDate, editTodoSaveBtn, editTodoCancelBtn)
+    //
+    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null, entryAllButButtons, entryButtons, editTodoHolder)
     //appending our new elements to the fragment then the fragment to or article
     let fragment = document.createDocumentFragment()
     fragment.appendChild(entryHolder)
     let todoOutput = document.getElementById("todo__results")
-    todoOutput.appendChild(fragment)
+    let completedDiv = document.getElementById("todo__complete")
+    if (entry.completed === true) {
+      completedDiv.appendChild(fragment)
+      entryText.classList.add("todo__checked")
+      entryCheck.checked = true
+    } else
+      todoOutput.appendChild(fragment)
   },
   initialTodos(entries) {
     entries.forEach(entry => {
