@@ -16,10 +16,10 @@ news()
 
 $("#login__button").click(function(){usersAPI.loginUser().then(() => {
   eventsGenerator()
-  chatFetchCalls.loadExistingChats()
 
 })})
 
+chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()
 chatExecution.editMessageHandler()
