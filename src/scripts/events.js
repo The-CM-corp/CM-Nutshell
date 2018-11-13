@@ -19,7 +19,6 @@ function eventsGenerator() {
     })
 }
 
-
 $("#add__event__button").click(function () {
   submitEventForm()
 })

@@ -11,7 +11,7 @@ body {
 }
 
 .nutshell__logo {
-text-shadow: 0 0 5px #111;
+  text-shadow: 0 0 10px #111;
 }
 
 .header {

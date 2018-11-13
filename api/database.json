@@ -23,6 +23,12 @@
       "password": "bryan",
       "email": "bryan@bryan.com",
       "id": 4
+    },
+    {
+      "name": "joe",
+      "password": "joe",
+      "email": "joe@joe.com",
+      "id": 5
     }
   ],
   "events": [
@@ -51,11 +57,44 @@
       "user_id": 2
     },
     {
-      "title": "ffudf",
-      "date": "2018-11-16",
-      "synopsis": "sdsrsretew",
-      "location": "cxfixdifxi",
-      "id": 4
+      "title": "This is the second event",
+      "date": "2018-11-28",
+      "synopsis": "Edited the Text",
+      "location": "Carson City",
+      "user_id": 4,
+      "id": 5
+    },
+    {
+      "title": "Fun Events",
+      "date": "2018-11-30",
+      "synopsis": "Hot Chicken Contest",
+      "location": "Hattie B's",
+      "user_id": 4,
+      "id": 6
+    },
+    {
+      "title": "Jack White Concert",
+      "date": "2018-11-24",
+      "synopsis": "No opener",
+      "location": "Ascend",
+      "user_id": 4,
+      "id": 7
+    },
+    {
+      "title": "Ping Pong Wizards",
+      "date": "2018-11-21",
+      "synopsis": "ping pong championship",
+      "location": "Belle Meade",
+      "user_id": 4,
+      "id": 8
+    },
+    {
+      "title": "laughing party",
+      "date": "2018-11-13",
+      "synopsis": "at noon we will laugh at greg without him knowing",
+      "location": "here",
+      "user_id": 4,
+      "id": 9
     }
   ],
   "news": [
@@ -65,6 +104,24 @@
       "synopsis": "People were nice to each other",
       "url": "#",
       "user_id": 1
+    },
+    {
+      "title": "Sally's News",
+      "synopsis": "Her news",
+      "url": "http.com",
+      "id": 2
+    },
+    {
+      "title": "new bryan article",
+      "synopsis": "here's the news story",
+      "url": "www.face.com",
+      "id": 3
+    },
+    {
+      "title": "joe is watching us",
+      "synopsis": "he's right behind me",
+      "url": "joe.com",
+      "id": 4
     }
   ],
   "todos": [
@@ -74,14 +131,62 @@
       "date": "11/8/18",
       "completed": false,
       "user_id": 1
+    },
+    {
+      "task": "bring in the trash",
+      "date": "2018-11-21",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "task": "take out trash",
+      "date": "2018-11-21",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "task": "wash dishes",
+      "date": "2018-11-21",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "task": "take out trash",
+      "date": "2018-11-27",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "task": "quit messing with the element creator",
+      "date": "2018-11-14",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "task": "quit messing with the element creator",
+      "date": "2018-11-14",
+      "completed": false,
+      "id": 7
     }
   ],
   "chats": [
     {
-      "id": 1,
       "user_id": 1,
-      "time": "10:00:00",
-      "message": "Hey, I'm kicking all sorts of butt"
+      "time": "2018-11-13T15:38:43.450Z",
+      "message": "hey",
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "time": "2018-11-13T15:51:40.240Z",
+      "message": "wassup lesley?????",
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "time": "2018-11-13T15:56:50.368Z",
+      "message": "austin is the man with the plan",
+      "id": 4
     }
   ],
   "friendships": [
