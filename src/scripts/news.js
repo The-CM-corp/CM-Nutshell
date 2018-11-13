@@ -1,4 +1,4 @@
-console.log("hi")
+console.log("hello")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -39,6 +39,22 @@ const newsHtmlEntry = (entry) => {
   `
 }
 
+// representation of edit form
+const newsHtmlEdit = () => {
+  return `
+  <div>
+    Title: <br>
+    <input type="text" name="Title" id="news__edit__title" placeholder="News Title"><br>
+    Synopsis: <br>
+    <input type="textarea" name="Synopsis" id="news__edit__synopsis" placeholder="Tell Us More"><br>
+    URL: <br>
+    <input type="text" name="URL" id="news__edit__url" placeholder="Give Us the Link"><br>
+    </div>
+    <button id="news__form__edit">Edit</button><br><br>
+    `
+}
+
+
 // fetch obj with a get, post, delete, edit, and target single entry
 
 const newsUrl = "http://localhost:8088/news"
@@ -62,7 +78,7 @@ const newsDataManager = {
       method: "DELETE"
     }).then(res => res.json())
   },
-  newsEditEntry: (entry, id) => {
+  newsEditEntry: (id, entry) => {
     return fetch(`${newsUrl}/${id}`, {
       method: "PUT",
       headers: {
@@ -143,15 +159,21 @@ const newsEdit = () => {
     // below the eventlistener is targeting an id that starts with the string "editNews"
     // it's looking for the id from the entry associated with the edit button and performs a get from the database but returns the values to the input boxes
     if (event.target.id.startsWith("editNews")) {
-      const id = event.target.id.split("!")[1]
-      newsDataManager.newsSingleEntry(id).then((entry) => {
-        document.querySelector("#news__form__title").value = entry.title
-        document.querySelector("#news__form__synopsis").value = entry.synopsis
-        document.querySelector("#news__form__url").value = entry.url
-      })
+      // const id = event.target.id.split("!")[1]
+      // newsDataManager.newsSingleEntry(id).then((entry) => {
+      //   document.querySelector("#news__edit__form__title").value = entry.title
+      //   document.querySelector("#news__edit__form__synopsis").value = entry.synopsis
+      //   document.querySelector("#news__edit__form__url").value = entry.url
+      // })
 
       // I'm not sure how to also delete the old entry so I'm putting in an alert for the user
-      alert("Make sure to delete your old entry")
+      // alert("Make sure to delete your old entry")
+      console.log("I hit edit")
+      // document.querySelector("#news__edit__form").innerHTML = newsHtmlEdit()
+      
+          
+      
+      
     }
   })
 }
@@ -167,6 +189,4 @@ const news = () => {
   newsEdit()
 }
 
-export {
-  news
-}
+export default news

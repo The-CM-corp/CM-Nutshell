@@ -7,7 +7,7 @@ import userFunctions from "./users"
 import usersAPI from "./api-users"
 import chatFetchCalls from "./chatMethods";
 import chatExecution from "./chatExecution";
-import { news } from "./news"
+import news from "./news"
 import todoClicks from "./todoClicks";
 import clearTODODom from "./todoClearDOM"
 
@@ -35,6 +35,7 @@ chatExecution.editMessageHandler()
 
 onTodoSumbit()
 todoClicks()
+
 
 
 
