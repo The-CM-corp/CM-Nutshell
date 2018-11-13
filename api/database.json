@@ -23,17 +23,15 @@
       "password": "bryan",
       "email": "bryan@bryan.com",
       "id": 4
+    },
+    {
+      "name": "austin",
+      "password": "austin",
+      "email": "austin",
+      "id": 5
     }
   ],
   "events": [
-    {
-      "id": 1,
-      "title": "Pinball Party",
-      "date": "11/8/18",
-      "synopsis": "Have fun playing pinball and drinking soda",
-      "location": "Beercade",
-      "user_id": 1
-    },
     {
       "id": 2,
       "title": "Nashville Predators Hockey",
@@ -56,6 +54,21 @@
       "synopsis": "sdsrsretew",
       "location": "cxfixdifxi",
       "id": 4
+    },
+    {
+      "title": "Event Title",
+      "date": "",
+      "synopsis": "",
+      "location": "Location",
+      "id": 5
+    },
+    {
+      "title": "Event Title",
+      "date": "",
+      "synopsis": "",
+      "location": "Location",
+      "user_id": 0,
+      "id": 6
     }
   ],
   "news": [
@@ -65,6 +78,34 @@
       "synopsis": "People were nice to each other",
       "url": "#",
       "user_id": 1
+    },
+    {
+      "title": "Joe's Title",
+      "synopsis": "joe's story",
+      "url": "joe's link",
+      "user_id": 1,
+      "id": 3
+    },
+    {
+      "title": "sally's title",
+      "synopsis": "sally's story",
+      "url": "sally's link",
+      "user_id": 3,
+      "id": 4
+    },
+    {
+      "title": "test",
+      "synopsis": "test3",
+      "url": "test",
+      "user_id": 1,
+      "id": 5
+    },
+    {
+      "title": "Great News for Once",
+      "synopsis": "People were nice to each other",
+      "url": "www.google.com",
+      "user_id": 1,
+      "id": 6
     }
   ],
   "todos": [
@@ -73,7 +114,49 @@
       "task": "Take out trash",
       "date": "11/8/18",
       "completed": false,
-      "user_id": 1
+      "user_id": 5
+    },
+    {
+      "task": "single source of truth",
+      "date": "2018-11-14",
+      "completed": false,
+      "id": 2,
+      "user_id": 3
+    },
+    {
+      "task": "Task",
+      "date": "2018-11-14",
+      "completed": true,
+      "id": 3,
+      "user_id": 3
+    },
+    {
+      "task": "Task Uno",
+      "date": "2018-11-24",
+      "completed": false,
+      "user_id": 5,
+      "id": 5
+    },
+    {
+      "task": "que pasa?",
+      "date": "2018-11-12",
+      "completed": false,
+      "user_id": 3,
+      "id": 6
+    },
+    {
+      "task": "Task",
+      "date": "2018-11-12",
+      "completed": true,
+      "user_id": 3,
+      "id": 7
+    },
+    {
+      "task": "what is wrong",
+      "date": "2018-11-16",
+      "completed": false,
+      "user_id": 3,
+      "id": 8
     }
   ],
   "chats": [
@@ -82,6 +165,24 @@
       "user_id": 1,
       "time": "10:00:00",
       "message": "Hey, I'm kicking all sorts of butt"
+    },
+    {
+      "user_id": 1,
+      "time": "2018-11-13T01:51:26.012Z",
+      "message": "Messageqq",
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "time": "2018-11-13T15:30:58.223Z",
+      "message": "hola",
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "time": "2018-11-13T15:31:05.602Z",
+      "message": "tu madre",
+      "id": 4
     }
   ],
   "friendships": [

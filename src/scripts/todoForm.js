@@ -1,22 +1,19 @@
-// interacting with the input form for new todos
 import putOnDOM from "./DOMPopulator"
 import API from "./todo"
-import onCheckbox from "./todoDelete"
+
 
 
 function onTodoSumbit () {
   let todoSubmit = document.getElementById("add__todo__button")
+  let sessionUserID = sessionStorage.getItem("user_id")
   todoSubmit.addEventListener("click", () => {
-    console.log("wazzup")
     let newTodo = {
       "task": document.getElementById("add__todo__title").value,
       "date": document.getElementById("add__todo__date").value,
       "completed": false,
+      "user_id": +sessionUserID
     }
-    console.log(document.getElementById("add__todo__date"))
-    API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))
-    console.log(newTodo)
-    // onCheckbox()
+    API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))  
   })
 }
 
