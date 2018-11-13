@@ -30,12 +30,10 @@ function submitEventForm() {
   let eventFormDateEl = document.getElementById("add__event__date")
   let eventFormSynopsisEl = document.getElementById("add__event__synopsis")
   let sessionUserId = sessionStorage.getItem("user_id");
-  console.log("session id:", sessionUserId)
 
   // create a new event object
   let newObject = { title: eventFormTitleEl.value, date: eventFormDateEl.value, synopsis: eventFormSynopsisEl.value, location: eventFormLocationEl.value, user_id: +sessionUserId }
   eventsAPI.saveData(newObject).then(() => {
-    console.log("new object", newObject);
     clearData();
   }).then(() => eventsGenerator())
 }
@@ -43,7 +41,6 @@ function submitEventForm() {
 function addDeleteEvent() {
   // the following selects all delete buttons
   $(".event__delete__button").click(function () {
-    console.log("delete button clicked")
     eventsAPI.deleteEntry($(this).attr("id"))
       .then(() => {
         clearData()
@@ -58,12 +55,10 @@ function addEditEvent() {
   // the following selects all edit buttons and adds editing capability
 
   $(".event__edit__button").click(function () {
-    console.log("parent element, with last child: ", $(this).parent().children().last());
     $(this).parent().children().last().toggle("hide")
   })
 
   $(".event__edit__save__button").click(function () {
-    console.log("this is the save button's id: ", $(this).attr("id"))
     let thisEditedId = $(this).attr("id")
     let editedTitleInput = document.getElementById(`edit__eventTitleInput__${thisEditedId}`)
     let editedDateInput = document.getElementById(`edit__eventDateInput__${thisEditedId}`)
