@@ -5,8 +5,8 @@ import API from "./todo"
 
 function onTodoSumbit () {
   let todoSubmit = document.getElementById("add__todo__button")
-  let sessionUserID = sessionStorage.getItem("user_id")
   todoSubmit.addEventListener("click", () => {
+    let sessionUserID = sessionStorage.getItem("user_id")
     let newTodo = {
       "task": document.getElementById("add__todo__title").value,
       "date": document.getElementById("add__todo__date").value,

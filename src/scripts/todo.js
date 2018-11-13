@@ -14,7 +14,6 @@ const API = {
       body: JSON.stringify(newTodo)
     }).then(data => data.json())
   },
-  // not sure how the patch works yet..
   patchTodo(id, editedTodo) {
     return fetch(`http://localhost:8088/todos/${id}`, {
       method: "PATCH",
