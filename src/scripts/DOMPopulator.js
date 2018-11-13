@@ -8,7 +8,7 @@ const putOnDOM = {
     let chatMessage = elementCreator.elementFactory("p", entry.message, "chat__message", `chat_message${entry.id}`)
     let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit", `btn__chat__edit${entry.id}`)
     let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__chat__delete", `btn__chat__delete-${entry.id}`)
-    let chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div${entry.id}`, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn)
+    let chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn)
     let fragment = document.createDocumentFragment()
     let chatOutput = document.querySelector("#chat__results")
     fragment.appendChild(chatHolder)
@@ -24,13 +24,13 @@ const putOnDOM = {
   postNewTodo(entry) {
     let entryTask = elementCreator.elementFactory("h3", entry.task, "todo__task", `todo__task${entry.id}`)
     let entryDate = elementCreator.elementFactory("p", `Expected completion date: ${entry.date}`, "todo__date", `todo__date${entry.id}`)
-    let entryText = elementCreator.elementFactory("div", null, "todo__text", `todo__text${entry.id}`, null, entryTask, entryDate)
+    let entryText = elementCreator.elementFactory("div", null, "todo__text", `todo__text${entry.id}`, null, null, null, entryTask, entryDate)
     let entryEdit = elementCreator.elementFactory("button", "Edit", "todo__edit", `todo__edit${entry.id}`)
     let entryDelete = elementCreator.elementFactory("button", "Delete", "todo__delete", `todo__delete${entry.id}`)
-    let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, entryEdit, entryDelete)
+    let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, null, null, entryEdit, entryDelete)
     let entryCheck = elementCreator.elementFactory("input", null, "todo__checkbox", `todo__checkbox${entry.id}`)
     entryCheck.type = "checkbox"
-    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null,   entryCheck, entryText, entryButtons)
+    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null,  entryCheck, entryText, entryButtons)
     //appending our new elements to the fragment then the fragment to or article
     let fragment = document.createDocumentFragment()
     fragment.appendChild(entryHolder)
@@ -46,7 +46,7 @@ const putOnDOM = {
     let newsTitle = elementCreator.elementFactory("h2", entry.title, "news__title", `news__title${entry.id}`)
     let newsSynopsis = elementCreator.elementFactory("p", entry.synopsis, "news__synopsis", `news__synopsis${entry.id}`)
     let newsURL = elementCreator.elementFactory("p", entry.url, "news__url", `news__url${entry.id}`)
-    let newsHolder = elementCreator.elementFactory("div", null, "news__div", `news__div${entry.id}`, null, newsTitle, newsSynopsis, newsURL)
+    let newsHolder = elementCreator.elementFactory("div", null, "news__div", `news__div${entry.id}`, null, null, null, newsTitle, newsSynopsis, newsURL)
     //appending our new elements to the fragment then the fragment to or article
     let fragment = document.createDocumentFragment()
     fragment.appendChild(newsHolder)
