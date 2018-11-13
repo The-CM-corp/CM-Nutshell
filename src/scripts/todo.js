@@ -1,8 +1,8 @@
 // creates a dynamic form for todo
 
 const API = {
-  getTodo() {
-    return fetch("http://localhost:8088/todos")
+  getTodo(user_id) {
+    return fetch(`http://localhost:8088/todos?user_id=${user_id}`)
     .then(data => data.json())
   },
   postTodo (newTodo) {

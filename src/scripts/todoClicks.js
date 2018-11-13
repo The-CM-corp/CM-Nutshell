@@ -1,13 +1,6 @@
 import API from "./todo"
-import putOnDOM from "./DOMPopulator"
+import clearTODODom from "./todoClearDOM"
 
-function clearTODODom() {
-  document.getElementById("todo__results").innerHTML = ""
-  API.getTodo()
-    .then(todo => {
-      putOnDOM.initialTodos(todo)
-    })
-}
 
 const todoClicks = () => {
   document.getElementById("todo__all").addEventListener("click", event => {
@@ -37,44 +30,18 @@ const todoClicks = () => {
       if (event.target.checked === true) {
         text.classList.add("todo__checked")
         checkedDiv.appendChild(checkTaskDiv)
-        API.patchTodo(id, {"completed": true})
-        console.log(text)
+        API.patchTodo(id, { "completed": true })
       } else if (event.target.checked === false) {
         text.classList.remove("todo__checked")
         uncheckedDiv.appendChild(checkTaskDiv)
-        API.patchTodo(id, {"completed": false})
+        API.patchTodo(id, { "completed": false })
       }
     }
   })
-  // this may work but change the id here 
-  // document.getElementById("todo__complete").addEventListener("change", event => {
-  //   // let checkedDiv = document.getElementById("todo__complete")
-  // })
-
-
+  
+ 
 }
 
 
-
-
-
-// function onCheckbox() {
-//   let checkbox = document.querySelectorAll('input[type =checkbox]')
-//   if (checkbox.length >= 2) {
-//     checkbox.forEach(box => {
-//       box.addEventListener("change", () =>{
-//         console.log("checked in js")
-//         console.log(box)
-//       })
-//     })
-//   }else checkbox.addEventListener("change", () => {
-//     console.log("just one event")
-//   // })
-//   // $('input[type =checkbox]').change(() => {
-//   //   console.log("JQUERY HELP ME")
-//   //   console.log($('input[type =checkbox]').siblings(".todo__checkbox").toggle("todo__checked")) 
-//     // $("todo__checkbox").toggle("todo__checked")
-//   })
-// }
 
 export default todoClicks
