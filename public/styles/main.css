@@ -10,6 +10,10 @@ body {
   background: whitesmoke;
 }
 
+.nutshell__logo {
+text-shadow: 0 0 5px #111;
+}
+
 .header {
   background: #424651;
   padding: 10px;
