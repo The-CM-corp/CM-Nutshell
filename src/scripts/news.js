@@ -1,4 +1,4 @@
-console.log("hello")
+console.log("hi")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -28,10 +28,11 @@ const newsFormManager = {
 // added the edit and delete buttons here
 const newsHtmlEntry = (entry) => {
   return `
-  <div class="news__div">
+  <div class="news__div" id="news__div${entry.id}">
     <h4>${entry.title}</h4>
     <p>${entry.synopsis}</p>
     <a href="http://${entry.url}">${entry.url}</a><br>
+    <p>${entry.timestamp}</p>
     <button id="editNews!${entry.id}" class="edit__button">Edit</button>
     <button id="deleteNews!${entry.id}" class="delete__button">Delete</button>
 
@@ -53,6 +54,8 @@ const newsHtmlEdit = () => {
     <button id="news__form__edit">Edit</button><br><br>
     `
 }
+
+
 
 
 // fetch obj with a get, post, delete, edit, and target single entry
@@ -116,6 +119,9 @@ const newsDomRender = () => {
 
 const saveNews = () => {
   document.querySelector("#news__form__save").addEventListener("click", () => {
+    const timestamp = new Date()
+    timestamp.setTime(unixtime*1000)
+    dateString = timestamp.toUTCString()
     const news__title = document.querySelector("#news__form__title").value
     const news__synopsis = document.querySelector("#news__form__synopsis").value
     const news__url = document.querySelector("#news__form__url").value
@@ -124,13 +130,14 @@ const saveNews = () => {
     // below will check to make sure all inputs are filled out before saving to DB
     if (!news__title || !news__synopsis || !news__url) {
       alert("fill out the form")
-    } else {
+    } else {      
       document.querySelector("#news__results").innerHTML = ""
       const newsEntry = {
         title: news__title,
         synopsis: news__synopsis,
         url: news__url,
-        user_id: +news__session__user__id
+        user_id: +news__session__user__id,
+        timestamp: dateString
       }
       // save the info and then once the promise is fulfilled
       newsDataManager.newsSaveEntry(newsEntry).then(() => {
@@ -159,21 +166,21 @@ const newsEdit = () => {
     // below the eventlistener is targeting an id that starts with the string "editNews"
     // it's looking for the id from the entry associated with the edit button and performs a get from the database but returns the values to the input boxes
     if (event.target.id.startsWith("editNews")) {
-      // const id = event.target.id.split("!")[1]
-      // newsDataManager.newsSingleEntry(id).then((entry) => {
-      //   document.querySelector("#news__edit__form__title").value = entry.title
-      //   document.querySelector("#news__edit__form__synopsis").value = entry.synopsis
-      //   document.querySelector("#news__edit__form__url").value = entry.url
-      // })
+      const id = event.target.id.split("!")[1]
+      newsDataManager.newsSingleEntry(id).then((entry) => {
+        document.querySelector("#news__form__title").value = entry.title
+        document.querySelector("#news__form__synopsis").value = entry.synopsis
+        document.querySelector("#news__form__url").value = entry.url
+      })
 
       // I'm not sure how to also delete the old entry so I'm putting in an alert for the user
       // alert("Make sure to delete your old entry")
-      console.log("I hit edit")
+      // console.log("I hit edit")
       // document.querySelector("#news__edit__form").innerHTML = newsHtmlEdit()
       
-          
-      
-      
+     
+      // document.querySelector(`#news__div${id}`).innerHTML = 
+  
     }
   })
 }
