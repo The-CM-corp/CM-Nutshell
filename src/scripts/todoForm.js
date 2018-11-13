@@ -11,7 +11,11 @@ function onTodoSumbit() {
       "completed": false,
       "user_id": +sessionUserID
     }
+    if (!newTodo.task || !newTodo.date) {
+      alert("Please fill the form!!")
+    } else {
     API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))
+    }
   })
 }
 

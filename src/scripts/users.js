@@ -18,9 +18,13 @@ function submitUserRegistration() {
   let registerFormPasswordEl = document.getElementById("register__password")
 
   let newUser = { name: registerFormNameEl.value, password: registerFormPasswordEl.value, email: registerFormEmailEl.value }
+  if (!newUser.name || !newUser.password || !newUser.email) {
+    alert("Please fill out all fields")
+  } else {
   usersAPI.saveUser(newUser)
   // .then(() => { console.log("new user", newUser);})
   alert("you have successfully registered! please log in to continue")
+  }
 }
 
 const userFunctions = () => {
