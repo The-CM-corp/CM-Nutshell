@@ -30,12 +30,20 @@ const putOnDOM = {
     let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, null, null, entryEdit, entryDelete)
     let entryCheck = elementCreator.elementFactory("input", null, "todo__checkbox", `todoCheckbox!${entry.id}`)
     entryCheck.type = "checkbox"
-    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null,  entryCheck, entryText, entryButtons)
+    let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null, entryCheck, entryText, entryButtons)
     //appending our new elements to the fragment then the fragment to or article
     let fragment = document.createDocumentFragment()
     fragment.appendChild(entryHolder)
     let todoOutput = document.getElementById("todo__results")
-    todoOutput.appendChild(fragment)
+    let completedDiv = document.getElementById("todo__complete")
+    console.log(entry.completed)
+    if (entry.completed === true) {
+      completedDiv.appendChild(fragment)
+      entryText.classList.add("todo__checked")
+      // entryButtons.classList.add("hide")
+      entryCheck.checked = true
+    } else
+      todoOutput.appendChild(fragment)
   },
   initialTodos(entries) {
     entries.forEach(entry => {
