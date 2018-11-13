@@ -27,3 +27,8 @@
    flex-wrap: wrap;
    margin: 5%;
  }
+
+ #todo__results {
+   border-bottom: 3px solid dodgerblue;
+
+ }
