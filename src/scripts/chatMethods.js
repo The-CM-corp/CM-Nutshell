@@ -41,5 +41,11 @@ export default {
     return fetch(`http://localhost:8088/chats/`)
     .then(entries => entries.json())
     .then(entries => putOnDOM.initialChats(entries))
+  },
+  getUserName: function () {
+    return fetch(`http://localhost:8088/users/${sessionStorage.user_id}`)
+    .then(jsonObj => jsonObj.json())
+    .then(jsObject => jsObject.name)
+    .then(returns => console.log(returns))
   }
 }
