@@ -78,6 +78,34 @@
       "synopsis": "People were nice to each other",
       "url": "#",
       "user_id": 1
+    },
+    {
+      "title": "Joe's Title",
+      "synopsis": "joe's story",
+      "url": "joe's link",
+      "user_id": 1,
+      "id": 3
+    },
+    {
+      "title": "sally's title",
+      "synopsis": "sally's story",
+      "url": "sally's link",
+      "user_id": 3,
+      "id": 4
+    },
+    {
+      "title": "test",
+      "synopsis": "test3",
+      "url": "test",
+      "user_id": 1,
+      "id": 5
+    },
+    {
+      "title": "Great News for Once",
+      "synopsis": "People were nice to each other",
+      "url": "www.google.com",
+      "user_id": 1,
+      "id": 6
     }
   ],
   "todos": [
@@ -122,6 +150,13 @@
       "completed": true,
       "user_id": 3,
       "id": 7
+    },
+    {
+      "task": "what is wrong",
+      "date": "2018-11-16",
+      "completed": false,
+      "user_id": 3,
+      "id": 8
     }
   ],
   "chats": [
@@ -136,6 +171,18 @@
       "time": "2018-11-13T01:51:26.012Z",
       "message": "Messageqq",
       "id": 2
+    },
+    {
+      "user_id": 1,
+      "time": "2018-11-13T15:30:58.223Z",
+      "message": "hola",
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "time": "2018-11-13T15:31:05.602Z",
+      "message": "tu madre",
+      "id": 4
     }
   ],
   "friendships": [

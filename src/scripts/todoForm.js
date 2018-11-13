@@ -1,6 +1,6 @@
 import putOnDOM from "./DOMPopulator"
 import API from "./todo"
-import deleteTask from "./todoClicks"
+
 
 
 function onTodoSumbit () {
@@ -14,8 +14,6 @@ function onTodoSumbit () {
       "user_id": +sessionUserID
     }
     API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))  
-    // onCheckbox()
-    // deleteTask()
   })
 }
 

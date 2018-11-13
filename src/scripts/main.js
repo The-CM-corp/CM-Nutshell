@@ -20,6 +20,7 @@ $("#login__button").click(function () {
     eventsGenerator()
     let fetchUserName = sessionStorage.getItem("user_name")
     $("#nav__username").text(fetchUserName)
+    clearTODODom()
   })
 })
 
@@ -34,7 +35,6 @@ chatExecution.deleteMessageHandler()
 // console.log(sessionStorage.getItem("user_id"))
 // API.getTodo(sessionStorage.getItem("user_id")).then(todos => putOnDOM.initialTodos(todos))
 // })
-clearTODODom()
 onTodoSumbit()
 todoClicks()
 
