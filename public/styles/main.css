@@ -1,7 +1,7 @@
-* {
+/* * { */
   /* margin: 0; */
   /* padding: 0; */
-  } *
+  /* } * */
 
 body {
   margin-top: 0;
@@ -71,10 +71,10 @@ body {
   padding: 10px;
 }
 
-.news__element {
+/* .news__element {
   border: 1px solid green;
   padding: 5px;
-}
+} */
 
 /* check class syntax in html */
 .event__div {
@@ -83,6 +83,20 @@ body {
   border-radius: 10px;
   /* box-shadow: 0px 0px 5px #424651; */
   padding: 5px;
+}
+
+.edit__event__div {
+  border: 1px solid #424651;
+  margin: 8px 0px;
+  box-shadow: 0px 0px 3px #424651;
+  padding: 3px;
+  background: lightgray;
+  /* z-index: 10; */
+}
+
+.edit__event__input {
+  margin: 5px;
+  border-radius: 5px;
 }
 
 .event__title {
@@ -106,7 +120,7 @@ body {
 
 /* BUTTONS */
 
-.edit__button {
+.event__edit__button {
   background: #424651;
   border-radius: 5px;
   margin-right: 10px;
@@ -114,11 +128,11 @@ body {
   color: white;
 }
 
-.edit__button:hover {
+.event__edit__button:hover {
   background: red;
 }
 
-.delete__button {
+.event__delete__button {
   background: #424651;
   border-radius: 5px;
   margin-right: 10px;
@@ -126,6 +140,13 @@ body {
   color: white;
 }
 
-.delete__button:hover {
+.event__delete__button:hover {
   background: purple;
+}
+
+.news__div {
+  border: 1px solid #424651;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
 }
