@@ -15,6 +15,7 @@ function eventsGenerator() {
     .then((eventData) => {
       putOnDOM.intialEvents(eventData)
       addDeleteEvent()
+      addEditEvent()
     })
 }
 
@@ -47,8 +48,43 @@ function addDeleteEvent() {
       .then(() => {
         clearData()
         eventsGenerator()
+      })
+  })
+}
+
+
+
+function addEditEvent() {
+  // the following selects all edit buttons and adds editing capability
+
+  $(".event__edit__button").click(function () {
+    console.log("parent element, with last child: ", $(this).parent().children().last());
+    $(this).parent().children().last().toggle("hide")
+  })
+
+  $(".event__edit__save__button").click(function () {
+    console.log("this is the save button's id: ", $(this).attr("id"))
+    let thisEditedId = $(this).attr("id")
+    let editedTitleInput = document.getElementById(`edit__eventTitleInput__${thisEditedId}`)
+    let editedDateInput = document.getElementById(`edit__eventDateInput__${thisEditedId}`)
+    let editedSynopsisInput = document.getElementById(`edit__eventSynopsisInput__${thisEditedId}`)
+    let editedLocationInput = document.getElementById(`edit__eventLocationInput__${thisEditedId}`)
+    let sessionUserId = sessionStorage.getItem("user_id");
+
+    let EditedObject = { title: editedTitleInput.value, date: editedDateInput.value, synopsis: editedSynopsisInput.value, location: editedLocationInput.value, user_id: +sessionUserId  }
+    console.log("edited object: ", EditedObject)
+    eventsAPI.editEntry(thisEditedId, EditedObject)
+      .then(() => {
+        clearData()
+        eventsGenerator()
     })
   })
+
+
+  $(".event__edit__cancel__button").click(function () {
+    $(this).parent().toggle("hide");
+  })
+
 }
 
 export default eventsGenerator
