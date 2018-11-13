@@ -28,11 +28,10 @@ const todoClicks = () => {
       let checkedDiv = document.getElementById("todo__complete")
       let uncheckedDiv = document.getElementById("todo__results")
       if (event.target.checked === true) {
-        API.patchTodo(id, { "completed": true })
-      
         text.classList.add("todo__checked")
         checkedDiv.appendChild(checkTaskDiv)
-      
+        API.patchTodo(id, { "completed": true })
+        
       } else if (event.target.checked === false) {
         text.classList.remove("todo__checked")
         uncheckedDiv.appendChild(checkTaskDiv)

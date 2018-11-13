@@ -17,6 +17,15 @@ const eventsAPI = {
       method: "DELETE"
     }).then(response => response.json())
   },
+  editEntry(id, object) {
+    return fetch(`http://localhost:8088/events/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(object)
+    }).then(response => response.json())
+  },
 }
 
 export default eventsAPI

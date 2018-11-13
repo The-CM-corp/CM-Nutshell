@@ -30,11 +30,7 @@ chatExecution.deleteMessageHandler()
 
 
 //todo calls
-// $("#login__button").click( () => {
-//   let userID = sessionStorage.getItem("user_id")
-// console.log(sessionStorage.getItem("user_id"))
-// API.getTodo(sessionStorage.getItem("user_id")).then(todos => putOnDOM.initialTodos(todos))
-// })
+
 onTodoSumbit()
 todoClicks()
 
