@@ -3,10 +3,10 @@
 const API = {
   getTodo(user_id) {
     return fetch(`http://localhost:8088/todos?user_id=${user_id}`)
-    .then(data => data.json())
+      .then(data => data.json())
   },
-  postTodo (newTodo) {
-    return fetch("http://localhost:8088/todos",{
+  postTodo(newTodo) {
+    return fetch("http://localhost:8088/todos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

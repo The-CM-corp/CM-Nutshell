@@ -44,10 +44,9 @@ const putOnDOM = {
     fragment.appendChild(entryHolder)
     let todoOutput = document.getElementById("todo__results")
     let completedDiv = document.getElementById("todo__complete")
-    console.log(entry.completed)
     if (entry.completed === true) {
       completedDiv.appendChild(fragment)
-      entryText.classList.add("todo__checked")  
+      entryText.classList.add("todo__checked")
       entryCheck.checked = true
     } else
       todoOutput.appendChild(fragment)

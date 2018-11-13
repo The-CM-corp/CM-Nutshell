@@ -1,9 +1,7 @@
 import putOnDOM from "./DOMPopulator"
 import API from "./todo"
 
-
-
-function onTodoSumbit () {
+function onTodoSumbit() {
   let todoSubmit = document.getElementById("add__todo__button")
   todoSubmit.addEventListener("click", () => {
     let sessionUserID = sessionStorage.getItem("user_id")
@@ -13,7 +11,7 @@ function onTodoSumbit () {
       "completed": false,
       "user_id": +sessionUserID
     }
-    API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))  
+    API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))
   })
 }
 
