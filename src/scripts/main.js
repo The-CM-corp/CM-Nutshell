@@ -19,13 +19,13 @@ $("#login__button").click(function () {
   usersAPI.loginUser().then(() => {
     eventsGenerator()
     news()
+    chatFetchCalls.loadExistingChats()
     let fetchUserName = sessionStorage.getItem("user_name")
     $("#nav__username").text(fetchUserName)
     clearTODODom()
   })
 })
 
-chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()
 chatExecution.editMessageHandler()
