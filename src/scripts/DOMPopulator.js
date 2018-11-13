@@ -6,7 +6,7 @@ const putOnDOM = {
     let chatName = elementCreator.elementFactory("a", entry.user_id, "chat__name", `chat__name${entry.id}`, "#")
     let chatTime = elementCreator.elementFactory("p", entry.time, "chat__time", `chat__time${entry.id}`)
     let chatMessage = elementCreator.elementFactory("p", entry.message, "chat__message", `chat_message${entry.id}`)
-    let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit", `btn__chat__edit${entry.id}`)
+    let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit", `btn__chat__edit-${entry.id}`)
     let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__chat__delete", `btn__chat__delete-${entry.id}`)
     let chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn)
     let fragment = document.createDocumentFragment()
@@ -24,11 +24,11 @@ const putOnDOM = {
   postNewTodo(entry) {
     let entryTask = elementCreator.elementFactory("h3", entry.task, "todo__task", `todo__task${entry.id}`)
     let entryDate = elementCreator.elementFactory("p", `Expected completion date: ${entry.date}`, "todo__date", `todo__date${entry.id}`)
-    let entryText = elementCreator.elementFactory("div", null, "todo__text", `todo__text${entry.id}`, null, null, null, entryTask, entryDate)
-    let entryEdit = elementCreator.elementFactory("button", "Edit", "todo__edit", `todo__edit${entry.id}`)
-    let entryDelete = elementCreator.elementFactory("button", "Delete", "todo__delete", `todo__delete${entry.id}`)
+    let entryText = elementCreator.elementFactory("div", null, "todo__text", `todo__text!${entry.id}`, null, null, null, entryTask, entryDate)
+    let entryEdit = elementCreator.elementFactory("button", "Edit", "todo__edit", `todoEdit!${entry.id}`)
+    let entryDelete = elementCreator.elementFactory("button", "Delete", "todo__delete", `todoDelete!${entry.id}`)
     let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, null, null, entryEdit, entryDelete)
-    let entryCheck = elementCreator.elementFactory("input", null, "todo__checkbox", `todo__checkbox${entry.id}`)
+    let entryCheck = elementCreator.elementFactory("input", null, "todo__checkbox", `todoCheckbox!${entry.id}`)
     entryCheck.type = "checkbox"
     let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null,  entryCheck, entryText, entryButtons)
     //appending our new elements to the fragment then the fragment to or article

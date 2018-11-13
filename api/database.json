@@ -33,14 +33,6 @@
   ],
   "events": [
     {
-      "id": 1,
-      "title": "Pinball Party",
-      "date": "11/8/18",
-      "synopsis": "Have fun playing pinball and drinking soda",
-      "location": "Beercade",
-      "user_id": 1
-    },
-    {
       "id": 2,
       "title": "Nashville Predators Hockey",
       "date": "11/17/18",
