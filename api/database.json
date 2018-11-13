@@ -69,6 +69,14 @@
       "location": "Location",
       "user_id": 0,
       "id": 6
+    },
+    {
+      "title": "Event Title",
+      "date": "",
+      "synopsis": "null",
+      "location": "Location",
+      "user_id": 3,
+      "id": 7
     }
   ],
   "news": [
@@ -85,13 +93,6 @@
       "url": "joe's link",
       "user_id": 1,
       "id": 3
-    },
-    {
-      "title": "sally's title",
-      "synopsis": "sally's story",
-      "url": "sally's link",
-      "user_id": 3,
-      "id": 4
     },
     {
       "title": "test",
@@ -126,7 +127,7 @@
     {
       "task": "Task",
       "date": "2018-11-14",
-      "completed": true,
+      "completed": false,
       "id": 3,
       "user_id": 3
     },
@@ -138,7 +139,7 @@
       "id": 5
     },
     {
-      "task": "que pasa?",
+      "task": "que pasa?!!!!",
       "date": "2018-11-12",
       "completed": false,
       "user_id": 3,

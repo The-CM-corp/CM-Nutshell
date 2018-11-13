@@ -1,5 +1,3 @@
-import API from "./todo.js"
-import putOnDOM from "./DOMPopulator"
 import onTodoSumbit from "./todoForm"
 import addNavClickEvents from "./navigation"
 import eventsGenerator from "./events"

@@ -4,20 +4,28 @@ import clearTODODom from "./todoClearDOM"
 
 const todoClicks = () => {
   document.getElementById("todo__all").addEventListener("click", event => {
-    // below the eventlistener is targeting an id that starts with the string "deleteNews"
-    // it then finds the id of the entry associated with the clicked button and performs a delete method from the DB and renders the new DB results
     if (event.target.id.startsWith("todoDelete")) {
       const id = event.target.id.split("!")[1]
-      console.log("delete id", id)
       API.deleteTodo(id).then(() => {
         clearTODODom()
       })
     } else if (event.target.id.startsWith("todoEdit")) {
       const id = event.target.id.split("!")[1]
-      console.log("edit id", id)
-      // API.deleteTodo(id).then(() => {
-      //   clearTODODom()
-      // })
+      let editDiv = document.getElementById(`todo__edit__div${id}`)
+      editDiv.classList.toggle("hide")
+    } else if (event.target.id.startsWith("todo__edit__save__button")) {
+      const id = event.target.id.split("!")[1]
+      let editedTask = document.getElementById(`todo__edit__task!${id}`)
+      let editedDate = document.getElementById(`todo__edit__date!${id}`)
+      let userId = sessionStorage.getItem("user_id");
+      let editedEntry = { task: editedTask.value, date: editedDate.value, user_id: userId.value }
+      API.patchTodo(id, editedEntry).then(() => {
+        clearTODODom()
+      })
+    } else if (event.target.id.startsWith("todo__edit__cancel__button")) {
+      const id = event.target.id.split("!")[1]
+      let editDiv = document.getElementById(`todo__edit__div${id}`)
+      editDiv.classList.add("hide")
     }
   })
   document.getElementById("todo__all").addEventListener("change", event => {
@@ -31,7 +39,7 @@ const todoClicks = () => {
         text.classList.add("todo__checked")
         checkedDiv.appendChild(checkTaskDiv)
         API.patchTodo(id, { "completed": true })
-        
+
       } else if (event.target.checked === false) {
         text.classList.remove("todo__checked")
         uncheckedDiv.appendChild(checkTaskDiv)
@@ -40,7 +48,7 @@ const todoClicks = () => {
     }
   })
 
- 
+
 }
 
 
