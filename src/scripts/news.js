@@ -1,6 +1,6 @@
 import timestamp from "./timestamp"
 
-console.log("hello")
+console.log("hi")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -59,10 +59,10 @@ const newsHtmlEntry = (entry) => {
 
 // fetch obj with a get, post, delete, edit, and target single entry
 
-const newsUrl = "http://localhost:8088/news?_sort=timestamp&_order=desc&"
+const newsUrl = "http://localhost:8088/news"
 const newsDataManager = {
   newsGetEntries: (user_id) => {
-    return fetch(`${newsUrl}user_id=${user_id}`)
+    return fetch(`http://localhost:8088/news?_sort=timestamp&_order=desc&user_id=${user_id}`)
       .then(res => res.json())
   },
   newsSaveEntry: (entry) => {
