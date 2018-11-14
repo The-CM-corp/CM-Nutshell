@@ -29,6 +29,36 @@
       "password": "password",
       "email": "cats@catmilk.com",
       "id": 5
+    },
+    {
+      "name": "bryan",
+      "password": "bryan@bryan.com",
+      "email": "bryan",
+      "id": 6
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "",
+      "id": 7
+    },
+    {
+      "name": "bryan",
+      "password": "",
+      "email": "ehejrrhejhkerj",
+      "id": 8
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "bryan@djfhskadjfh",
+      "id": 9
+    },
+    {
+      "name": "bryan",
+      "password": "bryan",
+      "email": "bryan@dafjksdhfkjashdklfhasdlkfhasdljkfh",
+      "id": 10
     }
   ],
   "events": [
