@@ -104,11 +104,12 @@ const newsDomRender = () => {
   document.querySelector("#news__results").innerHTML = ""
   let fetchUserId = sessionStorage.getItem("user_id")
   newsDataManager.newsGetEntries(fetchUserId)
-    // .then((entry) => {
-    //   // let sortedNews = entries.sort(function(a,b){
-    //   //   return a.timestamp.localeCompare(a.timestamp)
-    //     const newsEntryHTML = newsHtmlEntry(entry)
-    //     newsDom(newsEntryHTML)
+    // .then((newsData) => {
+    //   let sortedNews = newsData.sort(function(a,b){
+    //     return a.timestamp.localeCompare(b.timestamp)
+    //     // const newsEntryHTML = newsHtmlEntry(entry)
+    //   });
+    //   console.log(sortedNews)
     //   })
     .then(entries => {
       entries.forEach(entry => {
