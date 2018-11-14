@@ -42,8 +42,6 @@ const userFunctions = () => {
   usersGenerator()
   $("#register__button").click(function () {
     submitUserRegistration()
-    $("#login__form").removeClass("hide");
-    $("#register__form").addClass("hide");
   })
 }
 
