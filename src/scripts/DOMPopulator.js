@@ -1,5 +1,6 @@
 import elementCreator from "./elementFactory"
-// generic template
+
+// el, cont, clazz, id, link, type, value, ...children   FOR REFERENCE Parameters in elementCreator
 
 const putOnDOM = {
   postNewMessage(entry) {
@@ -8,9 +9,11 @@ const putOnDOM = {
     let chatMessage = elementCreator.elementFactory("p", entry.message, "chat__message", `chat_message${entry.id}`)
     let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit", `btn__chat__edit-${entry.id}`)
     let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__chat__delete", `btn__chat__delete-${entry.id}`)
+    let editInputField = elementCreator.elementFactory("input", null, null, `input__chat__edit-${entry.id}`, null, null, entry.message)
+    let editInputSave = elementCreator.elementFactory("button", "Save", "btn__chat__input_save", `btn__chat__input_save-${entry.id}`)
     let chatHolder;
-    if(entry.user_id === sessionStorage.user_id) {
-      chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn)
+    if(entry.user_id === parseInt(sessionStorage.user_id, 10)) {
+      chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn, editInputField, editInputSave)
     } else {
       chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage)
     }
