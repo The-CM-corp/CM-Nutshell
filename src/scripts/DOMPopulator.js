@@ -7,10 +7,10 @@ const putOnDOM = {
     let chatName = elementCreator.elementFactory("a", entry.user.name, "chat__name", `chat__name${entry.id}`, "#")
     let chatTime = elementCreator.elementFactory("p", entry.time, "chat__time", `chat__time${entry.id}`)
     let chatMessage = elementCreator.elementFactory("p", entry.message, "chat__message", `chat_message${entry.id}`)
-    let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit", `btn__chat__edit-${entry.id}`)
-    let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__chat__delete", `btn__chat__delete-${entry.id}`)
+    let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit edit__button", `btn__chat__edit-${entry.id}`)
+    let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__chat__delete delete__button", `btn__chat__delete-${entry.id}`)
     let editInputField = elementCreator.elementFactory("input", null, "hide", `input__chat__edit-${entry.id}`, null, null, entry.message)
-    let editInputSave = elementCreator.elementFactory("button", "Save", "btn__chat__input_save hide", `btn__chat__input_save-${entry.id}`)
+    let editInputSave = elementCreator.elementFactory("button", "Save", "btn__chat__input_save hide editSave__button", `btn__chat__input_save-${entry.id}`)
     let chatHolder;
     if(entry.userId === parseInt(sessionStorage.user_id, 10)) {
       chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn, editInputField, editInputSave)
@@ -27,8 +27,8 @@ const putOnDOM = {
     let entryTask = elementCreator.elementFactory("h3", entry.task, "todo__task", `todo__task${entry.id}`)
     let entryDate = elementCreator.elementFactory("p", `Expected completion date: ${entry.date}`, "todo__date", `todo__date${entry.id}`)
     let entryText = elementCreator.elementFactory("div", null, "todo__text", `todo__text!${entry.id}`, null, null, null, entryTask, entryDate)
-    let entryEdit = elementCreator.elementFactory("button", "Edit", "todo__edit", `todoEdit!${entry.id}`)
-    let entryDelete = elementCreator.elementFactory("button", "Delete", "todo__delete", `todoDelete!${entry.id}`)
+    let entryEdit = elementCreator.elementFactory("button", "Edit", "todo__edit edit__button", `todoEdit!${entry.id}`)
+    let entryDelete = elementCreator.elementFactory("button", "Delete", "todo__delete delete__button", `todoDelete!${entry.id}`)
     let entryButtons = elementCreator.elementFactory("div", null, "todo__buttons", `todo__buttons${entry.id}`, null, null, null, entryEdit, entryDelete)
     let entryCheck = elementCreator.elementFactory("input", null, "todo__checkbox", `todoCheckbox!${entry.id}`)
     entryCheck.type = "checkbox"
@@ -36,8 +36,8 @@ const putOnDOM = {
     // edit form
     let editTodoTask = elementCreator.elementFactory("input", null, "todo__edit__task", `todo__edit__task!${entry.id}`, null, "text", entry.task)
     let editTodoDate = elementCreator.elementFactory("input", null, "todo__edit__date", `todo__edit__date!${entry.id}`, null, "date", entry.date)
-    let editTodoSaveBtn = elementCreator.elementFactory("button", "Save Edits", "todo__edit__save__button", `todo__edit__save__button!${entry.id}`)
-    let editTodoCancelBtn = elementCreator.elementFactory("button", "Cancel", "todo__edit__cancel__button", `todo__edit__cancel__button!${entry.id}`)
+    let editTodoSaveBtn = elementCreator.elementFactory("button", "Save Edits", "todo__edit__save__button editSave__button", `todo__edit__save__button!${entry.id}`)
+    let editTodoCancelBtn = elementCreator.elementFactory("button", "Cancel", "todo__edit__cancel__button editCancel__button", `todo__edit__cancel__button!${entry.id}`)
     let editTodoHolder = elementCreator.elementFactory("div", null, "todo__edit__div hide", `todo__edit__div${entry.id}`, null, null, null, editTodoTask, editTodoDate, editTodoSaveBtn, editTodoCancelBtn)
     //
     let entryHolder = elementCreator.elementFactory("div", null, "todo__div", `todo__div${entry.id}`, null, null, null, entryAllButButtons, entryButtons, editTodoHolder)
@@ -83,8 +83,8 @@ const putOnDOM = {
     let eventDate = elementCreator.elementFactory("p", entry.date, "event__date", `event__date${entry.id}`)
     let eventLocation = elementCreator.elementFactory("p", entry.location, "event__location", `event__location${entry.id}`)
     let eventEditBtn = elementCreator.elementFactory("button", "edit", "event__edit__button", `${entry.id}`, "#")
-    let eventEditSaveBtn = elementCreator.elementFactory("button", "save edits", "event__edit__save__button", `${entry.id}`, "#")
-    let eventEditCancelBtn = elementCreator.elementFactory("button", "cancel", "event__edit__cancel__button", `${entry.id}`, "#")
+    let eventEditSaveBtn = elementCreator.elementFactory("button", "save edits", "event__edit__save__button editSave__button", `${entry.id}`, "#")
+    let eventEditCancelBtn = elementCreator.elementFactory("button", "cancel", "event__edit__cancel__button editCancel__button", `${entry.id}`, "#")
     let eventDeleteBtn = elementCreator.elementFactory("button", "delete", "event__delete__button", `${entry.id}`, "#")
     let editEventDate = elementCreator.elementFactory("input", null, "edit__event__input", `edit__eventDateInput__${entry.id}`, null, "date", entry.date)
     let editEventLocation = elementCreator.elementFactory("input", null, "edit__event__input", `edit__eventLocationInput__${entry.id}`, null, "text", entry.location)

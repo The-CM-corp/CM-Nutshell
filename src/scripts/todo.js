@@ -1,5 +1,3 @@
-// creates a dynamic form for todo
-
 const API = {
   getTodo(user_id) {
     return fetch(`http://localhost:8088/todos?user_id=${user_id}&_sort=date&_order=asc`)
@@ -32,7 +30,6 @@ const API = {
     })
   }
 }
-
 
 export default API
 

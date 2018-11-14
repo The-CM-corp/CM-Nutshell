@@ -22,7 +22,7 @@ const usersAPI = {
     let user = $("#login__name").val()
     console.log(user)
     // fetch db
-    return fetch(`http://localhost:8088/users?name=${user}`)
+    return fetch(`http://localhost:8088/users?email=${user}`)
       .then(response => response.json())
       .then(data => {
         console.log(data)

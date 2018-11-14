@@ -12,7 +12,7 @@ const newsFormManager = {
     URL: <br>
     <input type="text" name="URL" id="news__form__url" placeholder="Give Us the Link"><br>
     </div>
-    <button id="news__form__save">Save</button><br><br>
+    <button id="news__form__save" class="save__button">Submit</button><br><br>
     `
   },
   newsClearForm: () => {
