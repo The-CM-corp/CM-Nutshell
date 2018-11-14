@@ -25,11 +25,15 @@ const usersAPI = {
       .then(response => response.json())
       .then(data => {
         sessionStorage.setItem("user_id", data[0].id)
-        sessionStorage.setItem("user_name", data[0].name)
+        // sessionStorage.setItem("user_name", data[0].name)
       }
         )
-      // if no match found, throw alert error
-  }
+  },
+    queryUsers(email) {
+    return fetch(`http://localhost:8088/users/?email=${email}`)
+      .then(response => response.json())
+      .then(response => response.length)
+  },
 }
 
 export default usersAPI

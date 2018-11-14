@@ -10,6 +10,10 @@ body {
   background: whitesmoke;
 }
 
+.nutshell__logo {
+  text-shadow: 0 0 10px #111;
+}
+
 .header {
   background: #424651;
   padding: 10px;
@@ -19,6 +23,16 @@ body {
 .login__form {
   border: 1px solid gray;
 }
+
+.login_register__links {
+  text-decoration: none;
+  color: lightblue;
+}
+.login_register__links:hover {
+  text-decoration: none;
+  color: red;
+}
+
 
 .welcome {
   text-align: center;
@@ -101,6 +115,12 @@ body {
 
 .event__title {
   font-size: 1em;
+}
+
+.first__event {
+  font-weight: bolder;
+  background: lightcoral;
+  font-size: 120%;
 }
 
 .chat__element {

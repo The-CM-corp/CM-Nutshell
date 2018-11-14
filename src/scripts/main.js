@@ -8,6 +8,7 @@ import chatExecution from "./chatExecution";
 import news from "./news"
 import todoClicks from "./todoClicks";
 import clearTODODom from "./todoClearDOM"
+// import checkInputs from "./formValidation"
 
 addNavClickEvents()
 userFunctions()
@@ -21,7 +22,8 @@ $("#login__button").click(function () {
     $("#nav__username").text(fetchUserName)
     clearTODODom()
   })
-})
+}
+)
 
 chatFetchCalls.loadExistingChats()
 chatExecution.addNewMessageHandler()
