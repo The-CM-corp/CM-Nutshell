@@ -1,6 +1,6 @@
 import timestamp from "./timestamp"
 
-console.log("hi")
+console.log("hello")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -62,7 +62,7 @@ const newsHtmlEntry = (entry) => {
 const newsUrl = "http://localhost:8088/news"
 const newsDataManager = {
   newsGetEntries: (user_id) => {
-    return fetch(`http://localhost:8088/news?_sort=timestamp&_order=desc&user_id=${user_id}`)
+    return fetch(`http://localhost:8088/news?user_id=${user_id}&_sort=timestamp&_order=desc`)
       .then(res => res.json())
   },
   newsSaveEntry: (entry) => {
@@ -106,13 +106,6 @@ const newsDomRender = () => {
   document.querySelector("#news__results").innerHTML = ""
   let fetchUserId = sessionStorage.getItem("user_id")
   newsDataManager.newsGetEntries(fetchUserId)
-    // .then((newsData) => {
-    //   let sortedNews = newsData.sort(function(a,b){
-    //     return a.timestamp.localeCompare(b.timestamp)
-    //     // const newsEntryHTML = newsHtmlEntry(entry)
-    //   });
-    //   console.log(sortedNews)
-    //   })
     .then(entries => {
       entries.forEach(entry => {
         const newsEntryHTML = newsHtmlEntry(entry)
@@ -120,19 +113,6 @@ const newsDomRender = () => {
       })
     })
 }
-
-
-// const timestamp = () => {
-//   let currentDate = new Date()
-//     let date = currentDate.getDate()
-//     let month = currentDate.getMonth()
-//     let year = currentDate.getFullYear()
-//     let hour = currentDate.getHours()
-//     let min = ('0' + currentDate.getMinutes()).slice(-2)
-//     console.log(currentDate)
-//     return `${month+1}-${date}-${year} ${hour}:${min}`
-// }
-
 
 // saveNews function to target button and grab values from inputs to be posted and displayed
 
