@@ -1,5 +1,6 @@
 import eventsAPI from "./api-events"
 import putOnDOM from "./DOMPopulator"
+// import checkInputs from "./formValidation"
 
 
 function clearData() {
@@ -13,12 +14,15 @@ function eventsGenerator() {
 
   eventsAPI.getData(fetchUserId)
     .then((eventData) => {
-      putOnDOM.intialEvents(eventData)
+      let sortedEvents = eventData.sort(function (a, b) {
+        return a.date.localeCompare(b.date);
+      });
+      putOnDOM.intialEvents(sortedEvents)
+      $("#event__results").children().first().addClass("first__event")
       addDeleteEvent()
       addEditEvent()
     })
 }
-
 
 $("#add__event__button").click(function () {
   submitEventForm()
@@ -30,6 +34,9 @@ function submitEventForm() {
   let eventFormDateEl = document.getElementById("add__event__date")
   let eventFormSynopsisEl = document.getElementById("add__event__synopsis")
   let sessionUserId = sessionStorage.getItem("user_id");
+
+  // form validation
+  // checkInputs()
 
   // create a new event object
   let newObject = { title: eventFormTitleEl.value, date: eventFormDateEl.value, synopsis: eventFormSynopsisEl.value, location: eventFormLocationEl.value, user_id: +sessionUserId }
@@ -66,13 +73,12 @@ function addEditEvent() {
     let editedLocationInput = document.getElementById(`edit__eventLocationInput__${thisEditedId}`)
     let sessionUserId = sessionStorage.getItem("user_id");
 
-    let EditedObject = { title: editedTitleInput.value, date: editedDateInput.value, synopsis: editedSynopsisInput.value, location: editedLocationInput.value, user_id: +sessionUserId  }
-    console.log("edited object: ", EditedObject)
+    let EditedObject = { title: editedTitleInput.value, date: editedDateInput.value, synopsis: editedSynopsisInput.value, location: editedLocationInput.value, user_id: +sessionUserId }
     eventsAPI.editEntry(thisEditedId, EditedObject)
       .then(() => {
         clearData()
         eventsGenerator()
-    })
+      })
   })
 
 
