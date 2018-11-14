@@ -37,16 +37,6 @@ export default {
       }
     })
   },
-  // loadExistingChats: function () {
-  //   return fetch(`http://localhost:8088/chats?_expand=user`)
-  //     .then(entries => entries.json())
-  //     .then(entries => console.log(entries))
-  //     .catch(error => console.log(error))
-  //     // .then(entries => {
-  //     //   entries.forEach(entry => {
-  //     //     putOnDOM.postNewMessage(entry)
-  //     //   })
-  // }
   loadExistingChats: function () {
     return fetch(`http://localhost:8088/chats?_sort=time&_order=desc&_limit=10&_expand=user`)
       .then(entries => entries.json())

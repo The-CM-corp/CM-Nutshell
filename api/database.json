@@ -277,21 +277,9 @@
     },
     {
       "userId": 3,
-      "time": "11-14-2018 15:12",
-      "message": "time 2222",
+      "time": "2018-11-14T21:44:16.584Z",
+      "message": "messatesttest!!!",
       "id": 6
-    },
-    {
-      "userId": 3,
-      "time": "2018-11-14T21:17:39.198Z",
-      "message": "hello",
-      "id": 7
-    },
-    {
-      "userId": 3,
-      "time": "2018-11-14T21:19:25.457Z",
-      "message": "Message",
-      "id": 8
     }
   ]
 }

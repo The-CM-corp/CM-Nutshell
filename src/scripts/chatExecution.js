@@ -1,5 +1,4 @@
 import chatFetchCalls from "./chatMethods"
-import timestampFunction from "./timestamp"
 
 export default {
   addNewMessageHandler: function () {
@@ -8,8 +7,8 @@ export default {
       const newMessageInput = document.querySelector("#add__chat__message");
       let newMessage = chatFetchCalls.chatObjFactory(timestamp, newMessageInput.value);
       return chatFetchCalls.saveNewChat(newMessage)
-        .then(response => {
-          $("#chat_results").empty()
+        .then(() => {
+          $("#chat__results").empty()
           newMessageInput.value = "";
           chatFetchCalls.loadExistingChats()
         })
@@ -19,8 +18,8 @@ export default {
     $("#chat__results").on("click", ".btn__chat__delete", (event) => {
       let chatId = event.target.id.split("-")[1]
       return chatFetchCalls.deleteChat(chatId)
-        .then(response => $("#chat__results").empty())
-        .then(response => chatFetchCalls.loadExistingChats())
+        .then(() => $("#chat__results").empty())
+        .then(() => chatFetchCalls.loadExistingChats())
     })
   },
   editFormHandler: function () {
