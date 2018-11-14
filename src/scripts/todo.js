@@ -2,7 +2,7 @@
 
 const API = {
   getTodo(user_id) {
-    return fetch(`http://localhost:8088/todos?user_id=${user_id}`)
+    return fetch(`http://localhost:8088/todos?user_id=${user_id}&_sort=date&_order=asc`)
       .then(data => data.json())
   },
   postTodo(newTodo) {

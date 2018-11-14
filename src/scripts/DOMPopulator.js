@@ -35,7 +35,7 @@ const putOnDOM = {
     let entryAllButButtons = elementCreator.elementFactory("div", null, "todo__notButtons", `todo__notButtons!${entry.id}`, null, null, null, entryCheck, entryText)
     // edit form
     let editTodoTask = elementCreator.elementFactory("input", null, "todo__edit__task", `todo__edit__task!${entry.id}`, null, "text", entry.task)
-    let editTodoDate = elementCreator.elementFactory("input", null, "todo__edit__date", `todo__edit__date!${entry.id}`, null, "text", entry.date)
+    let editTodoDate = elementCreator.elementFactory("input", null, "todo__edit__date", `todo__edit__date!${entry.id}`, null, "date", entry.date)
     let editTodoSaveBtn = elementCreator.elementFactory("button", "Save Edits", "todo__edit__save__button", `todo__edit__save__button!${entry.id}`)
     let editTodoCancelBtn = elementCreator.elementFactory("button", "Cancel", "todo__edit__cancel__button", `todo__edit__cancel__button!${entry.id}`)
     let editTodoHolder = elementCreator.elementFactory("div", null, "todo__edit__div hide", `todo__edit__div${entry.id}`, null, null, null, editTodoTask, editTodoDate, editTodoSaveBtn, editTodoCancelBtn)
