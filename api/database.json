@@ -134,14 +134,14 @@
     {
       "task": "single source of truth",
       "date": "2018-11-14",
-      "completed": false,
+      "completed": true,
       "id": 2,
       "user_id": 3
     },
     {
       "task": "Task Numero Uno",
       "date": "2018-11-13",
-      "completed": true,
+      "completed": false,
       "user_id": 5,
       "id": 5
     },
@@ -155,7 +155,7 @@
     {
       "task": "what is wrong",
       "date": "2018-11-16",
-      "completed": true,
+      "completed": false,
       "user_id": 3,
       "id": 8
     },
@@ -182,7 +182,7 @@
     },
     {
       "task": "session storage",
-      "date": "2018-11-14",
+      "date": "2018-11-28",
       "completed": false,
       "user_id": 5,
       "id": 13
@@ -216,13 +216,6 @@
       "id": 18
     },
     {
-      "task": "dad",
-      "date": "2018-11-14",
-      "completed": false,
-      "user_id": 5,
-      "id": 19
-    },
-    {
       "task": "asdasd",
       "date": "",
       "completed": false,
@@ -232,16 +225,9 @@
     {
       "task": "ask for help",
       "date": "2018-11-12",
-      "completed": false,
+      "completed": true,
       "user_id": 5,
       "id": 21
-    },
-    {
-      "task": "hype",
-      "date": "2018-11-22",
-      "completed": false,
-      "user_id": 3,
-      "id": 22
     }
   ],
   "chats": [

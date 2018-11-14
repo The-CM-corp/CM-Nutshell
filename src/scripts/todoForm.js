@@ -1,5 +1,6 @@
 import putOnDOM from "./DOMPopulator"
 import API from "./todo"
+import clearTODODom from "./todoClearDOM";
 
 function onTodoSumbit() {
   let todoSubmit = document.getElementById("add__todo__button")
@@ -14,7 +15,10 @@ function onTodoSumbit() {
     if (!newTodo.task || !newTodo.date) {
       alert("Please fill the form!!")
     } else {
-    API.postTodo(newTodo).then(data => putOnDOM.postNewTodo(data))
+    API.postTodo(newTodo).then( () => {
+      //.then(data => putOnDOM.postNewTodo(data))
+    clearTODODom()
+    })
     }
   })
 }

@@ -16,10 +16,10 @@ function addNavClickEvents(){
       $("#nav").removeClass("hide");
       $("#categories").removeClass("hide")
   });
-    $("#register__button").click(function(){
-      $("#login__form").removeClass("hide");
-      $("#register__form").addClass("hide");
-  });
+  //   $("#register__button").click(function(){
+  //     $("#login__form").removeClass("hide");
+  //     $("#register__form").addClass("hide");
+  // });
   // Main Navigation Buttons > expand clicked category and hide others
     // Logout
     $("#logout__link").click(function(){

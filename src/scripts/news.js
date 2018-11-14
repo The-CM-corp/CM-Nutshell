@@ -1,4 +1,4 @@
-console.log("hi")
+console.log("hi!")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
