@@ -1,26 +1,28 @@
 import elementCreator from "./elementFactory"
-// generic template
+
+// el, cont, clazz, id, link, type, value, ...children   FOR REFERENCE Parameters in elementCreator
 
 const putOnDOM = {
   postNewMessage(entry) {
-    let chatName = elementCreator.elementFactory("a", entry.user_id, "chat__name", `chat__name${entry.id}`, "#")
+    let chatName = elementCreator.elementFactory("a", entry.user.name, "chat__name", `chat__name${entry.id}`, "#")
     let chatTime = elementCreator.elementFactory("p", entry.time, "chat__time", `chat__time${entry.id}`)
     let chatMessage = elementCreator.elementFactory("p", entry.message, "chat__message", `chat_message${entry.id}`)
-    let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit edit__button", `btn__chat__edit-${entry.id}`)
-    let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__chat__delete delete__button", `btn__chat__delete-${entry.id}`)
-    let chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn)
+    let chatEditBtn = elementCreator.elementFactory("button", "Edit", "btn__chat__edit", `btn__chat__edit-${entry.id}`)
+    let chatDeleteBtn = elementCreator.elementFactory("button", "Delete", "btn__chat__delete", `btn__chat__delete-${entry.id}`)
+    let editInputField = elementCreator.elementFactory("input", null, "hide", `input__chat__edit-${entry.id}`, null, null, entry.message)
+    let editInputSave = elementCreator.elementFactory("button", "Save", "btn__chat__input_save hide", `btn__chat__input_save-${entry.id}`)
+    let chatHolder;
+    if(entry.userId === parseInt(sessionStorage.user_id, 10)) {
+      chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn, editInputField, editInputSave)
+    } else {
+      chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage)
+    }
     let fragment = document.createDocumentFragment()
     let chatOutput = document.querySelector("#chat__results")
     fragment.appendChild(chatHolder)
     chatOutput.appendChild(fragment)
   },
 
-  // loops over all of one type of entry and populates multiple ones at a time
-  initialChats(entries) {
-    entries.forEach(entry => {
-      putOnDOM.postNewMessage(entry)
-    })
-  },
   postNewTodo(entry) {
     let entryTask = elementCreator.elementFactory("h3", entry.task, "todo__task", `todo__task${entry.id}`)
     let entryDate = elementCreator.elementFactory("p", `Expected completion date: ${entry.date}`, "todo__date", `todo__date${entry.id}`)

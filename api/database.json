@@ -59,6 +59,12 @@
       "password": "bryan",
       "email": "bryan@dafjksdhfkjashdklfhasdlkfhasdljkfh",
       "id": 10
+    },
+    {
+      "name": "fghjdfg",
+      "password": "jfghkjdfhg",
+      "email": "sallyfdgjhjdfhg",
+      "id": 11
     }
   ],
   "events": [
@@ -93,6 +99,14 @@
       "location": "Hattie B's",
       "user_id": 4,
       "id": 6
+    },
+    {
+      "title": "Event Title",
+      "date": "",
+      "synopsis": "null",
+      "location": "Location",
+      "user_id": 3,
+      "id": 7
     },
     {
       "title": "Jack White Concert",
@@ -156,31 +170,35 @@
       "id": 3
     },
     {
-      "title": "joe is watching us",
-      "synopsis": "he's right behind me",
-      "url": "joe.com",
-      "id": 4
-    },
-    {
-      "title": "Firefighter Rescues Kitten",
-      "synopsis": "it was scary for fluffy but chief jones saved the day",
-      "url": "cute.com",
-      "user_id": 4,
+      "title": "test",
+      "synopsis": "test3",
+      "url": "test",
+      "user_id": 1,
       "id": 5
     },
     {
-      "title": "Great News for Once",
-      "synopsis": "People were nice to each other",
-      "url": "www.google.com",
-      "user_id": 1,
+      "title": "1234",
+      "synopsis": "1",
+      "url": "1",
+      "user_id": 3,
+      "timestamp": "11-14-2018 14:54",
       "id": 6
     },
     {
-      "title": "my news",
-      "synopsis": "hasshha",
-      "url": "weri",
-      "user_id": 5,
+      "title": "1",
+      "synopsis": "1",
+      "url": "1",
+      "user_id": 3,
+      "timestamp": "11-14-2018 14:54",
       "id": 7
+    },
+    {
+      "title": "1",
+      "synopsis": "1",
+      "url": "www.google.com",
+      "user_id": 3,
+      "timestamp": "11-14-2018 14:54",
+      "id": 8
     }
   ],
   "todos": [
@@ -199,10 +217,11 @@
       "user_id": 3
     },
     {
-      "task": "Task Numero Uno",
-      "date": "2018-11-13",
+      "task": "Task",
+      "date": "2018-11-14",
       "completed": false,
-      "id": 5
+      "id": 3,
+      "user_id": 3
     },
     {
       "task": "quit messing with the element creator",
@@ -218,15 +237,8 @@
       "id": 8
     },
     {
-      "task": "Save this sweet trash!",
-      "date": "2018-11-13",
-      "completed": false,
-      "user_id": 5,
-      "id": 10
-    },
-    {
-      "task": "asdasd",
-      "date": "2018-11-14",
+      "task": "que pasa?!!!!",
+      "date": "2018-11-12",
       "completed": false,
       "user_id": 0,
       "id": 11
@@ -297,35 +309,16 @@
   ],
   "chats": [
     {
-      "user_id": 1,
-      "time": "2018-11-13T15:38:43.450Z",
-      "message": "hey",
-      "id": 2
-    },
-    {
-      "user_id": 1,
-      "time": "2018-11-13T15:51:40.240Z",
-      "message": "wassup lesley?????",
-      "id": 3
-    },
-    {
-      "user_id": 1,
-      "time": "2018-11-13T15:56:50.368Z",
-      "message": "austin is the man with the plan",
-      "id": 4
-    },
-    {
-      "user_id": "4",
+      "userId": "4",
       "time": "2018-11-13T22:17:50.315Z",
-      "message": "Messagenew ",
+      "message": "Message",
       "id": 5
-    }
-  ],
-  "friendships": [
+    },
     {
-      "id": 1,
-      "stalker_id": 1,
-      "bystander_id": 2
+      "userId": 3,
+      "time": "2018-11-14T21:44:16.584Z",
+      "message": "messatesttest!!!",
+      "id": 6
     }
   ]
 }
