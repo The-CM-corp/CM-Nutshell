@@ -16,7 +16,6 @@ function onTodoSumbit() {
       alert("Please fill the form!!")
     } else {
     API.postTodo(newTodo).then( () => {
-      //.then(data => putOnDOM.postNewTodo(data))
     clearTODODom()
     })
     }
