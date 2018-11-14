@@ -25,10 +25,40 @@
       "id": 4
     },
     {
-      "name": "austin",
-      "password": "austin",
-      "email": "austin",
+      "name": "sally",
+      "password": "password",
+      "email": "cats@catmilk.com",
       "id": 5
+    },
+    {
+      "name": "bryan",
+      "password": "bryan@bryan.com",
+      "email": "bryan",
+      "id": 6
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "",
+      "id": 7
+    },
+    {
+      "name": "bryan",
+      "password": "",
+      "email": "ehejrrhejhkerj",
+      "id": 8
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": "bryan@djfhskadjfh",
+      "id": 9
+    },
+    {
+      "name": "bryan",
+      "password": "bryan",
+      "email": "bryan@dafjksdhfkjashdklfhasdlkfhasdljkfh",
+      "id": 10
     }
   ],
   "events": [
@@ -49,34 +79,53 @@
       "user_id": 2
     },
     {
-      "title": "ffudf",
-      "date": "2018-11-16",
-      "synopsis": "sdsrsretew",
-      "location": "cxfixdifxi",
-      "id": 4
-    },
-    {
-      "title": "Event Title",
-      "date": "",
-      "synopsis": "",
-      "location": "Location",
+      "title": "This is the second event",
+      "date": "2018-11-28",
+      "synopsis": "Edited the Text",
+      "location": "Carson City",
+      "user_id": 4,
       "id": 5
     },
     {
-      "title": "Event Title",
-      "date": "",
-      "synopsis": "",
-      "location": "Location",
-      "user_id": 0,
+      "title": "Fun Events",
+      "date": "2018-11-30",
+      "synopsis": "Hot Chicken Contest",
+      "location": "Hattie B's",
+      "user_id": 4,
       "id": 6
     },
     {
+<<<<<<< HEAD
       "title": "Event Title",
       "date": "",
       "synopsis": "null",
       "location": "Location",
       "user_id": 3,
       "id": 7
+=======
+      "title": "Jack White Concert",
+      "date": "2018-11-24",
+      "synopsis": "No opener",
+      "location": "Ascend",
+      "user_id": 4,
+      "id": 7
+    },
+    {
+      "title": "Ping Pong Wizards",
+      "date": "2018-11-21",
+      "synopsis": "ping pong championship",
+      "location": "Belle Meade",
+      "user_id": 4,
+      "id": 8
+    },
+    {
+      "title": "laughing party",
+      "date": "2018-11-13",
+      "synopsis": "at noon we will laugh at greg without him knowing",
+      "location": "here",
+      "user_id": 4,
+      "id": 9
+>>>>>>> master
     }
   ],
   "news": [
@@ -88,25 +137,36 @@
       "user_id": 1
     },
     {
-      "title": "Joe's Title",
-      "synopsis": "joe's story",
-      "url": "joe's link",
-      "user_id": 1,
+      "title": "Sally's News",
+      "synopsis": "Her news",
+      "url": "http.com",
+      "id": 2
+    },
+    {
+      "title": "new bryan article",
+      "synopsis": "here's the news story",
+      "url": "www.face.com",
       "id": 3
     },
     {
+<<<<<<< HEAD
       "title": "test",
       "synopsis": "test3",
       "url": "test",
       "user_id": 1,
-      "id": 5
+=======
+      "title": "joe is watching us",
+      "synopsis": "he's right behind me",
+      "url": "joe.com",
+      "id": 4
     },
     {
-      "title": "Great News for Once",
-      "synopsis": "People were nice to each other",
-      "url": "www.google.com",
-      "user_id": 1,
-      "id": 6
+      "title": "Firefighter Rescues Kitten",
+      "synopsis": "it was scary for fluffy but chief jones saved the day",
+      "url": "cute.com",
+      "user_id": 4,
+>>>>>>> master
+      "id": 5
     }
   ],
   "todos": [
@@ -115,75 +175,103 @@
       "task": "Take out trash",
       "date": "11/8/18",
       "completed": false,
-      "user_id": 5
+      "user_id": 1
     },
     {
-      "task": "single source of truth",
-      "date": "2018-11-14",
+      "task": "bring in the trash",
+      "date": "2018-11-21",
       "completed": false,
-      "id": 2,
-      "user_id": 3
+      "id": 2
     },
     {
+<<<<<<< HEAD
       "task": "Task",
       "date": "2018-11-14",
       "completed": false,
       "id": 3,
       "user_id": 3
+=======
+      "task": "take out trash",
+      "date": "2018-11-21",
+      "completed": false,
+      "id": 3
+>>>>>>> master
     },
     {
-      "task": "Task Uno",
-      "date": "2018-11-24",
+      "task": "wash dishes",
+      "date": "2018-11-21",
       "completed": false,
-      "user_id": 5,
+      "id": 4
+    },
+    {
+      "task": "take out trash",
+      "date": "2018-11-27",
+      "completed": false,
       "id": 5
     },
     {
+<<<<<<< HEAD
       "task": "que pasa?!!!!",
       "date": "2018-11-12",
+=======
+      "task": "quit messing with the element creator",
+      "date": "2018-11-14",
+>>>>>>> master
       "completed": false,
-      "user_id": 3,
       "id": 6
     },
     {
-      "task": "Task",
-      "date": "2018-11-12",
-      "completed": true,
-      "user_id": 3,
+      "task": "quit messing with the element creator",
+      "date": "2018-11-14",
+      "completed": false,
       "id": 7
     },
     {
-      "task": "what is wrong",
-      "date": "2018-11-16",
-      "completed": false,
-      "user_id": 3,
+      "task": "rake leaves",
+      "date": "2018-11-14",
+      "completed": true,
+      "user_id": 4,
       "id": 8
+    },
+    {
+      "task": "mow the lawn",
+      "date": "2018-11-29",
+      "completed": false,
+      "user_id": 4,
+      "id": 9
+    },
+    {
+      "task": "bake the cookies faster",
+      "date": "2018-11-17",
+      "completed": false,
+      "user_id": 4,
+      "id": 10
     }
   ],
   "chats": [
     {
-      "id": 1,
       "user_id": 1,
-      "time": "10:00:00",
-      "message": "Hey, I'm kicking all sorts of butt"
-    },
-    {
-      "user_id": 1,
-      "time": "2018-11-13T01:51:26.012Z",
-      "message": "Messageqq",
+      "time": "2018-11-13T15:38:43.450Z",
+      "message": "hey",
       "id": 2
     },
     {
       "user_id": 1,
-      "time": "2018-11-13T15:30:58.223Z",
-      "message": "hola",
+      "time": "2018-11-13T15:51:40.240Z",
+      "message": "wassup lesley?????",
       "id": 3
     },
     {
       "user_id": 1,
-      "time": "2018-11-13T15:31:05.602Z",
-      "message": "tu madre",
+      "time": "2018-11-13T15:56:50.368Z",
+      "message": "austin is the man with the plan",
       "id": 4
+    },
+    {
+      "user_id": "4",
+      "time": "2018-11-13T22:17:50.315Z",
+      "message": "Messagenew ",
+      "id": 5
     }
   ],
   "friendships": [

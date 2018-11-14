@@ -27,15 +27,20 @@ const usersAPI = {
       .then(data => {
         console.log(data)
         sessionStorage.setItem("user_id", data[0].id)
-        sessionStorage.setItem("user_name", data[0].name)
+        // sessionStorage.setItem("user_name", data[0].name)
       }
-        )
-      // if no match found, throw alert error
+      )
+    // if no match found, throw alert error
   },
   getUserName: function (entryId) {
     return fetch(`http://localhost:8088/users/${entryId}`)
       .then(jsonObj => jsonObj.json())
       .then(jsObject => jsObject.name)
+  },
+  queryUsers(email) {
+  return fetch(`http://localhost:8088/users/?email=${email}`)
+    .then(response => response.json())
+    .then(response => response.length)
   }
 }
 
