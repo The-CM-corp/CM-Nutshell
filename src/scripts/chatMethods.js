@@ -56,9 +56,4 @@ export default {
         })
     })
   }
-  // getUserName: function (entryId) {
-  //   return fetch(`http://localhost:8088/users/${entryId}`)
-  //     .then(jsonObj => jsonObj.json())
-  //     .then(jsObject => jsObject.name)
-  // }
 }
