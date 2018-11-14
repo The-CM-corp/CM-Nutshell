@@ -1,9 +1,5 @@
 import timestamp from "./timestamp"
 
-console.log("hello")
-// add news() to the login button on main.js
-// updated main.css with news__div
-
 // html form representation and clear form values
 const newsFormManager = {
   newsHtmlForm: () => {
@@ -42,20 +38,6 @@ const newsHtmlEntry = (entry) => {
   `
 }
 
-// representation of edit form
-// const newsHtmlEdit = () => {
-//   return `
-//   <div>
-//     Title: <br>
-//     <input type="text" name="Title" id="news__edit__title" placeholder="News Title"><br>
-//     Synopsis: <br>
-//     <input type="textarea" name="Synopsis" id="news__edit__synopsis" placeholder="Tell Us More"><br>
-//     URL: <br>
-//     <input type="text" name="URL" id="news__edit__url" placeholder="Give Us the Link"><br>
-//     </div>
-//     <button id="news__form__edit">Edit</button><br><br>
-//     `
-// }
 
 // fetch obj with a get, post, delete, edit, and target single entry
 
@@ -165,7 +147,6 @@ const newsEdit = () => {
     // it then finds the id of the entry associated with the clicked button and performs a delete method from the DB and renders the new DB results
     if (event.target.id.startsWith("deleteNews")) {
       const id = event.target.id.split("!")[1]
-      console.log("delete id", id)
       newsDataManager.newsDeleteEntry(id).then(() =>
         newsDomRender()
       )
