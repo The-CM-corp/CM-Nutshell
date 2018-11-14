@@ -18,17 +18,26 @@ $("#login__button").click(function () {
   usersAPI.loginUser().then(() => {
     eventsGenerator()
     news()
-    let fetchUserName = sessionStorage.getItem("user_name")
-    $("#nav__username").text(fetchUserName)
+    chatFetchCalls.loadExistingChats()
+    // let fetchUserName = sessionStorage.getItem("user_name")
+    let fetchUserId = sessionStorage.getItem("user_id")
+    // let fetchUserName = chatFetchCalls.getUserName(fetchUserId)
+    usersAPI.getUserName(fetchUserId)
+    // .then(returns => console.log(`current user name ${returns}`))
+    .then(fetchUserName => {
+      $("#nav__username").text(fetchUserName)
+    } )
+
     clearTODODom()
   })
 }
 )
 
-chatFetchCalls.loadExistingChats()
+chatExecution.editFormHandler()
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()
 chatExecution.editMessageHandler()
+
 
 
 //todo calls

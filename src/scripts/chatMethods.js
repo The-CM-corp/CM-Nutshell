@@ -4,20 +4,20 @@ import putOnDOM from "./DOMPopulator";
 
 export default {
   // takes user input and makes new object
-  chatObjFactory: function(time, inputValue) {
+  chatObjFactory: function (time, inputValue) {
     return {
-    user_id: sessionStorage.user_id,
-    time: time,
-    message: inputValue
+      userId: parseInt(sessionStorage.user_id, 10),
+      time: time,
+      message: inputValue
     }
   },
   saveNewChat: function (object) {
     return fetch(`http://localhost:8088/chats/`, {
-    method: "POST",
-    headers: {
+      method: "POST",
+      headers: {
         "Content-Type": "application/json"
-    },
-    body: JSON.stringify(object)
+      },
+      body: JSON.stringify(object)
     })
   },
   editChat: function (objId, newContent) {
@@ -38,8 +38,13 @@ export default {
     })
   },
   loadExistingChats: function () {
-    return fetch(`http://localhost:8088/chats/`)
-    .then(entries => entries.json())
-    .then(entries => putOnDOM.initialChats(entries))
+    return fetch(`http://localhost:8088/chats?_sort=time&_order=desc&_limit=10&_expand=user`)
+      .then(entries => entries.json())
+      .then(entries => entries.reverse())
+      .then(entries => {
+        entries.forEach(entry => {
+          putOnDOM.postNewMessage(entry)
+        })
+    })
   }
 }
