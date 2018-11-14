@@ -31,9 +31,11 @@ $("#login__button").click(function () {
   })
 })
 
+chatExecution.editFormHandler()
 chatExecution.addNewMessageHandler()
 chatExecution.deleteMessageHandler()
 chatExecution.editMessageHandler()
+
 
 
 //todo calls

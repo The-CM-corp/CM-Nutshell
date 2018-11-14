@@ -22,6 +22,20 @@ export default {
         .then(response => chatFetchCalls.loadExistingChats())
     })
   },
+  editFormHandler: function () {
+    $("#chat__results").on("click", ".btn__chat__edit", (event) => {
+      console.log("button was clicked")
+      let chatId = event.target.id.split("-")[1]
+      let inputToShow = $(`#input__chat__edit-${chatId}`)
+      let saveBtnToShow = $(`#btn__chat__input_save-${chatId}`)
+      let editBtnToHide = $(`#btn__chat__edit-${chatId}`)
+      let deleteBtnToHide = $(`#btn__chat__delete-${chatId}`)
+      inputToShow.removeClass("hide")
+      saveBtnToShow.removeClass("hide")
+      editBtnToHide.addClass("hide")
+      deleteBtnToHide.addClass("hide")
+    })
+  },
   editMessageHandler: function () {
     $("#chat__results").on("click", ".btn__chat__input_save", (event) => {
       let chatId = event.target.id.split("-")[1]
