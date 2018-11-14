@@ -202,3 +202,17 @@ body {
   padding: 3px;
   background: lightgray;
  }
+
+ /* containers */
+ #news__container {
+   background: 	#c2eaeb;
+ }
+  #events__container {
+   background: 	 #81d8d4;
+ }
+#chat__container {
+  background: #3fc6bd;
+}
+#todo__container {
+  background: #2dafa7;
+}

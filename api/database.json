@@ -117,6 +117,22 @@
       "location": "here",
       "user_id": 4,
       "id": 9
+    },
+    {
+      "title": "Event Title",
+      "date": "",
+      "synopsis": "",
+      "location": "Location",
+      "user_id": 3,
+      "id": 10
+    },
+    {
+      "title": "Event Title",
+      "date": "",
+      "synopsis": "",
+      "location": "Location",
+      "user_id": 3,
+      "id": 11
     }
   ],
   "news": [
@@ -274,7 +290,7 @@
     {
       "task": "middle",
       "date": "2018-11-15",
-      "completed": true,
+      "completed": false,
       "user_id": 3,
       "id": 22
     }
