@@ -1,4 +1,3 @@
-import putOnDOM from "./DOMPopulator"
 import API from "./todo"
 import clearTODODom from "./todoClearDOM";
 
@@ -13,7 +12,7 @@ function onTodoSumbit() {
       "user_id": +sessionUserID
     }
     if (!newTodo.task || !newTodo.date) {
-      alert("Please fill the form!!")
+      alert("Please fill all required fields")
     } else {
     API.postTodo(newTodo).then( () => {
     clearTODODom()

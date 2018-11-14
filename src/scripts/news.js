@@ -1,4 +1,6 @@
-console.log("hi!")
+import timestamp from "./timestamp"
+
+console.log("hello")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -28,10 +30,11 @@ const newsFormManager = {
 // added the edit and delete buttons here
 const newsHtmlEntry = (entry) => {
   return `
-  <div class="news__div">
+  <div class="news__div" id="news__div${entry.id}">
     <h4>${entry.title}</h4>
     <p>${entry.synopsis}</p>
     <a href="http://${entry.url}">${entry.url}</a><br>
+    <p>${entry.timestamp}</p>
     <button id="editNews!${entry.id}" class="edit__button">Edit</button>
     <button id="deleteNews!${entry.id}" class="delete__button">Delete</button>
 
@@ -39,12 +42,27 @@ const newsHtmlEntry = (entry) => {
   `
 }
 
+// representation of edit form
+// const newsHtmlEdit = () => {
+//   return `
+//   <div>
+//     Title: <br>
+//     <input type="text" name="Title" id="news__edit__title" placeholder="News Title"><br>
+//     Synopsis: <br>
+//     <input type="textarea" name="Synopsis" id="news__edit__synopsis" placeholder="Tell Us More"><br>
+//     URL: <br>
+//     <input type="text" name="URL" id="news__edit__url" placeholder="Give Us the Link"><br>
+//     </div>
+//     <button id="news__form__edit">Edit</button><br><br>
+//     `
+// }
+
 // fetch obj with a get, post, delete, edit, and target single entry
 
 const newsUrl = "http://localhost:8088/news"
 const newsDataManager = {
   newsGetEntries: (user_id) => {
-    return fetch(`${newsUrl}?user_id=${user_id}`)
+    return fetch(`http://localhost:8088/news?user_id=${user_id}&_sort=timestamp&_order=desc`)
       .then(res => res.json())
   },
   newsSaveEntry: (entry) => {
@@ -104,26 +122,38 @@ const saveNews = () => {
     const news__synopsis = document.querySelector("#news__form__synopsis").value
     const news__url = document.querySelector("#news__form__url").value
     const news__session__user__id = sessionStorage.getItem("user_id")
-    console.log("news session id:", news__session__user__id)
-    // below will check to make sure all inputs are filled out before saving to DB
-    if (!news__title || !news__synopsis || !news__url) {
-      alert("fill out the form")
-    } else {
-      document.querySelector("#news__results").innerHTML = ""
-      const newsEntry = {
-        title: news__title,
-        synopsis: news__synopsis,
-        url: news__url,
-        user_id: +news__session__user__id
+    const newsEntry = {
+      title: news__title,
+      synopsis: news__synopsis,
+      url: news__url,
+      user_id: +news__session__user__id,
+      timestamp: timestamp()
+    }
+    if (event.target.id.startsWith("news__form__save")) {
+      // below will check to make sure all inputs are filled out before saving to DB
+      if (!news__title || !news__synopsis || !news__url) {
+        alert("fill out all boxes")
+      } else {
+        document.querySelector("#news__results").innerHTML = ""
+
+        // save the info and then once the promise is fulfilled
+        newsDataManager.newsSaveEntry(newsEntry).then(() => {
+          // clear inputs
+          newsFormManager.newsClearForm()
+          // and post it to the DOM
+          newsDomRender()
+        })
       }
-      // save the info and then once the promise is fulfilled
-      newsDataManager.newsSaveEntry(newsEntry).then(() => {
-        // clear inputs
+    }
+    if (event.target.id.startsWith("editNews")) {
+      const id = event.target.id.split("!")[1]
+      newsDataManager.newsEditEntry(newsEntry, id).then(() => {
         newsFormManager.newsClearForm()
-        // and post it to the DOM
         newsDomRender()
+        document.getElementById(`editNews__form!${id}`).id = "news__form__save"
       })
     }
+
   })
 }
 
@@ -144,14 +174,12 @@ const newsEdit = () => {
     // it's looking for the id from the entry associated with the edit button and performs a get from the database but returns the values to the input boxes
     if (event.target.id.startsWith("editNews")) {
       const id = event.target.id.split("!")[1]
+      document.querySelector("#news__form__save").id = `editNews__form!${id}`
       newsDataManager.newsSingleEntry(id).then((entry) => {
         document.querySelector("#news__form__title").value = entry.title
         document.querySelector("#news__form__synopsis").value = entry.synopsis
         document.querySelector("#news__form__url").value = entry.url
       })
-
-      // I'm not sure how to also delete the old entry so I'm putting in an alert for the user
-      alert("Make sure to delete your old entry")
     }
   })
 }
@@ -167,6 +195,4 @@ const news = () => {
   newsEdit()
 }
 
-export {
-  news
-}
+export default news
