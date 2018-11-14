@@ -175,6 +175,28 @@ body {
 .edit__button:hover {
   background: red;
 }
+.editSave__button {
+  background: #424651;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 3px 10px;
+  color: white;
+}
+
+.editSave__button:hover {
+  background: maroon;
+}
+.editCancel__button {
+  background: #424651;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 3px 10px;
+  color: white;
+}
+
+.editCancel__button:hover {
+  background: blueviolet;
+}
 
 .delete__button {
   background: #424651;
@@ -186,6 +208,17 @@ body {
 
 .delete__button:hover {
   background: purple;
+}
+.save__button {
+  background: #424651;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 3px 10px;
+  color: white;
+}
+
+.save__button:hover {
+  background: #159e96;
 }
 
 .news__div {

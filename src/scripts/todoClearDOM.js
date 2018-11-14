@@ -9,8 +9,6 @@ function clearTODODom() {
     .then(todo => {
       putOnDOM.initialTodos(todo)
     })
-
-  //a .then that filters completed true false and puts it in the correct div
 }
 
 export default clearTODODom
