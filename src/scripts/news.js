@@ -1,3 +1,5 @@
+import timestamp from "./timestamp"
+
 console.log("hello")
 // add news() to the login button on main.js
 // updated main.css with news__div
@@ -57,10 +59,10 @@ const newsHtmlEntry = (entry) => {
 
 // fetch obj with a get, post, delete, edit, and target single entry
 
-const newsUrl = "http://localhost:8088/news"
+const newsUrl = "http://localhost:8088/news?_sort=timestamp&_order=desc&"
 const newsDataManager = {
   newsGetEntries: (user_id) => {
-    return fetch(`${newsUrl}?user_id=${user_id}`)
+    return fetch(`${newsUrl}user_id=${user_id}`)
       .then(res => res.json())
   },
   newsSaveEntry: (entry) => {
@@ -120,16 +122,16 @@ const newsDomRender = () => {
 }
 
 
-const timestamp = () => {
-  let currentDate = new Date()
-    let date = currentDate.getDate()
-    let month = currentDate.getMonth()
-    let year = currentDate.getFullYear()
-    let hour = currentDate.getHours()
-    let min = ('0' + currentDate.getMinutes()).slice(-2)
-    console.log(currentDate)
-    return `${month+1}-${date}-${year} ${hour}:${min}`
-}
+// const timestamp = () => {
+//   let currentDate = new Date()
+//     let date = currentDate.getDate()
+//     let month = currentDate.getMonth()
+//     let year = currentDate.getFullYear()
+//     let hour = currentDate.getHours()
+//     let min = ('0' + currentDate.getMinutes()).slice(-2)
+//     console.log(currentDate)
+//     return `${month+1}-${date}-${year} ${hour}:${min}`
+// }
 
 
 // saveNews function to target button and grab values from inputs to be posted and displayed
