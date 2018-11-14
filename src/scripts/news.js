@@ -1,4 +1,4 @@
-console.log("hi")
+console.log("hello")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -124,8 +124,12 @@ const timestamp = () => {
     let date = currentDate.getDate()
     let month = currentDate.getMonth()
     let year = currentDate.getFullYear()
-    return `${month+1}-${date}-${year}`
+    let hour = currentDate.getHours()
+    let min = ('0' + currentDate.getMinutes()).slice(-2)
+    console.log(currentDate)
+    return `${month+1}-${date}-${year} ${hour}:${min}`
 }
+
 
 // saveNews function to target button and grab values from inputs to be posted and displayed
 
