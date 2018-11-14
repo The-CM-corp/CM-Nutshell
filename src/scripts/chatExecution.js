@@ -1,4 +1,5 @@
 import chatFetchCalls from "./chatMethods"
+import timestampFunction from "./timestamp"
 
 export default {
   addNewMessageHandler: function () {

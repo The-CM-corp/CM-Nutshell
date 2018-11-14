@@ -12,7 +12,7 @@ const putOnDOM = {
     let editInputField = elementCreator.elementFactory("input", null, "hide", `input__chat__edit-${entry.id}`, null, null, entry.message)
     let editInputSave = elementCreator.elementFactory("button", "Save", "btn__chat__input_save hide", `btn__chat__input_save-${entry.id}`)
     let chatHolder;
-    if(entry.user_id === parseInt(sessionStorage.user_id, 10)) {
+    if(entry.userId === parseInt(sessionStorage.user_id, 10)) {
       chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage, chatEditBtn, chatDeleteBtn, editInputField, editInputSave)
     } else {
       chatHolder = elementCreator.elementFactory("div", null, "chat__div", `chat__div-${entry.id}`, null, null, null, chatName, chatTime, chatMessage)

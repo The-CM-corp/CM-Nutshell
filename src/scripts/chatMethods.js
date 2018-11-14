@@ -6,7 +6,7 @@ export default {
   // takes user input and makes new object
   chatObjFactory: function (time, inputValue) {
     return {
-      user_id: parseInt(sessionStorage.user_id, 10),
+      userId: parseInt(sessionStorage.user_id, 10),
       time: time,
       message: inputValue
     }
