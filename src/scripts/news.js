@@ -1,4 +1,4 @@
-console.log("hello")
+console.log("hi")
 // add news() to the login button on main.js
 // updated main.css with news__div
 
@@ -41,22 +41,19 @@ const newsHtmlEntry = (entry) => {
 }
 
 // representation of edit form
-const newsHtmlEdit = () => {
-  return `
-  <div>
-    Title: <br>
-    <input type="text" name="Title" id="news__edit__title" placeholder="News Title"><br>
-    Synopsis: <br>
-    <input type="textarea" name="Synopsis" id="news__edit__synopsis" placeholder="Tell Us More"><br>
-    URL: <br>
-    <input type="text" name="URL" id="news__edit__url" placeholder="Give Us the Link"><br>
-    </div>
-    <button id="news__form__edit">Edit</button><br><br>
-    `
-}
-
-
-
+// const newsHtmlEdit = () => {
+//   return `
+//   <div>
+//     Title: <br>
+//     <input type="text" name="Title" id="news__edit__title" placeholder="News Title"><br>
+//     Synopsis: <br>
+//     <input type="textarea" name="Synopsis" id="news__edit__synopsis" placeholder="Tell Us More"><br>
+//     URL: <br>
+//     <input type="text" name="URL" id="news__edit__url" placeholder="Give Us the Link"><br>
+//     </div>
+//     <button id="news__form__edit">Edit</button><br><br>
+//     `
+// }
 
 // fetch obj with a get, post, delete, edit, and target single entry
 
@@ -81,7 +78,7 @@ const newsDataManager = {
       method: "DELETE"
     }).then(res => res.json())
   },
-  newsEditEntry: (id, entry) => {
+  newsEditEntry: (entry, id) => {
     return fetch(`${newsUrl}/${id}`, {
       method: "PUT",
       headers: {
@@ -107,54 +104,69 @@ const newsDomRender = () => {
   document.querySelector("#news__results").innerHTML = ""
   let fetchUserId = sessionStorage.getItem("user_id")
   newsDataManager.newsGetEntries(fetchUserId)
-    .then((entries) => {
-      let sortedNews = entries.sort(function(a,b){
-        return a.timestamp.localeCompare(a.timestamp)
-        const newsEntryHTML = newsHtmlEntry(entry)
-        newsDom(newsEntryHTML)
-      })
-    // .then(entries => {
-    //   entries.forEach(entry => {
+    // .then((entry) => {
+    //   // let sortedNews = entries.sort(function(a,b){
+    //   //   return a.timestamp.localeCompare(a.timestamp)
     //     const newsEntryHTML = newsHtmlEntry(entry)
     //     newsDom(newsEntryHTML)
     //   })
-    // })
+    .then(entries => {
+      entries.forEach(entry => {
+        const newsEntryHTML = newsHtmlEntry(entry)
+        newsDom(newsEntryHTML)
+      })
+    })
+}
+
+
+const timestamp = () => {
+  let currentDate = new Date()
+    let date = currentDate.getDate()
+    let month = currentDate.getMonth()
+    let year = currentDate.getFullYear()
+    return `${month+1}-${date}-${year}`
 }
 
 // saveNews function to target button and grab values from inputs to be posted and displayed
 
 const saveNews = () => {
   document.querySelector("#news__form__save").addEventListener("click", () => {
-    const currentDate = new Date()
-    const date = currentDate.getDate()
-    const month = currentDate.getMonth()
-    const year = currentDate.getFullYear()
-    const dateString = `${month+1}-${date}-${year}`
     const news__title = document.querySelector("#news__form__title").value
     const news__synopsis = document.querySelector("#news__form__synopsis").value
     const news__url = document.querySelector("#news__form__url").value
     const news__session__user__id = sessionStorage.getItem("user_id")
-    console.log("news session id:", news__session__user__id)
-    // below will check to make sure all inputs are filled out before saving to DB
-    if (!news__title || !news__synopsis || !news__url) {
-      alert("fill out the form")
-    } else {      
-      document.querySelector("#news__results").innerHTML = ""
-      const newsEntry = {
-        title: news__title,
-        synopsis: news__synopsis,
-        url: news__url,
-        user_id: +news__session__user__id,
-        timestamp: dateString
+    const newsEntry = {
+      title: news__title,
+      synopsis: news__synopsis,
+      url: news__url,
+      user_id: +news__session__user__id,
+      timestamp: timestamp()
+    }
+    if (event.target.id.startsWith("news__form__save")) {
+      // below will check to make sure all inputs are filled out before saving to DB
+      if (!news__title || !news__synopsis || !news__url) {
+        alert("fill out all boxes")
+      } else {
+        document.querySelector("#news__results").innerHTML = ""
+
+        // save the info and then once the promise is fulfilled
+        newsDataManager.newsSaveEntry(newsEntry).then(() => {
+          // clear inputs
+          newsFormManager.newsClearForm()
+          // and post it to the DOM
+          newsDomRender()
+        })
       }
-      // save the info and then once the promise is fulfilled
-      newsDataManager.newsSaveEntry(newsEntry).then(() => {
-        // clear inputs
+    }
+    if (event.target.id.startsWith("editNews")) {
+      const id = event.target.id.split("!")[1]
+      newsDataManager.newsEditEntry(newsEntry, id).then(() => {
         newsFormManager.newsClearForm()
-        // and post it to the DOM
         newsDomRender()
+        document.getElementById(`editNews__form!${id}`).id = "news__form__save"
       })
     }
+
   })
 }
 
@@ -175,20 +187,12 @@ const newsEdit = () => {
     // it's looking for the id from the entry associated with the edit button and performs a get from the database but returns the values to the input boxes
     if (event.target.id.startsWith("editNews")) {
       const id = event.target.id.split("!")[1]
+      document.querySelector("#news__form__save").id = `editNews__form!${id}`
       newsDataManager.newsSingleEntry(id).then((entry) => {
         document.querySelector("#news__form__title").value = entry.title
         document.querySelector("#news__form__synopsis").value = entry.synopsis
         document.querySelector("#news__form__url").value = entry.url
       })
-
-      // I'm not sure how to also delete the old entry so I'm putting in an alert for the user
-      // alert("Make sure to delete your old entry")
-      // console.log("I hit edit")
-      // document.querySelector("#news__edit__form").innerHTML = newsHtmlEdit()
-      
-     
-      // document.querySelector(`#news__div${id}`).innerHTML = 
-  
     }
   })
 }
