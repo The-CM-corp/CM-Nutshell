@@ -151,6 +151,20 @@
       "url": "cute.com",
       "user_id": 4,
       "id": 5
+    },
+    {
+      "title": "Great News for Once",
+      "synopsis": "People were nice to each other",
+      "url": "www.google.com",
+      "user_id": 1,
+      "id": 6
+    },
+    {
+      "title": "my news",
+      "synopsis": "hasshha",
+      "url": "weri",
+      "user_id": 5,
+      "id": 7
     }
   ],
   "todos": [
@@ -162,26 +176,15 @@
       "user_id": 1
     },
     {
-      "task": "bring in the trash",
-      "date": "2018-11-21",
+      "task": "single source of truth",
+      "date": "2018-11-14",
       "completed": false,
-      "id": 2
+      "id": 2,
+      "user_id": 3
     },
     {
-      "task": "take out trash",
-      "date": "2018-11-21",
-      "completed": false,
-      "id": 3
-    },
-    {
-      "task": "wash dishes",
-      "date": "2018-11-21",
-      "completed": false,
-      "id": 4
-    },
-    {
-      "task": "take out trash",
-      "date": "2018-11-27",
+      "task": "Task Numero Uno",
+      "date": "2018-11-13",
       "completed": false,
       "id": 5
     },
@@ -192,31 +195,88 @@
       "id": 6
     },
     {
-      "task": "quit messing with the element creator",
-      "date": "2018-11-14",
+      "task": "what is wrong",
+      "date": "2018-11-16",
       "completed": false,
-      "id": 7
-    },
-    {
-      "task": "rake leaves",
-      "date": "2018-11-14",
-      "completed": true,
-      "user_id": 4,
+      "user_id": 3,
       "id": 8
     },
     {
-      "task": "mow the lawn",
-      "date": "2018-11-29",
+      "task": "Save this sweet trash!",
+      "date": "2018-11-13",
       "completed": false,
-      "user_id": 4,
-      "id": 9
+      "user_id": 5,
+      "id": 10
     },
     {
-      "task": "bake the cookies faster",
-      "date": "2018-11-17",
+      "task": "asdasd",
+      "date": "2018-11-14",
       "completed": false,
-      "user_id": 4,
-      "id": 10
+      "user_id": 0,
+      "id": 11
+    },
+    {
+      "task": "austin",
+      "date": "2018-11-14",
+      "completed": false,
+      "user_id": 5,
+      "id": 12
+    },
+    {
+      "task": "session storage",
+      "date": "2018-11-28",
+      "completed": false,
+      "user_id": 5,
+      "id": 13
+    },
+    {
+      "task": "ready for thisfdfgd",
+      "date": "2018-11-14",
+      "completed": false,
+      "user_id": 0,
+      "id": 14
+    },
+    {
+      "task": "adsda",
+      "date": "",
+      "completed": false,
+      "user_id": 0,
+      "id": 16
+    },
+    {
+      "task": "adsda",
+      "date": "",
+      "completed": false,
+      "user_id": 0,
+      "id": 17
+    },
+    {
+      "task": "asdas",
+      "date": "",
+      "completed": false,
+      "user_id": 0,
+      "id": 18
+    },
+    {
+      "task": "asdasd",
+      "date": "",
+      "completed": false,
+      "user_id": 0,
+      "id": 20
+    },
+    {
+      "task": "ask for help",
+      "date": "2018-11-12",
+      "completed": true,
+      "user_id": 5,
+      "id": 21
+    },
+    {
+      "task": "middle",
+      "date": "2018-11-15",
+      "completed": true,
+      "user_id": 3,
+      "id": 22
     }
   ],
   "chats": [

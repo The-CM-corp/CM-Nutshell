@@ -3,7 +3,10 @@
  /* i want task on top of date and check box to the right of the text */
 
  .todo__div {
- border: 1px solid forestgreen;
+ border: 1px solid #424651;
+ margin: 1%;
+ /* border-radius: 10%; */
+ padding: 5px;
  }
  .todo__checkbox {
    margin: 3%;
