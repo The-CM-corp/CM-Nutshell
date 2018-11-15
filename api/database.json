@@ -501,6 +501,12 @@
       "time": "2018-11-15T06:14:40.156Z",
       "message": "I can't believe how much we've learned in a month and a half!",
       "id": 18
+    },
+    {
+      "userId": 1,
+      "time": "2018-11-15T06:33:48.382Z",
+      "message": "I am proud of each and every one of you. Except Bryan. I'm really disappointed in you.",
+      "id": 19
     }
   ]
 }

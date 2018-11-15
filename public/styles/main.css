@@ -131,6 +131,8 @@ body {
 
 .event__div {
   border: 1px solid whitesmoke;
+  transition: background-color 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.4);
   margin-bottom: 10px;
   /* border-radius: 10px; */
   /* box-shadow: 0px 0px 5px #424651; */
@@ -264,9 +266,11 @@ body {
 }
 
 .news__div {
-  border: 1px solid #424651;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.5s ease;
   margin-bottom: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 5px;
 }
 
@@ -335,6 +339,16 @@ body {
 
 .news__url {
   font-size: 70%;
+  margin: 5px 0px;
+}
+
+.news__synopsis {
+  margin: 5px 0px;
+}
+
+.news__timestamp {
+  margin: 5px 0px;
+  font-size: 85%;
 }
 
 /* Chat Styles */
@@ -355,6 +369,7 @@ body {
 }
 
 .chat__div {
+  transition: background-color 0.5s ease;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 5px;
   margin-bottom: 10px;
