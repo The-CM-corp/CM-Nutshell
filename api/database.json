@@ -41,6 +41,12 @@
       "password": "patty",
       "email": "patty@patty.com",
       "id": 7
+    },
+    {
+      "name": "jenna",
+      "password": "jenna",
+      "email": "jenna@jenna.com",
+      "id": 8
     }
   ],
   "events": [
@@ -187,6 +193,14 @@
       "location": "Humphrey's",
       "user_id": 5,
       "id": 24
+    },
+    {
+      "title": "Dinner with Dogs",
+      "date": "2018-11-17",
+      "synopsis": "alpotizers",
+      "location": "in east nashville",
+      "user_id": 5,
+      "id": 25
     }
   ],
   "news": [
@@ -281,9 +295,9 @@
     {
       "title": "Why You Shouldn't Try to Milk a Cat",
       "synopsis": "seriously?",
-      "url": "https://youtu.be/jIoOJKLHeY0?t=55",
+      "url": "youtu.be/jIoOJKLHeY0?t=57",
       "user_id": 5,
-      "timestamp": "11-14-2018 23:37",
+      "timestamp": "11-15-2018 8:45",
       "id": 21
     }
   ],
@@ -354,7 +368,7 @@
     {
       "task": "wash car",
       "date": "2018-11-15",
-      "completed": false,
+      "completed": true,
       "user_id": 2,
       "id": 31
     },
@@ -491,12 +505,6 @@
       "id": 16
     },
     {
-      "userId": 5,
-      "time": "2018-11-15T05:22:50.937Z",
-      "message": "Just finished updating the database!",
-      "id": 17
-    },
-    {
       "userId": 2,
       "time": "2018-11-15T06:14:40.156Z",
       "message": "I can't believe how much we've learned in a month and a half!",
@@ -507,6 +515,12 @@
       "time": "2018-11-15T06:33:48.382Z",
       "message": "I am proud of each and every one of you. Except Bryan. I'm really disappointed in you.",
       "id": 19
+    },
+    {
+      "userId": 5,
+      "time": "2018-11-15T16:31:34.010Z",
+      "message": "I'm back in action",
+      "id": 20
     }
   ]
 }
