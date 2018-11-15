@@ -12,19 +12,21 @@
 </head>
 
 <body>
-  <section id="welcome" class="welcome">
-    <div>
-      <h1>{nutshell}</h1>
-      <h2><a id="login__link" href="#" class="login_register__links">Login</a> or <a id="register__link" href="#" class="login_register__links">Register</a></h2>
+  <section id="welcome">
+    <div class="welcome">
+      <h1 class="nutshell__logo huge__logo">{nutshell}</h1>
+      <p class="logo__tagline">it's like everything wrapped in a neat little package</p>
+      <h2><a id="login__link" href="#" class="login_register__links">Login</a> || <a id="register__link" href="#" class="login_register__links">Register</a></h2>
     </div>
 
     <!-- Hidden Login Form > will show on login link click -->
     <div id="login__form" class="login__form hide">
       <p>Please Login with Your Email and Password</p>
+      <div>
       <label for="login__name">Email</label>
-      <input type="text" name="login__name" id="login__name" placeholder="enter your email">
-      <label for="login__password">Password</label>
-      <input type="text" name="login__password" id="login__password" placeholder="password">
+      <input type="text" name="login__name" id="login__name" placeholder="enter your email"></div>
+      <div><label for="login__password">Password</label>
+      <input type="text" name="login__password" id="login__password" placeholder="password"></div>
       <button id="login__button">Submit</button>
     </div>
     <!-- Hidden Register Form > will show on register link click -->
@@ -65,7 +67,7 @@
     <div id="news__container" class="category__container">
       <h1>NEWS</h1>
       <!-- <h3><a href="#">add news article</a></h3> -->
-      <h3><a href="#" id="add__news">add article</a></h3>
+      <h3><a href="#" id="add__news" class="add__item">add article</a></h3>
       <!-- Add News Form -->
       <div id="add__news__form" class="add_content_form hide">
 
@@ -83,19 +85,19 @@
     <!-- Events Section -->
     <div id="events__container" class="category__container">
       <h1>EVENTS</h1>
-      <h3><a href="#" id="add__event">add event</a></h3>
+      <h3><a href="#" id="add__event" class="add__item">add event</a></h3>
       <!-- Add Event Form -->
       <div id="add__event__form" class="add_event_form hide">
-        <p>Add Event </p>
-        <label for="add__event__title">Event Name</label>
-        <input type="text" name="add__event__title" id="add__event__title" value="Event Title">
-        <label for="add__event__location">Location</label>
-        <input type="text" name="add__event__location" id="add__event__location" value="Location">
-        <label for="add__event__date">Date</label>
-        <input type="date" name="add__event__date" id="add__event__date">
-        <label for="add__event__synopsis">Synopsis</label>
-        <input type="text" name="add__event__synopsis" id="add__event__synopsis">
-        <button id="add__event__button" class="save__button">Submit</button>
+        <!-- <p>Add Event </p> -->
+        <div><label for="add__event__title">Event Name</label>
+        <input type="text" name="add__event__title" id="add__event__title" placeholder="Event Title"></div>
+        <div><label for="add__event__location">Location</label>
+        <input type="text" name="add__event__location" id="add__event__location" placeholder="Location"></div>
+        <div><label for="add__event__date">Date</label>
+        <input type="date" name="add__event__date" id="add__event__date"></div>
+        <div><label for="add__event__synopsis">Synopsis</label>
+        <input type="text" name="add__event__synopsis" id="add__event__synopsis" placeholder="Synopsis"></div>
+        <button id="add__event__button" class="save__button">Save Event</button>
       </div>
       <!-- Event Results -->
       <div id="event__results">
@@ -108,12 +110,12 @@
     <!-- Chat Section -->
     <div id="chat__container" class="category__container">
       <h1>CHAT</h1>
-      <h3><a href="#" id="add__chat">new message</a></h3>
+      <h3><a href="#" id="add__chat" class="add__item">new message</a></h3>
       <!-- Add Chat Form -->
       <div id="add__chat__form" class="add_chat_form hide">
-        <p>Add Message </p>
-        <label for="add__chat__message">Chat Message</label>
-        <input type="textarea" name="add__chat__message" id="add__chat__message" value="Message" rows="3">
+        <!-- <p>Add Message </p> -->
+        <div><label for="add__chat__message">Chat Message</label>
+        <input class="new__chat__input" type="textarea" name="add__chat__message" id="add__chat__message" value="Message" rows="3"></div>
         <button id="add__chat__button" class="save__button">Submit</button>
       </div>
       <!-- Chat Results -->
@@ -126,11 +128,11 @@
     <!-- Todo Section -->
     <div id="todo__container" class="category__container">
       <h1>TO DO</h1>
-      <h3><a href="#" id="add__todo">add task</a></h3>
+      <h3><a href="#" id="add__todo" class="add__item">add task</a></h3>
       <!-- Add Todo Form -->
       <div id="add__todo__form" class="add_todo_form hide">
-        <p>Add Task </p>
-        <!-- <label for="add__todo__title">Task</label> -->
+        <!-- <p>Add Task </p> -->
+        <label for="add__todo__title">Task</label>
         <input type="text" name="add__todo__title" id="add__todo__title" placeholder="Task" placeholder="Task">
         <label for="add__todo__date">Expected Completion Date</label>
         <input type="date" name="add__todo__date" id="add__todo__date">

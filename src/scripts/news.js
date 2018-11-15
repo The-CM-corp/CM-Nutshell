@@ -12,7 +12,7 @@ const newsFormManager = {
     URL: <br>
     <input type="text" name="URL" id="news__form__url" placeholder="Give Us the Link"><br>
     </div>
-    <button id="news__form__save" class="save__button">Submit</button><br><br>
+    <button id="news__form__save" class="save__button">Submit</button>
     `
   },
   newsClearForm: () => {
@@ -28,9 +28,9 @@ const newsHtmlEntry = (entry) => {
   return `
   <div class="news__div" id="news__div${entry.id}">
     <h4>${entry.title}</h4>
-    <p>${entry.synopsis}</p>
-    <a href="http://${entry.url}">${entry.url}</a><br>
-    <p>${entry.timestamp}</p>
+    <p class="news__synopsis">${entry.synopsis}</p>
+    <a class="news__url" href="http://${entry.url}" target="blank">${entry.url}</a><br>
+    <p class="news__timestamp">${entry.timestamp}</p>
     <button id="editNews!${entry.id}" class="edit__button">Edit</button>
     <button id="deleteNews!${entry.id}" class="delete__button">Delete</button>
 

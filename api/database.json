@@ -2,20 +2,20 @@
   "users": [
     {
       "id": 1,
-      "name": "Joe Shepherd",
+      "name": "joeshep",
       "password": "broccoli",
       "email": "joe@joe.com"
     },
     {
       "id": 2,
-      "name": "Greg Korte",
-      "password": "cauliflower",
-      "email": "greg@greg.com"
+      "name": "austin",
+      "password": "austin",
+      "email": "austin@austin.com"
     },
     {
-      "name": "sally",
-      "password": "sally",
-      "email": "sally",
+      "name": "jessica",
+      "password": "jessica",
+      "email": "jessica@jessica.com",
       "id": 3
     },
     {
@@ -25,75 +25,43 @@
       "id": 4
     },
     {
-      "name": "sally",
-      "password": "password",
-      "email": "cats@catmilk.com",
+      "name": "lesley",
+      "password": "lesley",
+      "email": "lesley@lesley.com",
       "id": 5
     },
     {
-      "name": "bryan",
-      "password": "bryan@bryan.com",
-      "email": "bryan",
+      "name": "flippy",
+      "password": "flippy",
+      "email": "flippy@flippy.com",
       "id": 6
     },
     {
-      "name": "",
-      "password": "",
-      "email": "",
+      "name": "patty",
+      "password": "patty",
+      "email": "patty@patty.com",
       "id": 7
-    },
-    {
-      "name": "bryan",
-      "password": "",
-      "email": "ehejrrhejhkerj",
-      "id": 8
-    },
-    {
-      "name": "",
-      "password": "",
-      "email": "bryan@djfhskadjfh",
-      "id": 9
-    },
-    {
-      "name": "bryan",
-      "password": "bryan",
-      "email": "bryan@dafjksdhfkjashdklfhasdlkfhasdljkfh",
-      "id": 10
-    },
-    {
-      "name": "fghjdfg",
-      "password": "jfghkjdfhg",
-      "email": "sallyfdgjhjdfhg",
-      "id": 11
     }
   ],
   "events": [
     {
-      "id": 2,
-      "title": "Nashville Predators Hockey",
-      "date": "11/17/18",
-      "synopsis": "Predators vs. the Kings",
-      "location": "Bridgestone Arena",
-      "user_id": 1
-    },
-    {
-      "id": 3,
       "title": "Movie Night at the Odeon",
-      "date": "11/19/18",
+      "date": "2018-11-19",
       "synopsis": "Screening of the Classic Movie Joe Dirt",
-      "location": "Odeon Theatre, Spartlesburg, TN",
-      "user_id": 2
+      "location": "Franklin Theatre",
+      "user_id": 2,
+      "id": 3
     },
     {
-      "title": "This is the second event",
+      "title": "Date Night",
       "date": "2018-11-28",
-      "synopsis": "Edited the Text",
-      "location": "Carson City",
+      "synopsis": "dinner at Kayne Prime",
+      "location": "The Gulch",
       "user_id": 4,
       "id": 5
     },
     {
-      "title": "Fun Events",
+      "title": "Death Row Challenge!!",
       "date": "2018-11-30",
       "synopsis": "Hot Chicken Contest",
       "location": "Hattie B's",
@@ -101,18 +69,10 @@
       "id": 6
     },
     {
-      "title": "Event Title",
-      "date": "",
-      "synopsis": "null",
-      "location": "Location",
-      "user_id": 3,
-      "id": 7
-    },
-    {
       "title": "Jack White Concert",
-      "date": "2018-11-24",
-      "synopsis": "No opener",
-      "location": "Ascend",
+      "date": "2018-11-19",
+      "synopsis": "Jack White has announced a show at Nashville's Bridgestone Arena on November 20, 2018 as a makeup show for Pilgrimage Music & Cultural Festival's recent cancellation,",
+      "location": "Bridgestone Arena",
       "user_id": 4,
       "id": 7
     },
@@ -125,80 +85,206 @@
       "id": 8
     },
     {
-      "title": "laughing party",
+      "title": "Laughing Party",
       "date": "2018-11-13",
-      "synopsis": "at noon we will laugh at greg without him knowing",
-      "location": "here",
+      "synopsis": "at noon we will laugh at Alfonso's giphys",
+      "location": "NSS Snackery",
       "user_id": 4,
       "id": 9
     },
     {
-      "title": "Event Title",
-      "date": "",
-      "synopsis": "",
-      "location": "Location",
-      "user_id": 3,
-      "id": 10
+      "title": "NSS Christmas Party",
+      "date": "2018-12-15",
+      "synopsis": "Friends, fun, and ugly Christmas sweaters!",
+      "location": "NSS",
+      "user_id": 1,
+      "id": 13
     },
     {
-      "title": "Event Title",
+      "title": "Predators Hockey",
+      "date": "2018-11-15",
+      "synopsis": "Preds vs AZ Coyotes",
+      "location": "Bridgestone Arena",
+      "user_id": 1,
+      "id": 14
+    },
+    {
+      "title": "Cohort 28 Graduation",
+      "date": "2019-03-22",
+      "synopsis": "Cohort 28 will show off their skills to the Nashville tech community.",
+      "location": "NSS",
+      "user_id": 1,
+      "id": 15
+    },
+    {
+      "title": "Mom's Birthday",
+      "date": "2018-11-30",
+      "synopsis": "Everybody's coming to my house to celebrate mom!",
+      "location": "my house",
+      "user_id": 3,
+      "id": 16
+    },
+    {
+      "title": "Beach Boys Concert",
+      "date": "2018-11-15",
+      "synopsis": "Beach Boys at the Ryman with special guest John Stamos",
+      "location": "Ryman Auditorium",
+      "user_id": 3,
+      "id": 17
+    },
+    {
+      "title": "Titans Game",
+      "date": "2018-11-18",
+      "synopsis": "Titans vs Colts",
+      "location": "Lucas Field",
+      "user_id": 3,
+      "id": 18
+    },
+    {
+      "title": "NSS Christmas Party",
+      "date": "2018-12-15",
+      "synopsis": "Friedns, fun, and ugly sweaters!",
+      "location": "NSS",
+      "user_id": 2,
+      "id": 19
+    },
+    {
+      "title": "Jack White Concert",
+      "date": "2018-11-19",
+      "synopsis": "Jack White has announced a show at Nashville's Bridgestone Arena on November 20, 2018 as a makeup show for Pilgrimage Music & Cultural Festival's recent cancellation",
+      "location": "Bridgestone Arena",
+      "user_id": 2,
+      "id": 20
+    },
+    {
+      "title": "",
       "date": "",
       "synopsis": "",
-      "location": "Location",
+      "location": "",
+      "user_id": 0,
+      "id": 21
+    },
+    {
+      "title": "Javascript Meetup",
+      "date": "2018-11-24",
+      "synopsis": "if (you === love beer) { Have a few brews and talk about the great new code you're working on!!}",
+      "location": "Jackalope Brewery",
       "user_id": 3,
-      "id": 11
+      "id": 22
+    },
+    {
+      "title": "Women in Tech Meetup",
+      "date": "2018-11-23",
+      "synopsis": "Roundtable discussion about what to expect in your first role as a junior developer",
+      "location": "East Nashville",
+      "user_id": 5,
+      "id": 23
+    },
+    {
+      "title": "Coffee with the Cat Milkers Crew",
+      "date": "2018-11-16",
+      "synopsis": "Meetup to work on group project",
+      "location": "Humphrey's",
+      "user_id": 5,
+      "id": 24
     }
   ],
   "news": [
     {
-      "id": 1,
-      "title": "Great News for Once",
-      "synopsis": "People were nice to each other",
-      "url": "#",
-      "user_id": 1
-    },
-    {
-      "title": "Sally's News",
-      "synopsis": "Her news",
-      "url": "http.com",
-      "id": 2
-    },
-    {
-      "title": "new bryan article",
-      "synopsis": "here's the news story",
-      "url": "www.face.com",
-      "id": 3
-    },
-    {
-      "title": "test",
-      "synopsis": "test3",
-      "url": "test",
+      "title": "Amazon is Coming!",
+      "synopsis": "Amazon operations center to come to Nashville. ",
+      "url": "www.newschannel5.com",
       "user_id": 1,
-      "id": 5
+      "timestamp": "11-14-2018 18:11",
+      "id": 9
     },
     {
-      "title": "1234",
-      "synopsis": "1",
-      "url": "1",
-      "user_id": 3,
-      "timestamp": "11-14-2018 14:54",
-      "id": 6
-    },
-    {
-      "title": "1",
-      "synopsis": "1",
-      "url": "1",
-      "user_id": 3,
-      "timestamp": "11-14-2018 14:54",
-      "id": 7
-    },
-    {
-      "title": "1",
-      "synopsis": "1",
+      "title": "Google Photos",
+      "synopsis": "So many photos!",
       "url": "www.google.com",
+      "user_id": 1,
+      "timestamp": "11-14-2018 18:19",
+      "id": 10
+    },
+    {
+      "title": "Low Carb Diets",
+      "synopsis": "Don't eat bread",
+      "url": "www.cnn.com",
+      "user_id": 1,
+      "timestamp": "11-14-2018 18:26",
+      "id": 11
+    },
+    {
+      "title": "60 Holiday Snacks",
+      "synopsis": "Make these for your party",
+      "url": "www.pinterest.com",
       "user_id": 3,
-      "timestamp": "11-14-2018 14:54",
-      "id": 8
+      "timestamp": "11-14-2018 18:55",
+      "id": 12
+    },
+    {
+      "title": "Thanksgiving Travel",
+      "synopsis": "Tons of people heading home.",
+      "url": "www.newschannel5.com",
+      "user_id": 3,
+      "timestamp": "11-14-2018 18:59",
+      "id": 13
+    },
+    {
+      "title": "Understanding JavaScript",
+      "synopsis": "How it will be useful.",
+      "url": "www.technology.com",
+      "user_id": 3,
+      "timestamp": "11-14-2018 19:01",
+      "id": 14
+    },
+    {
+      "title": "Items for Sale",
+      "synopsis": "Rare personal objects for sale.",
+      "url": "www.craigslist.com",
+      "user_id": 2,
+      "timestamp": "11-14-2018 19:10",
+      "id": 15
+    },
+    {
+      "title": "Amazon Could Bring Increased Home Prices",
+      "synopsis": " The company promises to bring 5,000 jobs to the city.",
+      "url": "www.newschannel5.com",
+      "user_id": 2,
+      "timestamp": "11-14-2018 19:13",
+      "id": 16
+    },
+    {
+      "title": "Cohort 26 Ends On A High Note",
+      "synopsis": "Cohort 26 graduated last week!",
+      "url": "www.google.com",
+      "user_id": 4,
+      "timestamp": "11-14-2018 19:29",
+      "id": 17
+    },
+    {
+      "title": "52nd Annual CMA Awards",
+      "synopsis": "It's the biggest night in country music.",
+      "url": "www.newschannel5.com",
+      "user_id": 4,
+      "timestamp": "11-14-2018 19:31",
+      "id": 18
+    },
+    {
+      "title": "How to Milk a Cat",
+      "synopsis": "pretty much all you need to know about how to milk a cat",
+      "url": "youtu.be/bXNwzKo5Yps?t=80",
+      "user_id": 5,
+      "timestamp": "11-14-2018 23:32",
+      "id": 20
+    },
+    {
+      "title": "Why You Shouldn't Try to Milk a Cat",
+      "synopsis": "seriously?",
+      "url": "https://youtu.be/jIoOJKLHeY0?t=55",
+      "user_id": 5,
+      "timestamp": "11-14-2018 23:37",
+      "id": 21
     }
   ],
   "todos": [
@@ -206,119 +292,221 @@
       "id": 1,
       "task": "Take out trash",
       "date": "11/8/18",
-      "completed": false,
+      "completed": true,
       "user_id": 1
     },
     {
-      "task": "single source of truth",
-      "date": "2018-11-14",
+      "task": "Discuss React",
+      "date": "2018-11-26",
       "completed": false,
-      "id": 2,
-      "user_id": 3
+      "user_id": 1,
+      "id": 23
     },
     {
-      "task": "Task",
-      "date": "2018-11-14",
+      "task": "Buy the turkey for next week",
+      "date": "2018-11-20",
       "completed": false,
-      "id": 3,
-      "user_id": 3
+      "user_id": 1,
+      "id": 24
     },
     {
-      "task": "quit messing with the element creator",
-      "date": "2018-11-14",
-      "completed": false,
-      "id": 6
-    },
-    {
-      "task": "what is wrong",
+      "task": "Learning Team Meeting Agenda",
       "date": "2018-11-16",
       "completed": false,
+      "user_id": 1,
+      "id": 25
+    },
+    {
+      "task": "Take the cat to the vet",
+      "date": "2018-12-03",
+      "completed": false,
       "user_id": 3,
-      "id": 8
+      "id": 26
     },
     {
-      "task": "que pasa?!!!!",
-      "date": "2018-11-12",
+      "task": "Get the Christmas decorations out of the attic.",
+      "date": "2018-11-23",
       "completed": false,
-      "user_id": 0,
-      "id": 11
+      "user_id": 3,
+      "id": 27
     },
     {
-      "task": "austin",
-      "date": "2018-11-14",
-      "completed": false,
-      "user_id": 5,
-      "id": 12
-    },
-    {
-      "task": "session storage",
-      "date": "2018-11-28",
-      "completed": false,
-      "user_id": 5,
-      "id": 13
-    },
-    {
-      "task": "ready for thisfdfgd",
-      "date": "2018-11-14",
-      "completed": false,
-      "user_id": 0,
-      "id": 14
-    },
-    {
-      "task": "adsda",
-      "date": "",
-      "completed": false,
-      "user_id": 0,
-      "id": 16
-    },
-    {
-      "task": "adsda",
-      "date": "",
-      "completed": false,
-      "user_id": 0,
-      "id": 17
-    },
-    {
-      "task": "asdas",
-      "date": "",
-      "completed": false,
-      "user_id": 0,
-      "id": 18
-    },
-    {
-      "task": "asdasd",
-      "date": "",
-      "completed": false,
-      "user_id": 0,
-      "id": 20
-    },
-    {
-      "task": "ask for help",
-      "date": "2018-11-12",
+      "task": "Cancel magazine subscription",
+      "date": "2018-11-16",
       "completed": true,
-      "user_id": 5,
-      "id": 21
+      "user_id": 3,
+      "id": 28
     },
     {
-      "task": "middle",
+      "task": "Clean gutters",
+      "date": "2018-11-17",
+      "completed": false,
+      "user_id": 2,
+      "id": 29
+    },
+    {
+      "task": "pack away Halloween decorations",
+      "date": "2018-11-30",
+      "completed": false,
+      "user_id": 2,
+      "id": 30
+    },
+    {
+      "task": "wash car",
+      "date": "2018-11-15",
+      "completed": false,
+      "user_id": 2,
+      "id": 31
+    },
+    {
+      "task": "set the DVR for my program",
       "date": "2018-11-15",
       "completed": false,
       "user_id": 3,
-      "id": 22
+      "id": 32
+    },
+    {
+      "task": "Basketball Practice",
+      "date": "2018-11-15",
+      "completed": false,
+      "user_id": 4,
+      "id": 33
+    },
+    {
+      "task": "pack lunch for the kids",
+      "date": "2018-11-14",
+      "completed": true,
+      "user_id": 4,
+      "id": 34
+    },
+    {
+      "task": "Study React",
+      "date": "2018-11-17",
+      "completed": false,
+      "user_id": 4,
+      "id": 35
+    },
+    {
+      "task": "buy groceries",
+      "date": "2018-11-15",
+      "completed": false,
+      "user_id": 0,
+      "id": 36
+    },
+    {
+      "task": "Eat cookies",
+      "date": "2018-11-14",
+      "completed": false,
+      "user_id": 3,
+      "id": 37
+    },
+    {
+      "task": "update LinkedIn profile",
+      "date": "2018-11-17",
+      "completed": false,
+      "user_id": 5,
+      "id": 38
+    },
+    {
+      "task": "get oil change",
+      "date": "2018-11-29",
+      "completed": false,
+      "user_id": 5,
+      "id": 39
+    },
+    {
+      "task": "tell Bryan how sorry I am for calling him a weirdo",
+      "date": "2018-11-16",
+      "completed": true,
+      "user_id": 2,
+      "id": 40
+    },
+    {
+      "task": "tell Austin how awesome he is",
+      "date": "2018-11-19",
+      "completed": false,
+      "user_id": 4,
+      "id": 41
     }
   ],
   "chats": [
     {
-      "userId": "4",
-      "time": "2018-11-13T22:17:50.315Z",
-      "message": "Message",
-      "id": 5
+      "userId": 1,
+      "time": "2018-11-15T00:13:52.316Z",
+      "message": "Hey guys!  Why is it so cold outside tonight?",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "time": "2018-11-15T00:37:14.493Z",
+      "message": "How about that Amazon news???",
+      "id": 8
     },
     {
       "userId": 3,
-      "time": "2018-11-14T21:44:16.584Z",
-      "message": "messatesttest!!!",
-      "id": 6
+      "time": "2018-11-15T00:48:49.627Z",
+      "message": "Did you guys see the last episode of This Is Us?  I can't believe what happened!",
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "time": "2018-11-15T01:03:21.302Z",
+      "message": "Ask me about our awesome project!",
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "time": "2018-11-15T01:07:46.575Z",
+      "message": "Windows 7 Rules!",
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "time": "2018-11-15T01:08:13.615Z",
+      "message": "Come to me for help with github.",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "time": "2018-11-15T01:17:22.473Z",
+      "message": "Who is going to game night?",
+      "id": 13
+    },
+    {
+      "userId": 3,
+      "time": "2018-11-15T01:18:21.836Z",
+      "message": "Drive safe out there.  The roads are slick!",
+      "id": 14
+    },
+    {
+      "userId": 4,
+      "time": "2018-11-15T01:25:38.540Z",
+      "message": "Who's going to the tech meetup tonight?",
+      "id": 15
+    },
+    {
+      "userId": 4,
+      "time": "2018-11-15T05:04:53.698Z",
+      "message": "Seriously!!! It's like super cold. I thought it was supposed to be warm down south!",
+      "id": 16
+    },
+    {
+      "userId": 5,
+      "time": "2018-11-15T05:22:50.937Z",
+      "message": "Just finished updating the database!",
+      "id": 17
+    },
+    {
+      "userId": 2,
+      "time": "2018-11-15T06:14:40.156Z",
+      "message": "I can't believe how much we've learned in a month and a half!",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "time": "2018-11-15T06:33:48.382Z",
+      "message": "I am proud of each and every one of you. Except Bryan. I'm really disappointed in you.",
+      "id": 19
     }
   ]
 }
