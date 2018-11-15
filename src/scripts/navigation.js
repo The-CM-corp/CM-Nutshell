@@ -60,16 +60,16 @@ function addNavClickEvents(){
   });
   // Add Content to Categories
     $("#add__news").click(function(){
-      $("#add__news__form").removeClass("hide");
+      $("#add__news__form").toggle("hide");
   });
     $("#add__event").click(function(){
-      $("#add__event__form").removeClass("hide");
+      $("#add__event__form").toggle("hide");
   });
     $("#add__chat").click(function(){
-      $("#add__chat__form").removeClass("hide");
+      $("#add__chat__form").toggle("hide");
   });
     $("#add__todo").click(function(){
-      $("#add__todo__form").removeClass("hide");
+      $("#add__todo__form").toggle("hide");
   });
   })
 }

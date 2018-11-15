@@ -80,8 +80,8 @@ const putOnDOM = {
   postNewEvent(entry) {
     let eventTitle = elementCreator.elementFactory("h2", entry.title, "event__title", `event__title${entry.id}`)
     let eventSynopsis = elementCreator.elementFactory("p", entry.synopsis, "event__synopsis", `event__synopsis${entry.id}`)
-    let eventDate = elementCreator.elementFactory("p", entry.date, "event__date", `event__date${entry.id}`)
-    let eventLocation = elementCreator.elementFactory("p", entry.location, "event__location", `event__location${entry.id}`)
+    let eventDate = elementCreator.elementFactory("p", `<strong>Date:</strong> ${entry.date}`, "event__date", `event__date${entry.id}`)
+    let eventLocation = elementCreator.elementFactory("p", `<strong>Location:</strong> ${entry.location}`, "event__location", `event__location${entry.id}`)
     let eventEditBtn = elementCreator.elementFactory("button", "edit", "event__edit__button", `${entry.id}`, "#")
     let eventEditSaveBtn = elementCreator.elementFactory("button", "save edits", "event__edit__save__button editSave__button", `${entry.id}`, "#")
     let eventEditCancelBtn = elementCreator.elementFactory("button", "cancel", "event__edit__cancel__button editCancel__button", `${entry.id}`, "#")
@@ -91,7 +91,7 @@ const putOnDOM = {
     let editEventTitle = elementCreator.elementFactory("input", null, "edit__event__input", `edit__eventTitleInput__${entry.id}`, null, "text", entry.title)
     let editEventSynopsis = elementCreator.elementFactory("input", null, "edit__event__input", `edit__eventSynopsisInput__${entry.id}`, null, "text", entry.synopsis)
     let editEventHolder = elementCreator.elementFactory("div", null, "edit__event__div hide", `edit__event__div${entry.id}`, null, null, null, editEventTitle, editEventDate, editEventSynopsis, editEventLocation, eventEditSaveBtn, eventEditCancelBtn)
-    let eventHolder = elementCreator.elementFactory("div", null, "event__div", `event__div${entry.id}`, null, null, null, eventTitle, eventDate, eventSynopsis, eventLocation, eventEditBtn, eventDeleteBtn, editEventHolder)
+    let eventHolder = elementCreator.elementFactory("div", null, "event__div", `event__div${entry.id}`, null, null, null, eventTitle, eventDate, eventLocation, eventSynopsis, eventEditBtn, eventDeleteBtn, editEventHolder)
     //appending our new elements to the fragment then the fragment to or article
     let fragment = document.createDocumentFragment()
     fragment.appendChild(eventHolder)
