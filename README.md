@@ -1,26 +1,23 @@
-# Browserify Boilerplate Repository
+# Nutshell: Your One Stop Shop
 
-Use this repository for when you want to start a new modular JavaScript application that gets compiled by Browserify. You start off with three JavaScript modules in the `src/scripts` directory.
+Nutshell is a new app that provides everything a user could need, all in one nice shell. The app provides a way for users to keep track of their daily tasks, chat with other users, and share news articles and events. Nutshell is written using the React framework.
 
-1. `hello.js` - Exports a simple function that says hello
-1. `goodbye.js` - Exports a simple function that says goodbye
-1. `sandwichMaker.js` - Exports an object with a single method named `placeOrder()`
-1. `main.js` - Contains the logic of your application. It imports the other three modules, and invokes all of the functions.
+# Getting Started
+To run Nutshell locally, create an empty directory and clone the project by running the following command in your terminal: ``` git@github.com:The-CM-corp/CM-Nutshell.git ```
 
-## Setup
+Go to the ```src/lib``` folder in the project and run: ```npm init```
 
-1. Clone this repository.
-1. `cd browserify-boilerplate/src/lib`
-1. `npm install`
-1. `npm start`
+Run the following command to install all libraries and their dependencies: ```npm install```
 
-The `npm start` command will run grunt for you.
+Be sure to run the following in order to view Nutshell in your browser: ```npm start```
 
-The web server will be started, and the JavaScript code in the `src/scripts` directory will be compiled into `public/hellogoodbye.js`.
+Open your preferred browser and go to: [http://localhost:8080/]( http://localhost:8080/)
 
-1. Open Chome and make sure your developer tools are open.
-1. Open [http://localhost:8080](http://localhost:8080) in your browser.
-1. You should see the following output in the console.
+In another window of your terminal traverse into ```src/api``` and run: ```json-server -p 8088 -w database.json```
 
-![sample boilerplate output](./browserify-boilerplate-output.png)
-
+# Enjoy Nutshell
+### Contributors
+* [Austin Zoradi](https://github.com/amazoradi)
+* [Bryan Nilsen]( https://github.com/BryanNilsen)
+* [Jessica Barnett]( https://github.com/jessicabarnett8219)
+* [Lesley Boyd]( https://github.com/laboyd001)
