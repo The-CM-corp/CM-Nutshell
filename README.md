@@ -15,6 +15,22 @@ Open your preferred browser and go to: [http://localhost:8080/]( http://localhos
 
 In another window of your terminal traverse into ```src/api``` and run: ```json-server -p 8088 -w database.json```
 
+
+# We covered many topics in the creation of Nutshell, some of which include:
+1. Functions
+1. Stand-Up meetings
+1. ERD Diagrams
+1. Databases/API
+1. Objects
+1. CSS
+1. Handling user events
+1. Factory functions
+1. Data entry/editing
+1. CRUD functionality
+1. Modular code with Browserify
+1. Github
+ 
+
 # Enjoy Nutshell
 ### Contributors
 * [Austin Zoradi](https://github.com/amazoradi)
