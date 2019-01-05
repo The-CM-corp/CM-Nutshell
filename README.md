@@ -1,6 +1,6 @@
 # Nutshell: Your One Stop Shop
 
-Nutshell is a new app that provides everything a user could need, all in one nice shell. The app provides a way for users to keep track of their daily tasks, chat with other users, and share news articles and events. Nutshell is written using the React framework.
+Nutshell is a new app that provides everything a user could need, all in one nice shell. The app provides a way for users to keep track of their daily tasks, chat with other users, and share news articles and events.
 
 # Getting Started
 To run Nutshell locally, create an empty directory and clone the project by running the following command in your terminal: ``` git@github.com:The-CM-corp/CM-Nutshell.git ```
